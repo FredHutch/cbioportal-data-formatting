@@ -24,7 +24,7 @@ tags <- listS3Objects(bucket = bucket)
 annotations <- tgrAnnotate( harmonizedOnly = FALSE)
 monsterMash <- dplyr::left_join(tags, annotations) %>% dropWhen()
 
-onlythese <- monsterMash %>% filter(genomics_type == "dnaseq" & seq_libtype == "one" & workflowName == "ITH_HALO_CARD" ) %>% dropWhen()
+onlythese <- monsterMash %>% filter(genomics_type == "dnaseq" & seq_libtype == "one" & workflowName == "ITH_HALO_CARD" & workflowOutputType == "consensusVariants"  ) %>% dropWhen()
 unique(onlythese$workflowOutputType)
 ```
 
