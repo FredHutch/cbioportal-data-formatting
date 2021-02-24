@@ -5,4 +5,5 @@ stable_id: mutations
 show_profile_in_analysis_tab: true
 profile_name: first attempt at uploading data
 profile_description: mutations from bulk DNA sequencing
-data_filename: 2021-02-17-mafattempt.txt
+variant_classification_filter:
+data_filename: 2021-02-17-validationData_maftools.maf

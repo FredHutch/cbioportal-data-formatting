@@ -14,12 +14,12 @@ BiocManager::install("maftools")
 
 ```{r}
 library(tidyverse); library(aws.s3); library(tgR); library(furrr); library(maftools)
-setCreds(path = "~/github/cred/paguirigan.R")
+setCreds(path = "~/Desktop/SamVel_credentials.R")
 ```
 
 # Pull S3 Inventory and Annotate
 ```{r}
-bucket <- "fh-pi-paguirigan-a-eco"; DAG  <- "paguirigana"
+bucket <- "fh-pi-paguirigan-a-eco"#; DAG  <- "paguirigana"
 tags <- listS3Objects(bucket = bucket)
 annotations <- tgrAnnotate( harmonizedOnly = FALSE)
 monsterMash <- dplyr::left_join(tags, annotations) %>% dropWhen()
@@ -54,27 +54,36 @@ results <- map(seq(1:nrow(selectedData)), function(x){
              ) 
   snark$ExAC_ALL[grepl("^\\.$",snark$ExAC_ALL)] <- 0
   snark$ExAC_ALL <- as.numeric(snark$ExAC_ALL)
-  snark <- snark %>% filter(ExAC_ALL < 0.05) 
+  snark <- snark %>% filter(ExAC_ALL < 0.2) 
   
   snark <- snark %>% 
-    mutate(VAF = rowMeans(select(snark, VAF.GATK, VAF.SAM, VAF.Mu), na.rm = T)) %>% 
-    mutate(DP = rowMeans(select(snark, DP.GATK, DP.SAM, DP.Mu), na.rm = T)) %>% 
-    mutate(AD = rowMeans(select(snark, AD.GATK, AD.SAM, AD.Mu), na.rm = T)) %>% 
-    filter(AD > 10)
+    mutate(VAF.AVG = rowMeans(select(snark, VAF.GATK, VAF.SAM, VAF.Mu), na.rm = T)) %>% 
+    mutate(DP.AVG = rowMeans(select(snark, DP.GATK, DP.SAM, DP.Mu), na.rm = T)) %>% 
+    mutate(AD.AVG = rowMeans(select(snark, AD.GATK, AD.SAM, AD.Mu), na.rm = T))
   return(snark)
 }) 
+
 names(results) <- selectedData$molecular_id
 
 res1 <- map_dfr(results, rbind, .id = "molecular_id")
 
 n_distinct(res1$molecular_id)
+unique(res1$molecular_id)
 ```
 
 # Make into a MAF
 ```{r}
 res1$Tumor_Sample_Barcode <- res1$molecular_id
-write_delim(res1, "data/2021-02-17-mafattempt.txt", delim = "\t")
-forMaf <-annovarToMaf("data/2021-02-17-mafattempt.txt", Center = "NA", refBuild = "hg38")
+res1$Amino_Acid_Change <- res1$AAChange.refGene
+res1$SAMPLE_ID <- res1$molecular_id
+
+#downsize the isoforms in the amino_acid_change column; program complains about an unexpected 'p' character
+res1 <- res1 %>% mutate(Amino_Acid_Change = gsub("p.*$", "", Amino_Acid_Change))
+
+head(res1$Amino_Acid_Change)
+
+write_delim(res1, "~/Desktop/temp_files/vcf2maf_temp/actual_files/2021-02-17-mafattempt.txt", delim = "\t")
+forMaf <-annovarToMaf("~/Desktop/temp_files/vcf2maf_temp/actual_files/2021-02-17-mafattempt.txt", Center = "NA", refBuild = "hg38")
 
 ```
 
@@ -85,7 +94,7 @@ annot <- selectedData %>% select(molecular_id, seq_flowcell_id, age_range, tissu
 
 usefulMAF <- read.maf(maf = forMaf, clinicalData = annot)
 
-write.mafSummary(usefulMAF, basename = "data/2021-02-17-validationData")
+write.mafSummary(usefulMAF, basename = "~/Desktop/temp_files/vcf2maf_temp/actual_files/2021-02-17-validationData") #this writes out the maf, the summaries, and all other metadata files
 ```
 
 

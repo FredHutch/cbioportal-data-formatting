@@ -1,5 +1,16 @@
-#Patient_Identifier<TAB>Sample_Identifier
-#Patient_identifier<TAB>Sample_identifier
-#STRING
-#1
-PATIENT_ID<TAB>SAMPLE_ID
+#Patient Identifier	Sample Identifier
+#Patient_identifier	Sample_identifier
+#STRING	STRING
+#1	1
+PATIENT_ID	SAMPLE_ID
+one	M00000513
+two	M00000522
+three	M00000529
+four	M00000874
+five	M00000876
+six	M00000892
+seven	M00000906
+eight	M00001142
+nine	M00001352
+ten	M00001424
+eleven	M00000891

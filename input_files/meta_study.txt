@@ -3,4 +3,5 @@ cancer_study_identifier: paguirigan_test_upload
 name: Paguirigan Test Upload
 short_name: pag.t.1
 description: The first attempt at uploading cell line validation data onto CBioPortal
+add_global_case_list: true
 reference_genome: hg38
