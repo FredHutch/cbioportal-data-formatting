@@ -1,0 +1,9 @@
+cancer_study_identifier: paguirigan_test_upload
+genetic_alteration_type: MUTATION_EXTENDED
+datatype: MAF
+stable_id: mutations
+show_profile_in_analysis_tab: true
+profile_name: first attempt at uploading data
+profile_description: mutations from bulk DNA sequencing
+variant_classification_filter:
+data_filename: 2021-02-17-validationData_maftools.maf

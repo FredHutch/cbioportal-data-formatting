@@ -1,5 +1,0 @@
-cancer_study_identifier: paguirigan_test_upload											
-stable_id: paguirigan_test_upload_sequenced											
-case_list_name: Validation Data											
-case_list_description: Validation data used to test uploading process for cbioportal instance											
-case_list_ids: 	M00000513	M00000522	M00000529	M00000874	M00000876	M00000892	M00000906	M00001142	M00001352	M00001424	M00000891

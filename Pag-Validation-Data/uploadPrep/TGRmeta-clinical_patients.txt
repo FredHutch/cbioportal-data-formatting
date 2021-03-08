@@ -1,0 +1,8 @@
+subject_id	diagnosis	subtype	sex	race
+CM-M33-O33-K33	aml	NA	unknown	unknown
+CM-M40-O40-K20	aml	NA	unknown	unknown
+CM-M50-O50	aml	NA	unknown	unknown
+KG1a	aml	NA	male	white
+MOLM14-L1	secondaryaml	FAB_M5	male	unknown
+OCI-AML3	aml	FAB_M4	male	unknown
+OCI-AML3	aml	NA	NA	NA

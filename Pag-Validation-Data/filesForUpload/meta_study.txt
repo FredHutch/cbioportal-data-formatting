@@ -1,0 +1,10 @@
+type_of_cancer: Leukamia_AML1
+cancer_study_identifier: pag_validation
+name: Paguirigan Validation Dataset
+description: Validation dataset for ITH research
+citation: NA
+pmid: NA
+groups: PUBLIC;PAGUIRIGAN
+short_name: ITH Validation
+reference_genome: hg38
+tgr_submission: FH547-TGR2;FH8794-TGR4

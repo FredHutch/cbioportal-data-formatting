@@ -1,0 +1,149 @@
+---
+title: "Bulk Variant Filtering and MAF creation for cbioportal"
+author: "Amy Paguirigan"
+date: "2/17/2021"
+output: html_document
+---
+# Prep
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("maftools")
+```
+
+```{r}
+library(tidyverse); library(aws.s3); library(tgR); library(furrr); library(maftools)
+setCreds(path = "~/Desktop/SamVel_credentials.R")
+setCreds(path = "~/github/cred/paguirigan.R")
+```
+
+# Pull S3 Inventory and Annotate
+```{r}
+bucket <- "fh-pi-paguirigan-a-eco"#; DAG  <- "paguirigana"
+tags <- listS3Objects(bucket = bucket)
+annotations <- tgrAnnotate( harmonizedOnly = FALSE)
+monsterMash <- dplyr::left_join(tags, annotations) %>% dropWhen()
+
+onlythese <- monsterMash %>% filter(genomics_type == "dnaseq" & seq_libtype == "one" & workflowName == "ITH_HALO_CARD" & workflowOutputType == "consensusVariants"  ) %>% dropWhen()
+unique(onlythese$workflowOutputType)
+```
+
+# Validation Data cohort
+```{r}
+selectedData <- onlythese %>% filter(study_id == "Validation") %>% dropWhen()
+
+selectedData %>% group_by(seq_pool) %>% summarize(n_distinct(molecular_id))
+```
+
+# Pull down, filter and collect data
+```{r}
+results <- map(seq(1:nrow(selectedData)), function(x){
+  instruction <- selectedData[x,]
+  snark <- s3read_using(read.table, stringsAsFactors = F, header = T, 
+                        object = instruction$key, 
+                        bucket = instruction$piBucket)
+  snark <- snark %>% select(-starts_with(c("Mutation", "PROVEAN", "FATHMM", "Meta", "M.CAP", "MutPred", "fathmm", "Eigen", "integrated", "GERP", "phylo", "phast", "SIFT", "LRT", "SiPhy", "GenoCanyon", "GTex")))
+  snark <- snark %>% 
+    filter(!ExonicFunc.refGene %in% c("synonymous SNV", ".", "unknown")) %>%
+    filter(FILTER.Mu == "PASS" & is.na(AD.SAM)==F & is.na(AD.GATK)==F |  # all three callers
+             FILTER.Mu == "PASS" & is.na(AD.GATK)==F |  # pass for Mutect, and called by GATK too - NPM1 falls here
+             is.na(AD.SAM)==F  & is.na(AD.GATK)==F | # regardless of mutect, if called by both others
+             grepl("germline", FILTER.Mu) ==T  & is.na(AD.GATK)==F | # GATK, and germline, any samtools
+             grepl("slippage", FILTER.Mu) ==T  & is.na(AD.GATK)==F | # GATK, and contains slippage filter for Mutect, any samtools
+             FILTER.Mu == "clustered_events" & is.na(AD.SAM)==F & is.na(AD.GATK)==F # Mutect clustered events, and both other callers
+             ) 
+  snark$ExAC_ALL[grepl("^\\.$",snark$ExAC_ALL)] <- 0
+  snark$ExAC_ALL <- as.numeric(snark$ExAC_ALL)
+  snark <- snark %>% filter(ExAC_ALL < 0.2) 
+  
+  snark <- snark %>% 
+    mutate(VAF.AVG = rowMeans(select(snark, VAF.GATK, VAF.SAM, VAF.Mu), na.rm = T)) %>% 
+    mutate(DP.AVG = rowMeans(select(snark, DP.GATK, DP.SAM, DP.Mu), na.rm = T)) %>% 
+    mutate(AD.AVG = rowMeans(select(snark, AD.GATK, AD.SAM, AD.Mu), na.rm = T))
+  return(snark)
+}) 
+
+names(results) <- selectedData$molecular_id
+
+res1 <- map_dfr(results, rbind, .id = "molecular_id")
+
+n_distinct(res1$molecular_id)
+unique(res1$molecular_id)
+```
+
+# Make into a MAF
+```{r}
+annot <- selectedData %>% select(molecular_id, seq_flowcell_id, age_range, tissue_type, seq_pool, study_id, subject_id, biospecimen_id, assay_material_id) %>% mutate(Tumor_Sample_Barcode = paste(molecular_id, assay_material_id, sep = "-"), SAMPLE_ID = paste(molecular_id, biospecimen_id, sep = "-"))
+
+n_distinct(annot$Tumor_Sample_Barcode) # must be unique for all samples!!
+
+annotatedVariants <- left_join(res1, annot %>% select(molecular_id, Tumor_Sample_Barcode, SAMPLE_ID))
+
+
+#downsize the isoforms in the amino_acid_change column; program complains about an unexpected 'p' character
+annotatedVariants <- annotatedVariants %>% mutate(Amino_Acid_Change = gsub(":p.*$", "", AAChange.refGene))
+
+head(annotatedVariants$Amino_Acid_Change)
+
+write_delim(annotatedVariants, "./Pag-Validation-Data/mafProcessing/temp.txt", delim = "\t")
+forMaf <-annovarToMaf(annovar = "./Pag-Validation-Data/mafProcessing/temp.txt", Center = "FredHutch", refBuild = "hg38", MAFobj = T, sampleAnno = annot)
+
+```
+
+# Write out MAF and some summary files
+```{r}
+write.mafSummary(forMaf, basename = "./Pag-Validation-Data/mafProcessing/pag-validation") #this writes out the maf, the summaries, and all other metadata files
+```
+
+
+# Write out annotation data for patients for cbioportal
+```{r}
+metadata <- left_join(annot, selectedData)
+
+unique(metadata$study_id)
+study <- metadata %>% group_by(study_id) %>% summarize(submission_id, protocol, protocol_org) %>% unique()
+write_delim(study, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-study.txt", delim = "\t")
+
+unique(metadata$subject_id)
+clinical_patients <- metadata %>% group_by(subject_id) %>% summarize(diagnosis, subtype, sex, race ) %>% unique()
+write_delim(clinical_patients, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-clinical_patients.txt", delim = "\t")
+
+unique(metadata$biospecimen_id)
+clinical_samples <- metadata %>% group_by(biospecimen_id) %>% summarize(collection_event, collection_type, tissue_type_origin, cell_line_id) %>% unique()
+write_delim(clinical_samples, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-clinical_samples.txt", delim = "\t")
+
+
+unique(metadata$Tumor_Sample_Barcode)
+genomics_samples <- metadata %>% group_by(Tumor_Sample_Barcode) %>% summarize(genomics_type, seq_flowcell_id, seq_libtype, seq_pool) %>% unique()
+write_delim(genomics_samples, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-genomics_samples.txt", delim = "\t")
+
+```
+
+
+
+
+
+
+
+
+
+# Maftools summary functions
+```{r}
+getSampleSummary(usefulMAF)
+getGeneSummary(usefulMAF)
+getFields(usefulMAF)
+
+```
+
+# Maftools plots
+```{r}
+plotmafSummary(maf = usefulMAF, rmOutlier = TRUE, addStat = 'median', dashboard = TRUE, titvRaw = FALSE)
+oncoplot(usefulMAF)
+lollipopPlot(maf = usefulMAF, gene = 'DNMT3A', AACol = 'aaChange', showMutationRate = TRUE)
+rainfallPlot(maf = usefulMAF, detectChangePoints = TRUE, pointSize = 0.4)
+plotVaf(maf = usefulMAF, vafCol = 'VAF')
+somaticInteractions(maf = usefulMAF, top = 25, pvalue = c(0.05, 0.1))
+```
+
+
