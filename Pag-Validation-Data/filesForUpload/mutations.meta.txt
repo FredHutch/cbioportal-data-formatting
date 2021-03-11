@@ -1,9 +1,8 @@
-cancer_study_identifier: Leukamia_AML1
-genetic_alteration_type: MUTATION
+cancer_study_identifier: pag_ith_validation_initial
+genetic_alteration_type: MUTATION_EXTENDED
 datatype: MAF
 stable_id: mutations
 show_profile_in_analysis_tab: true
 profile_description: Mutation data from TruSight One Panel sequencing. 
 profile_name: Mutations
-data_filename: data-pag-validation_maftools.maf
-swissprot_identifier: name
+data_filename: mutations-pag-validation.maf

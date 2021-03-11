@@ -1,0 +1,7 @@
+type_of_cancer: immortal_cell_line
+cancer_study_identifier: pag_ith_validation_initial
+name: Paguirigan Cell line ITH Validation Dataset
+description: Validation dataset for ITH research with only cell line data
+short_name: ITH Valid (Pag)
+reference_genome: hg38
+add_global_case_list: true

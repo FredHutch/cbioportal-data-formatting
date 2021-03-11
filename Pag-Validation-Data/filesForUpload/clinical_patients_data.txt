@@ -1,8 +1,11 @@
-SUBJECT_ID	DIAGNOSIS	SUBTYPE	SEX	RACE
+#Patient Identifier	Diagnosis	Subtype	Sex	Race
+#Patient Identifier	Diagnosis	Subtype	Sex	Race
+#STRING	STRING	STRING	STRING	STRING
+#1	1	1	1	1
+PATIENT_ID	DIAGNOSIS	SUBTYPE	SEX	RACE
 CM-M33-O33-K33	aml	[Not Available]	unknown	unknown
 CM-M40-O40-K20	aml	[Not Available]	unknown	unknown
 CM-M50-O50	aml	[Not Available]	unknown	unknown
 KG1a	aml	[Not Available]	male	white
 MOLM14-L1	secondaryaml	FAB_M5	male	unknown
 OCI-AML3	aml	FAB_M4	male	unknown
-OCI-AML3	aml	[Not Available]	[Not Available]	[Not Available]

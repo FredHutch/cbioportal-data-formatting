@@ -98,25 +98,32 @@ write.mafSummary(forMaf, basename = "./Pag-Validation-Data/mafProcessing/pag-val
 
 
 # Write out annotation data for patients for cbioportal
+- column names need to be in all upper case
+- data files will need to be tab separated
 ```{r}
 metadata <- left_join(annot, selectedData)
 
 unique(metadata$study_id)
 study <- metadata %>% group_by(study_id) %>% summarize(submission_id, protocol, protocol_org) %>% unique()
-write_delim(study, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-study.txt", delim = "\t")
+colnames(study) <- toupper(colnames(study))
+write_delim(study, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-study.txt", delim = "\t", na = "[Not Available]")
 
 unique(metadata$subject_id)
-clinical_patients <- metadata %>% group_by(subject_id) %>% summarize(diagnosis, subtype, sex, race ) %>% unique()
-write_delim(clinical_patients, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-clinical_patients.txt", delim = "\t")
+clinical_patients <- metadata %>% group_by(subject_id) %>% summarize(diagnosis, subtype, sex, race ) %>% unique() %>% rename("patient_id"="subject_id")
+colnames(clinical_patients) <- toupper(colnames(clinical_patients))
+write_delim(clinical_patients, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-clinical_patients.txt", delim = "\t", na = "[Not Available]")
 
 unique(metadata$biospecimen_id)
-clinical_samples <- metadata %>% group_by(biospecimen_id) %>% summarize(collection_event, collection_type, tissue_type_origin, cell_line_id) %>% unique()
-write_delim(clinical_samples, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-clinical_samples.txt", delim = "\t")
+# requires both patient_id (subject_id) and SAMPLE_ID
+clinical_samples <- metadata %>% group_by(SAMPLE_ID) %>% summarize(subject_id, collection_event, collection_type, tissue_type_origin, cell_line_id) %>% unique() %>% rename("patient_id"="subject_id")
+colnames(clinical_samples) <- toupper(colnames(clinical_samples))
+write_delim(clinical_samples, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-clinical_samples.txt", delim = "\t",na = "[Not Available]")
 
 
 unique(metadata$Tumor_Sample_Barcode)
 genomics_samples <- metadata %>% group_by(Tumor_Sample_Barcode) %>% summarize(genomics_type, seq_flowcell_id, seq_libtype, seq_pool) %>% unique()
-write_delim(genomics_samples, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-genomics_samples.txt", delim = "\t")
+colnames(genomics_samples) <- toupper(colnames(genomics_samples))
+write_delim(genomics_samples, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-genomics_samples.txt", delim = "\t",na = "[Not Available]")
 
 ```
 

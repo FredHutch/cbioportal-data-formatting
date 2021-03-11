@@ -1,3 +1,7 @@
+#Sample id	Patient id	Collection Event	Collection Type	Tissue Type of Origin	Cell Line ID
+#Sample id	Patient id	Collection Event	Collection Type	Tissue Type of Origin	Cell Line ID
+#STRING	STRING	STRING	STRING	STRING	STRING
+#1	1	1	1	2	2
 SAMPLE_ID	PATIENT_ID	COLLECTION_EVENT	COLLECTION_TYPE	TISSUE_TYPE_ORIGIN	CELL_LINE_ID
 M00000513-OCI-AML3	OCI-AML3	diagnosis	unknown	peripheralblood	OCI-AML3
 M00000522-MOLM14-L1	MOLM14-L1	diagnosis	unknown	peripheralblood	MOLM14-L1
