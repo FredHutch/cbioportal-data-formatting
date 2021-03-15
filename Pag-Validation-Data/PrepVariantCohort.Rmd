@@ -74,9 +74,11 @@ unique(res1$molecular_id)
 
 # Make into a MAF
 ```{r}
-annot <- selectedData %>% select(molecular_id, seq_flowcell_id, age_range, tissue_type, seq_pool, study_id, subject_id, biospecimen_id, assay_material_id) %>% mutate(Tumor_Sample_Barcode = paste(molecular_id, assay_material_id, sep = "-"), SAMPLE_ID = paste(molecular_id, biospecimen_id, sep = "-"))
+annot <- selectedData %>% select(molecular_id, seq_flowcell_id, age_range, tissue_type, seq_pool, study_id, subject_id, biospecimen_id, assay_material_id) %>% mutate(Tumor_Sample_Barcode = paste(molecular_id, biospecimen_id, sep = "-"), SAMPLE_ID = paste(molecular_id, biospecimen_id, sep = "-"))
 
 n_distinct(annot$Tumor_Sample_Barcode) # must be unique for all samples!!
+### For some reason the SMAPLE_ID needs to be the same as the Tumor_Sample_Barcode for mutation data.  Why they called this something different appears to be a TCGA artifact, but for now it's just the way it is.  
+## 
 
 annotatedVariants <- left_join(res1, annot %>% select(molecular_id, Tumor_Sample_Barcode, SAMPLE_ID))
 
@@ -125,12 +127,17 @@ genomics_samples <- metadata %>% group_by(Tumor_Sample_Barcode) %>% summarize(ge
 colnames(genomics_samples) <- toupper(colnames(genomics_samples))
 write_delim(genomics_samples, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-genomics_samples.txt", delim = "\t",na = "[Not Available]")
 
+
+### Cases Sequenced
+cat(metadata$Tumor_Sample_Barcode, sep = "\t", file = "./Pag-Validation-Data/uploadPrep/TGRmeta-cases-sequenced.txt")
 ```
 
 
 
+```{r}
 
 
+```
 
 
 

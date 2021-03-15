@@ -1,0 +1,5 @@
+cancer_study_identifier: pag_ith_validation_initial
+stable_id: pag_ith_validation_initial_sequenced
+case_list_name: Samples profiled for mutations
+case_list_description: This is this case list that contains all samples that are profiled for mutations.
+case_list_ids: M00000513-OCI-AML3	M00000522-MOLM14-L1	M00000529-KG1a	M00000874-CM-M33-O33-K33	M00000876-CM-M33-O33-K33	M00000891-CM-M40-O40-K20	M00000892-CM-M40-O40-K20	M00000906-CM-M50-O50	M00001142-CM-M33-O33-K33	M00001352-OCI-AML3	M00001424-OCI-AML3
