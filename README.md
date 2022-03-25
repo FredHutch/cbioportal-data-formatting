@@ -35,6 +35,8 @@ cd <local version of tg-cbioportal-data repo>
 VALIDDATA=$(pwd) ## example: /github/public/tg-cbioportal-data/Pag-Validation-Data/filesForUpload
 
 $CBIO/core/src/main/scripts/importer/validateData.py -s $VALIDDATA -u http://cbioportal.fredhutch.org -v
+
+$CBIO/core/src/main/scripts/importer/validateData.py -s $VALIDDATA -u http://cbioportal.org -v
 ```
 
 #### General links to docs

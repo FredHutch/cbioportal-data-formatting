@@ -130,6 +130,15 @@ write_delim(genomics_samples, file = "./Pag-Validation-Data/uploadPrep/TGRmeta-g
 
 ### Cases Sequenced
 cat(metadata$Tumor_Sample_Barcode, sep = "\t", file = "./Pag-Validation-Data/uploadPrep/TGRmeta-cases-sequenced.txt")
+
+
+### Gene Panel
+## For Trusight One, we have a gene list provided for us!!
+## s3://fh-pi-paguirigan-a-eco/ReferenceDataSets/DNASeqArchivePanelData/TruSightOne/TruSight-One-Gene-List-May-2014.txt
+
+genes <- read.delim("./Pag-Validation-Data/uploadPrep/TruSight-One-Gene-List-May-2014.txt", header = F)
+cat(genes$V1, sep = "\t", file = "./Pag-Validation-Data/uploadPrep/TGRmeta-tabsepGeneList.txt")
+
 ```
 
 
