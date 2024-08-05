@@ -1,0 +1,165 @@
+{
+    "merged_mafs": {
+        "dir": "merged_mafs",
+        "dtypes": {
+            "mutation": {
+                "ext": "maf",
+                "cbio_name": "data_mutations_extended.txt",
+                "meta_file_attr": {
+                    "stable_id": "mutations",
+                    "profile_name": "Mutations",
+                    "profile_description": "Calls from Strelka2 v2.9.3. Stripped annotated as Silent, Intron, IGR, 3'UTR, 5'UTR, 3'Flank, 5'Flank, RNA and required min alt ct of 5, min tumor depth of 30",
+                    "genetic_alteration_type": "MUTATION_EXTENDED",
+                    "datatype": "MAF",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+      },
+      "merged_protein": {
+        "dir": "merged_protein",
+        "dtypes": {
+            "quantification": {
+                "ext": "quantification.txt",
+                "cbio_name": "data_protein_quantification.txt",
+                "meta_file_attr": {
+                    "stable_id": "protein_quantification",
+                    "profile_name": "Protein levels",
+                    "profile_description": "Protein levels measured with mass spectrometry by the Clinical Proteomic Tumor Analysis Consortium (CPTAC) for a subset of CBTN samples",
+                    "genetic_alteration_type": "PROTEIN_LEVEL",
+                    "datatype": "LOG2-VALUE",
+                    "show_profile_in_analysis_tab": "false"
+                }
+            },
+            "zscore": {
+                "ext": "quantification_Zscores.txt",
+                "cbio_name": "data_protein_quantification_Zscores.txt",
+                "meta_file_attr": {
+                    "stable_id": "protein_quantification_zscores",
+                    "profile_name": "Z scores of protein levels",
+                    "profile_description": "Z scores of study protein expression (mass spectrometry by CPTAC)",
+                    "genetic_alteration_type": "PROTEIN_LEVEL",
+                    "datatype": "Z-SCORE",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+      },
+    "merged_cnvs": {
+        "dir": "merged_cnvs",
+        "dtypes": {
+            "linear": {
+                "ext": "log2_ratio.tsv",
+                "cbio_name": "data_linear_CNA.txt",
+                "meta_file_attr": {
+                    "stable_id": "log2CNA",
+                    "profile_name": "copy-number values",
+                    "profile_description": "Predicted copy number values from WGS (log2 ratio). Copy number calls obtained using CNVkit v2.9.3",
+                    "genetic_alteration_type": "COPY_NUMBER_ALTERATION",
+                    "datatype": "LOG2-VALUE",
+                    "show_profile_in_analysis_tab": "false"
+                }
+
+            }
+        }
+    },
+    "merged_rsem": {
+        "dir": "merged_rsem",
+        "dtypes": {
+            "counts": {
+                "ext": "log2_fpkm.tsv",
+                "cbio_name": "data_rna_seq_v2_mrna.txt",
+                "meta_file_attr": {
+                    "stable_id": "rna_seq_v2_mrna",
+                    "profile_name": "RNA expression",
+                    "profile_description": "Log2 of FPKM + 1 expresstion values. STAR v2.6.1d aligned + RSEM v1.3.1 quantification.",
+                    "genetic_alteration_type": "MRNA_EXPRESSION",
+                    "datatype": "CONTINUOUS",
+                    "show_profile_in_analysis_tab": "false"
+                }
+            },
+            "zscore": {
+                "ext": "zscore.log2_fpkm.tsv",
+                "cbio_name": "data_rna_seq_v2_mrna_median_Zscores.txt",
+                "meta_file_attr": {
+                    "stable_id": "rna_seq_v2_mrna_median_Zscores",
+                    "profile_name": "RNA expression z-scores",
+                    "profile_description": "Expression levels from RNA-Seq, Z scores of log2(FPKM + 1) values",
+                    "genetic_alteration_type": "MRNA_EXPRESSION",
+                    "datatype": "Z-SCORE",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+    },
+    "data_sheets": {
+        "dir": "datasheets",
+        "dtypes": {
+            "patient": {
+                "cbio_name": "data_clinical_patient.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "PATIENT_ATTRIBUTES"
+                }
+            },
+            "sample": {
+                "cbio_name": "data_clinical_sample.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "SAMPLE_ATTRIBUTES"
+                }
+            }
+        }
+    },
+    "study": {
+        "_comment": "If a big study being split into many, make cancer_study_identifer blank, dx will be used",
+        "description": ["", ". We report a comprehensive proteogenomics analysis, including whole-genome sequencing, RNA sequencing, and proteomics and phosphoproteomics profiling, of 218 tumors across 7 histological types of childhood brain cancer: low-grade glioma (n = 93), ependymoma (32), high-grade glioma (25), medulloblastoma (22), ganglio-glioma (18), craniopharyngioma (16), and atypical teratoid rhabdoid tumor (12). Proteomics data identify common biological themes that span histological boundaries, suggesting that treatments used for one histological type may be applied effectively to other tumors sharing similar proteomics features. Immune landscape characterization reveals diverse tumor microenvironments across and within diagnoses. Proteomics data further reveal functional effects of somatic mutations and copy number variations (CNVs) not evident in transcriptomics data. https://doi.org/10.1016/j.cell.2020.10.044"],
+        "groups": "PUBLIC",
+        "cancer_study_identifier": "cptac_published",
+        "reference_genome": "hg38",
+        "dir_suffix": "",
+        "name_append": "(IPC, CPTAC, Publication)"
+    },
+    "cases_3way_complete": {
+        "stable_id": "3way_complete",
+        "case_list_name": "Tumor samples with mutation, CNA and mRNA data",
+        "case_list_description": "All tumor samples with mutation, CNA, and mRNA data",
+        "case_list_category": "all_cases_with_mutation_and_cna_and_mrna_data"
+    },
+    "cases_all": {
+        "stable_id": "all",
+        "case_list_name": "All Tumors",
+        "case_list_description": "All tumor samples",
+        "case_list_category": "all_cases_in_study"
+    },
+    "cases_cnaseq": {
+        "stable_id": "cnaseq",
+        "case_list_name": "Tumor samples with mutation and CNA data",
+        "case_list_description": "All tumor samples with mutation and CNA data",
+        "case_list_category": "all_cases_with_mutation_and_cna_data"
+    },
+    "cases_cna": {
+        "stable_id": "cna",
+        "case_list_name": "Tumor Samples with CNA data",
+        "case_list_description": "All tumors with CNA data",
+        "case_list_category": "all_cases_with_cna_data"
+    },
+    "cases_RNA_Seq_v2_mRNA": {
+        "stable_id": "rna_seq_v2_mrna",
+        "case_list_name": "Tumor Samples with mRNA data (RNA Seq V2)",
+        "case_list_description": "All samples with mRNA expression data",
+        "case_list_category": "all_cases_with_mrna_rnaseq_data"
+    },
+    "cases_rppa": {
+        "stable_id": "rppa",
+        "case_list_name": "Tumor samples with protein quantification data",
+        "case_list_description": "All samples with protein quantification data",
+        "case_list_category": "all_cases_with_rppa_data"
+    },
+    "cases_sequenced": {
+        "stable_id": "sequenced",
+        "case_list_name": "Tumor samples with mutations",
+        "case_list_description": "All tumor samples with mutation data",
+        "case_list_category": "all_cases_with_mutation_data"
+    }
+}

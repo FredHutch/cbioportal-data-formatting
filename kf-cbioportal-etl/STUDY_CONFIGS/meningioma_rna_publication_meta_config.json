@@ -1,0 +1,148 @@
+{
+    "_doc":{
+        "_description": "This section of the document is meant to help understand the organization of key-value pairs and how it supports the creation of files from  https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats as part of the cBioportal ETL",
+        "sections": {
+            "merged_x": {
+                "_description": "Support information for merged genomic data and supporting meta files. ",
+                "dir": "output directory for merged results. Should match output dir specified by etl conversion script at run time",
+                "dtypes": {
+                    "_description": "Data types - cBio defined data types. _comment has link to detailed specifics in each section.",
+                    "ext": "File extension of merged outputs from etl script",
+                    "cbio_name": "cBio output file name - a soft link to the etl output created inside the study directory",
+                    "meta_file_attributes": "Direct key-value paris used by cBio in a meta_x file used to describe data_x files"
+                }
+            },
+            "study": "Special meta file used to describe the cBio study",
+            "case_x": "cBio case lists - sample lists describing which samples have mutation data, sv data, cnv data, etc. See https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#case-lists for specifics",
+            "data_sheets": "Clinical patient and sample data as well as gene matrix if panel data present. Distinct from other data_x files in that in contains sample and patient metadata and not genomic data",
+            "database_pulls": {
+                "_description": "This section is used to support pulling auto-generated clinical data tables and supporting genomics etl information from the D3b Data Warehouse",
+                "manifests": {
+                    "<manifest descriptor>": {
+                        "_description": "The key for this field is meant to be a convenient descriptor of what sub-study files derive from, as a cBio study make come from many sources",
+                        "table": "D3b warehouse table name with relevant file info",
+                        "file_types": "Manifests typically contain all possible harmonization outputs. Specifying specific file_type(s) limits to relevant outputs. Exception is annotated_public_output, etl will pull only he maf as vcfs are included in that query.",
+                        "out_file": "Desired output file name"
+                    }
+                },
+                "x_head": "Special header file table for data_clinical(sample/patient). cBio data_clinical headers have 5 header rows, and which columns are used are determined by the x_file table",
+                "x_file": "sample or patient tables with corresponding metadata at the sample and patient levels",
+                "genomics_etl": "a helper file with relevant cBio sample names and individual genomic files names for ETL merging",
+                "seq_center": "only if project has RNA data, a helper file to fill in missing sequencing center information for genomics etl",
+                "gene_file": "Only if study has panel data, the source information for gene matrix in the data_sheets section"
+
+            }
+        }
+    },
+    "merged_rsem": {
+        "_comment": " see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#expression-data for detailed specifics",
+        "dir": "merged_rsem",
+        "dtypes": {
+            "counts": {
+                "ext": "rsem_merged.txt",
+                "cbio_name": "data_rna_seq_v2_mrna.txt",
+                "meta_file_attr": {
+                    "stable_id": "rna_seq_v2_mrna",
+                    "profile_name": "RNA expression",
+                    "profile_description": "Expression levels from RNA-Seq (rsem FPKM)",
+                    "genetic_alteration_type": "MRNA_EXPRESSION",
+                    "datatype": "CONTINUOUS",
+                    "show_profile_in_analysis_tab": "false"
+                }
+            },
+            "zscore": {
+                "ext": "rsem_merged_zscore.txt",
+                "cbio_name": "data_rna_seq_v2_mrna_median_Zscores.txt",
+                "meta_file_attr": {
+                    "stable_id": "rna_seq_v2_mrna_median_Zscores",
+                    "profile_name": "RNA expression z-scores",
+                    "profile_description": "Expression levels from RNA-Seq, Z scores of log2(FPKM + 1) values",
+                    "genetic_alteration_type": "MRNA_EXPRESSION",
+                    "datatype": "Z-SCORE",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+    },
+    "data_sheets": {
+        "dir": "datasheets",
+        "dtypes": {
+            "patient": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#example-clinical-header for detailed specifics",
+                "cbio_name": "data_clinical_patient.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "PATIENT_ATTRIBUTES"
+                }
+            },
+            "sample": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#clinical-sample-columns for detailed specifics",
+                "cbio_name": "data_clinical_sample.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "SAMPLE_ATTRIBUTES"
+                }
+            }
+        }
+    },
+    "study": {
+        "_comment": "",
+        "description":"Meningioma samples were obtained at the Hospital of the University of Pennsylvania (HUP) and banked after intraoperative examination under IRB protocol approved by the University of Pennsylvania. The discovery set consisted of 25 meningioma samples from 20 patients, which included de novo tumors. Cite this article: Viaene, A.N., Zhang, B., Martinez-Lage, M. et al. Transcriptome signatures associated with meningioma progression. acta neuropathol commun 7, 67 (2019). https://doi.org/10.1186/s40478-019-0690-x",
+        "groups": "PUBLIC",
+        "cancer_study_identifier": "meningioma_rna_2019",
+        "type_of_cancer": "mng",
+        "short_name": "meningioma",
+        "reference_genome": "hg38",
+        "display_name": "Transcriptome signatures associated with meningioma progression(Publication)"
+    },
+    "cases_all": {
+        "stable_id": "all",
+        "case_list_name": "All Tumors",
+        "case_list_description": "All tumor samples",
+        "case_list_category": "all_cases_in_study"
+    },
+    "cases_RNA_Seq_v2_mRNA": {
+        "stable_id": "rna_seq_v2_mrna",
+        "case_list_name": "Tumor Samples with mRNA data (RNA Seq V2)",
+        "case_list_description": "All samples with mRNA expression data",
+        "case_list_category": "all_cases_with_mrna_rnaseq_data"
+    },
+    "cases_sv": {
+        "stable_id": "sv",
+        "case_list_name": "Tumor samples with fusions",
+        "case_list_description": "All tumor samples with fusion data",
+        "case_list_category": "all_cases_with_sv_data"
+    },
+    "database_pulls": {
+        "_comment": "This section is used to numerate relevant database schema and tables needed for clinical data and supporting genomic etl files",
+        "manifests": {
+            "aml": {
+                "table": "brownm28_dev_schema.lung_mito_rna-genomics_file_manifest",
+                "file_type": ["RSEM_gene","annofuse_filtered_fusions_tsv"],
+                "out_file": "lung_mito_rna_genomics_file_manifest.txt"
+            }
+        },
+        "sample_head": {
+            "table": "template_sample_header.txt"
+        },
+        "sample_file": {
+            "table": "brownm28_dev_schema.delme_lung_mito_rna_data_clinical_sample",
+            "out_file": "data_clinical_sample.txt"
+        },
+        "patient_head": {
+            "table": "template_patient_header.txt"
+        },
+        "patient_file": {
+            "table": "brownm28_dev_schema.delme_lung_mito_rna_data_clinical_patient",
+            "out_file": "data_clinical_patient.txt"
+        },
+        "genomics_etl": {
+            "table": "brownm28_dev_schema.delme_lung_mito_rna_genomics_etl_file",
+            "out_file": "cbio_file_name_id.txt"
+        },
+        "seq_center": {
+            "table": "brownm28_dev_schema.delme_lung_mito_rna_sq_info_etl_resource",
+            "out_file": "seq_center_resource.txt"
+        }
+    }
+}

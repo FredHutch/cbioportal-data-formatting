@@ -1,0 +1,5 @@
+CBTTC Diagnosis	MB cbioportal id	MB cbioportal name
+Ganglioglioma	phgg	Pediatric high-grade glioma resources from the Children's Brain Tumor Tissue Consortium
+High-grade glioma/astrocytoma (WHO grade III/IV)	phgg	Pediatric high-grade glioma resources from the Children's Brain Tumor Tissue Consortium
+Low-grade glioma/astrocytoma (WHO grade I/II)	phgg	Pediatric high-grade glioma resources from the Children's Brain Tumor Tissue Consortium
+Supratentorial or Spinal Cord PNET	phgg	Pediatric high-grade glioma resources from the Children's Brain Tumor Tissue Consortium
