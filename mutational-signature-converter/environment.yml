@@ -1,0 +1,15 @@
+name: mutational_signature
+channels:
+  - defaults
+  - bioconda
+dependencies:
+  - r-data.table
+  - samtools
+  - r-rstan
+  - python=2.7
+  - r-optparse
+  - notebook
+  - bedtools
+  - pandas
+prefix: /opt/anaconda2/envs/mutational_signature
+
