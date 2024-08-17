@@ -13,7 +13,7 @@ This part of the repository is organized by cBioportal file format and includes 
 
   `scripts/` – Contains scripts that will help with transforming your data from an unformatted version to a cBioportal-compatible format. 
   
-  `examples/` – Contains example test data for testing the functionality of the scripts and for testing upload
+  `example/` – Contains example test data for testing the functionality of the scripts and for testing upload
 
   ``_example_unformatted.txt`` - An example test dataset that is unformatted. This is an example of data in a format you may usually start with. 
   
