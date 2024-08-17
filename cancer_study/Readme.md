@@ -1,5 +1,7 @@
 #### This is a required file for any study to be uploaded
 
+This is a multiline text file and can be created using any text editor.
+
 # Cancer Study
 As described in the Data Loading tool page, the following file is needed to describe the cancer study:
 
