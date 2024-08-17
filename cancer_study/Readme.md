@@ -10,7 +10,7 @@ You can create this file using any text editor (e.g., Notepad, VS Code). Each fi
 
 ## Required Fields
 
-1. **type_of_cancer**: The cancer type abbreviation, e.g., "brca". This should be the same cancer type as specified in the meta_cancer_type.txt file, if available. The type can be "mixed" for studies with multiple cancer types.
+1. **type_of_cancer**: The cancer type abbreviation, e.g., "brca". This should be the same cancer type as specified in the meta_cancer_type.txt file, if available (note a meta_cancer_type.txt file is only required if a cancer type is being uploaded that is not already in the database). The type can be "mixed" for studies with multiple cancer types (not to be used if uploading data from multiple tumors from the same cancer type).
 
 2. **cancer_study_identifier**: A string used to uniquely identify this cancer study within the database, e.g., "brca_joneslab_2013".
 
