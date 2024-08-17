@@ -1,4 +1,7 @@
 _Ref: https://docs.cbioportal.org/file-formats/#cancer-study_
+
+This is a required file for any study to be uploaded
+
 # Cancer Study
 As described in the Data Loading tool page, the following file is needed to describe the cancer study:
 
