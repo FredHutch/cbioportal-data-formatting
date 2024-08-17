@@ -1,4 +1,51 @@
-# tg-cbioportal-data
+# Data Formatting for cBioportal
+
+Welcome to the Data Formatting for cBioportal GitHub repository! 
+
+This repository provides publicly available helpful scripts to transform your data into a format compatible with cBioportal. 
+
+
+## Repository Structure
+
+### Format your data
+
+This part of the repository is organized by cBioportal file format and includes the following:
+
+  `scripts/` – Contains scripts that will help with transforming your data from an unformatted version to a cBioportal-compatible format. 
+  
+  `examples/` – Contains example test data for testing the functionality of the scripts and for testing upload
+
+  ``_example_unformatted.txt`` - An example test dataset that is unformatted. This is an example of data in a format you may usually start with. 
+  
+  ``_example_formatted.txt`` – The example test data that is cBioportal-compatible formatted 
+
+### Validate your formatted data
+
+### Upload your formatted data into a local instance of cBioportal
+
+## Helpful links
+
+### cBioportal documentation
+
+Expected file formats for different data types for cBioportal: https://docs.cbioportal.org/file-formats/
+
+Overview of what a completed data "package" would look like for upload into cBioportal: https://github.com/cBioPortal/cbioportal/blob/master/docs/Data-Loading.md#preparing-study-data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### tg-cbioportal-data
 
 Use the following link for instructions of file validation and uploading:
 https://docs.cbioportal.org/5.1-data-loading/data-loading/using-the-dataset-validator
@@ -10,7 +57,7 @@ Link for oncotree portal - useful for knowing what cancer types and their docume
 http://oncotree.mskcc.org/#/home
 
 
-## Test validation using example dataset
+#### Test validation using example dataset
 
 ```
 
@@ -39,14 +86,4 @@ $CBIO/core/src/main/scripts/importer/validateData.py -s $VALIDDATA -u http://cbi
 $CBIO/core/src/main/scripts/importer/validateData.py -s $VALIDDATA -u http://cbioportal.org -v
 ```
 
-#### General links to docs
-Overview of what a data "package" would look like for upload into cbioportal:
-https://github.com/cBioPortal/cbioportal/blob/master/docs/Data-Loading.md#preparing-study-data
 
-Note here that file names don't have to START with "meta" but do have to have it at the beginning or end.  
-
-Consider making our format `clinical.meta` and `clinical_data.txt` to make them show up in alphabetical order together in the OS UI.  
-
-
-Bunch of info about the data formats that need to be used:
-https://github.com/cbioportal/cbioportal/blob/master/docs/File-Formats.md#introduction
