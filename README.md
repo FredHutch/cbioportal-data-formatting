@@ -11,8 +11,9 @@ This repository provides helpful scripts and instructions to transform your data
 
 There are two types of data files that are uploaded within a study:
 
-1. meta files: These files are usually a multi-line text file containing information about the data (meta to the data). You can create this file using any text editor (e.g., Notepad, VS Code). Each field should be filled based on your study's details.
-2. data files: These files contain the actual data that is to be uploaded
+1. **meta files**: These files are usually a multi-line text file containing information about the data (meta to the data). You can create this file using any text editor (e.g., Notepad, VS Code). Each field should be filled based on your study's details.
+
+2. **data files**: These files contain the actual data that is to be uploaded
    
 This part of the repository is organized by cBioportal file format and includes the following:
 
