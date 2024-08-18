@@ -1,14 +1,13 @@
 # Cancer Study
 
-This file contains metadata about the cancer study. It is a single text file. 
+This is a single text file containing metadata about the cancer study. 
 
-Example filename: **meta_study.txt**
+**Files to prepare:**
+| Filename (suggested)    | Filetype    | Requirement    |Example data filename
+|-------------|-------------|-------------|-------------|
+| meta_study.txt | Meta |Required |meta_study_example_formatted.txt 
 
-Filetype: **meta** 
-
-Requirement: **required**
-
-## How to prepare the file
+## How to prepare the meta_study.txt file
 
 ### Required Fields
 
@@ -33,7 +32,7 @@ Requirement: **required**
 
 6. **reference_genome**: the study reference genome (e.g. hg19, hg38). Without specifying this property, the study will be assigned to the reference genome specified in application.properties (property ucsc.build).
 
-## Example
+### Example (from cBioportal)
 
 ```
 type_of_cancer: brca
