@@ -2,26 +2,31 @@
 
 Welcome to the Data Formatting for cBioportal GitHub repository! 
 
-This repository provides publicly available helpful scripts to transform your data into a format compatible with cBioportal. 
+This repository provides helpful scripts and instructions to transform your data into a format compatible with cBioportal. 
 
 
 ## Repository Structure
 
-### Format your data
+### format_your_data
 
+There are two types of data files that are uploaded within a study:
+
+1. meta files: These files are usually a multi-line text file containing information about the data (meta to the data)
+2. data files: These files contain the actual data that is to be uploaded
+   
 This part of the repository is organized by cBioportal file format and includes the following:
 
   `scripts/` – Contains scripts that will help with transforming your data from an unformatted version to a cBioportal-compatible format. 
   
-  `example/` – Contains example test data for testing the functionality of the scripts and for testing upload
+  `example/` – Contains example data and file formats that can be used for testing the functionality of the scripts as well as testing upload
 
-  ``_example_unformatted.txt`` - An example test dataset that is unformatted. This is an example of data in a format you may usually start with. 
+  ``_example_unformatted.txt`` - An example test dataset that is unformatted. This is an example of data in a format you may usually start with. You can use the scripts to test how to convert files from a raw format to cBioportal-compatible format.
   
-  ``_example_formatted.txt`` – The example test data that is cBioportal-compatible formatted 
+  ``_example_formatted.txt`` – Example file that is cBioportal-compatible formatted. This is what the example data should look like once you have used the scripts to process the example unformatted data files. 
 
-### Validate your formatted data
+### validate_your_study
 
-### Upload your formatted data into a local instance of cBioportal
+### launch_local_cbioportal_instance
 
 ## Helpful links
 
