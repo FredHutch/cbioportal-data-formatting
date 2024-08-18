@@ -1,6 +1,8 @@
-# Cancer Study Meta File 
+# Cancer Study
 
 **meta_study.txt**
+
+This file a **meta** filetype
 
 This is a **required file** for any study being uploaded into cBioportal.
 
