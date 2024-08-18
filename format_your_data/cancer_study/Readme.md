@@ -2,13 +2,12 @@
 
 **meta_study.txt**
 
-This file a **meta** filetype
+This file a **meta** file type
 
 This is a **required file** for any study being uploaded into cBioportal.
 
 This file contains metadata about the cancer study. 
 
-You can create this file using any text editor (e.g., Notepad, VS Code). Each field should be filled based on your study's details.
 
 ## Required Fields
 
