@@ -4,10 +4,9 @@ Welcome to the Data Formatting for cBioportal GitHub repository!
 
 This repository provides helpful scripts and instructions to transform your data into a format compatible with cBioportal. 
 
-
 ## Repository Structure
 
-### format_your_data
+#### format_your_data
 
 There are two types of data files that are uploaded within a study:
 
@@ -25,9 +24,22 @@ This part of the repository is organized by cBioportal file format and includes 
   
   ``_example_formatted.txt`` – Example file that is cBioportal-compatible formatted. This is what the example data should look like once you have used the scripts to process the example unformatted data files. 
 
-### validate_your_study
+#### validate_your_study
 
-### launch_local_cbioportal_instance
+#### launch_local_cbioportal_instance
+
+## A few things to keep in mind as you prepare your study for upload
+
+There are just a few rules to follow:
+
+- meta_study, meta_clinical and respective clinical data file are the only mandatory files.
+  
+- cancer type files can be mandatory if the study is referring to a cancer type that does not yet exist in the DB.
+  
+- meta files can be named anything, as long as it starts or ends with name 'meta'. E.g. meta_test, meta.test, test.meta are all fine; metal_test and metastudy are wrong.
+  
+- data files can be named anything and are referenced by a property data_filename set in the meta file.
+
 
 ## Helpful links
 
