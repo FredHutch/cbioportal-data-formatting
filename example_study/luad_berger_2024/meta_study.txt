@@ -1,0 +1,10 @@
+type_of_cancer: luad
+cancer_study_identifier: luad_berger_2024
+name: Lung Cancer in Never Smokers from the WHI (FHCC, JCI Insight 2024)
+description: Sequencing of 73 match tumor-normal pairs from post-menopausal women never, light and heavy smokers enrolled in the Womens Health Initiative.
+citation: Moorthi et al. JCI Insight 2024
+pmid: 39052387
+groups: 
+add_global_case_list: true
+tags: 
+reference_genome: hg19

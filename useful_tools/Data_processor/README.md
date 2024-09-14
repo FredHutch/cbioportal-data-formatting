@@ -1,15 +1,38 @@
-## Data-processor
-This script is made to convert existing clinical datasets to the clinical data format [required by cBioportal.](https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#clinical-data).
+_Note: This readme is adapted from the original repository reaedme. Original repository: https://github.com/MJKorte/Data-processor_
 
-### Usage
-* The generate_metadata.py script works by using terminal input. Terminal input looks like this: `./generate_metadata.py -i 'your_dataset_file.xlsx' -s 'sheet_name' -a 'Your_annotation_file.xlsx'`
-* The "-i" flag is the name of the Excel clinical data file which needs to be placed in the in the /data/input folder included in this repository.
-* The "-s" flag is the sheet name of the the Excel data sheet which is especially usefull when using clinical data files with multiple sheets.
-* The "-a" flag is the name of the annotation file, the first time the script is ran for a new dataset, this flag can be left empty like this: `./generate_metadata.py -i 'your_dataset_file.xlsx' -s 'sheet_name' -a`. 
+## Data Processor 
 
-* The script will generate an annotation file, usage is described below. The data folder contains the in- and output folder. The script expects an Excel file in the "input" folder and writes the data files with metadata to the "output" folder.
+This tool is used to convert clinical data files from multi-tab excel files into files that can be uploaded into cBioportal. These include the data_clinical_patient.txt or data_clinical_sample.txt files and their respective meta files. 
 
-### Annotation file
+### Folder structure 
+
+1. **data**: This folder has two sub-folders called **input** and **output**. 
+*Note: Do not delete*
+
+2. **requirements.txt**: This has the list of software dependancies that are needed to run this tool. 
+
+3. **scripts**: The scripts required to run this tool
+*Note: Do not delete*
+
+4. **example**: The example study that can be used to test the script
+
+
+### Prerequistes
+
+1. Make sure you have a local copy of this repository
+
+2. Make sure you have all the dependancies installed (see requirements.txt)
+
+You can install these using either of these two commands in a terminal window
+	
+	`pip3 install pandas numpy openpyxl`
+	
+
+	`python install pandas numpy openpyxl`
+
+3. Have an excel file with your input clinical data 
+
+### Things to consider when preparing your excel file with clinical data 
 
 #### Formatting
 * The script expects a clinical Excel datafile with the first row as variable names. Because cBioportal has special treatment for certain variables these variables can be formatted and used by the script. 
@@ -21,6 +44,26 @@ This script is made to convert existing clinical datasets to the clinical data f
 * For example: if you want the variable T_nr to be the patient_ID used in cBioportal rename the column variable name to "\*T_nr". The same works for the sample ID, but with "#". 
 
 * For the Sample ID it is possible to mark multiple column names with "#" which combines the variables in these columns to a sample ID with a "-" connecting the values.
+
+
+5. Create the annotation file 
+python3 ./scripts/generate_metadata.py -i 'Example_clinical_datasheet.xlsx' -s 'Sheet1' -a 'Example_clinical_datasheet_annotation.xlsx'
+
+6. This will create an annotation file in your input folder 
+
+7. 
+
+
+* The generate_metadata.py script works by using terminal input. Terminal input looks like this: `./generate_metadata.py -i 'your_dataset_file.xlsx' -s 'sheet_name' -a 'Your_annotation_file.xlsx'`
+* The "-i" flag is the name of the Excel clinical data file which needs to be placed in the in the /data/input folder included in this repository.
+* The "-s" flag is the sheet name of the the Excel data sheet which is especially usefull when using clinical data files with multiple sheets.
+* The "-a" flag is the name of the annotation file, the first time the script is ran for a new dataset, this flag can be left empty like this: `./generate_metadata.py -i 'your_dataset_file.xlsx' -s 'sheet_name' -a`. 
+
+* The script will generate an annotation file, usage is described below. The data folder contains the in- and output folder. The script expects an Excel file in the "input" folder and writes the data files with metadata to the "output" folder.
+
+### Annotation file
+
+
 
 
 The script will generate an Excel file called "Annotation_file.xlsx", this file consists of 2 sheets "Annotation" and "Meta study". Rows in the "Annotation" sheet can be deleted to remove variables from the final data files.

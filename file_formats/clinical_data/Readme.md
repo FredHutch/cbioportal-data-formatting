@@ -1,16 +1,12 @@
-# Clinical data
+## Clinical data
 
-Clinical data files are used to capture clinical attributes associated with patients and/or samples. 
+Clinical data files are used to capture clinical attributes associated with the genomic data from patients and/or samples.
 
-cBioportal supports the upload of multiple samples per patient. 
+Clinical data files are used to do 2 things within cBioportal:
 
-These set of files have both data and meta filetypes. 
+1. Add clinical attributes at both the patient level and the sample level to the genomic data
 
-Clinical data files are used to capture:
-
-1. clinical attributes at the patient level and the sample level
-
-2. the mapping between sample IDs and patient IDs
+2. Capture the mapping between samples and patients. This is especially important when dealing with multiple samples from the same patient. 
 
 **Files to prepare:**
 | Filename (suggested)    | Filetype    | Requirement    |Example data filename
