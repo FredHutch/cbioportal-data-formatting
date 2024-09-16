@@ -1,5 +1,6 @@
 ## Clinical data
 
+
 Clinical data files are used to capture clinical attributes associated with the genomic data from patients and/or samples.
 
 Clinical data files are used to do 2 things within cBioportal:
@@ -9,14 +10,14 @@ Clinical data files are used to do 2 things within cBioportal:
 2. Capture the mapping between samples and patients. This is especially important when dealing with multiple samples from the same patient. 
 
 **Files to prepare:**
-| Filename (suggested)    | Filetype    | Requirement    |Example data filename
-|-------------|-------------|-------------|-------------|
-| meta_clinical_sample.txt | Meta |Required |meta_clinical_sample_example_formatted.txt
-| data_clinical_sample.txt | Data |Required |data_clinical_sample_example_formatted.txt
-| meta_clinical_patient.txt | Meta |Optional |meta_clinical_patient_example_formatted.txt
-| data_clinical_patient.txt | Data |Optional |data_clinical_patient_example_formatted.txt
+| Filename (suggested)    | Filetype    | Requirement| Format  |  
+|-------------|-------------|-------------|----------|
+| meta_clinical_sample.txt | Meta |Required| Multi-line text file|
+| data_clinical_sample.txt | Data |Required |Tab-separated file|
+| meta_clinical_patient.txt | Meta |Optional |Multi-line text file|
+| data_clinical_patient.txt | Data |Optional|Tab-separated file|
 
-## How to prepare meta_clinical_sample.txt
+## Meta Clinical Sample File 
 
 ### Required Fields
 
@@ -28,21 +29,17 @@ Clinical data files are used to do 2 things within cBioportal:
 
 4. **data_filename**: your datafile
 
-### Example (from cBioportal)
-```
-cancer_study_identifier: brca_tcga_pub
-genetic_alteration_type: CLINICAL
-datatype: SAMPLE_ATTRIBUTES
-data_filename: data_clinical_sample.txt
-```
 
-## How to prepare data_clinical_sample.txt
+## Data Clinical Sample File
 
-This file is a 2-dimensional matrix with clinical attributes of the sample. 
+This file is a 2-dimensional matrix (tab separated) with clinical attributes of the sample. 
 
-### Required columns
+### Required Fields
+#### Note: To give your clinical data header please refer to [this](https://github.com/cBioPortal/clinical-data-dictionary/blob/master/docs/resource_uri_to_clinical_attribute_mapping.txt) to find appropriate column names. This allows the variables to be used for comparison across multiple studies
 
-The file begins with tab-delimited metadata describing the clinical attributes in the file. The rows for the metadata **have to start with a "#" symbol** and the following **four rows** are required:
+The file begins with tab-delimited metadata describing the clinical attributes in the file. 
+
+The rows for the metadata **have to start with a "#" symbol** and the following **four rows** are required:
 
 1. **Attribute display name**: The **1st row** must have the display name for each clinical attribute. Consecutive attribute display names should be separated by a tab.
 
@@ -122,22 +119,10 @@ The following columns additionally affect the Timeline data visualization:
 - If set to metastatic or metastasis: red
 - If set to primary or otherwise: black
 
-7. There is also a list of columns with special functionalities that can be found here: [https://docs.cbioportal.org/file-formats/#columns-with-specific-functionality]
+7. There is also a list of columns with special functionalities that can be found (here)[https://docs.cbioportal.org/file-formats/#columns-with-specific-functionality]
    
-### Example (from cBioportal)
-```
-#Patient Identifier<TAB>Sample Identifier<TAB>Subtype<TAB>...
-#Patient identifier<TAB>Sample Identifier<TAB>Subtype description<TAB>...
-#STRING<TAB>STRING<TAB>STRING<TAB>...
-#1<TAB>1<TAB>1<TAB>...
-PATIENT_ID<TAB>SAMPLE_ID<TAB>SUBTYPE<TAB>...
-PATIENT_ID_1<TAB>SAMPLE_ID_1<TAB>basal-like<TAB>...
-PATIENT_ID_2<TAB>SAMPLE_ID_2<TAB>Her2 enriched<TAB>...
-...
 
-```
-
-## How to prepare meta_clinical_patient.txt
+## Meta Clinical Patient File 
 
 ### Required Fields
 
@@ -149,17 +134,9 @@ PATIENT_ID_2<TAB>SAMPLE_ID_2<TAB>Her2 enriched<TAB>...
 
 4. **data_filename**: your datafile
 
-### Example (from cBioportal)
-```
-cancer_study_identifier: brca_tcga_pub
-genetic_alteration_type: CLINICAL
-datatype: PATIENT_ATTRIBUTES
-data_filename: data_clinical_patient.txt
 
-```
-
-## How to prepare data_clinical_patient.txt
-
+## Data Clinical Patient File 
+#### Note: To give your clinical data header please refer to [this](https://github.com/cBioPortal/clinical-data-dictionary/blob/master/docs/resource_uri_to_clinical_attribute_mapping.txt) to find appropriate column names. This allows the variables to be used for comparison across multiple studies
 This file contains information regarding the patient level information. 
 
 ### Required columns
@@ -221,7 +198,9 @@ More information on how Study View uses priority data to adjust views can be fou
 
 ### Optional columns
 
-1. **[PREFIX]_STATUS and  [PREFIX]_MONTHS**: To generate **survival** plots, two columns describing the patient status (_STATUS) and months (_MONTHS) at which the status data was collected must be provided. To use a pair of columns the same prefix should be used.  _Note:The values of the survival status must be prefixed with 0: or 1._
+1. **[PREFIX]_STATUS** and  **[PREFIX]_MONTHS**: To generate **survival** plots, two columns describing the patient status (STATUS) and months (MONTHS) at which the status data was collected must be provided. To use a pair of columns the same prefix should be used._
+
+  _Note:The values of the survival status must be prefixed with 0: or 1._
 
 Examples:
 
@@ -253,17 +232,6 @@ _Note: Include the reference dates for Survival Data in the attribute descriptio
 
 MUTATION_COUNT and FRACTION_GENOME_ALTERED are auto populated clinical attributes, and should therefore not be present in clinical data files.
 
-### Example (from cBioportal)
-```
-#Patient Identifier<TAB>Overall Survival Status<TAB>Overall Survival (Months)<TAB>Disease Free Status<TAB>Disease Free (Months)<TAB>...
-#Patient identifier<TAB>Overall survival status<TAB>Overall survival in months since diagnosis<TAB>Disease free status<TAB>Disease free in months since treatment<TAB>...
-#STRING<TAB>STRING<TAB>NUMBER<TAB>STRING<TAB>NUMBER<TAB>...
-#1<TAB>1<TAB>1<TAB>1<TAB>1<TAB>
-PATIENT_ID<TAB>OS_STATUS<TAB>OS_MONTHS<TAB>DFS_STATUS<TAB>DFS_MONTHS<TAB>...
-PATIENT_ID_1<TAB>1:DECEASED<TAB>17.97<TAB>1:Recurred/Progressed<TAB>30.98<TAB>...
-PATIENT_ID_2<TAB>0:LIVING<TAB>63.01<TAB>0:DiseaseFree<TAB>63.01<TAB>...
-...
-```
 
 ## Reference
 

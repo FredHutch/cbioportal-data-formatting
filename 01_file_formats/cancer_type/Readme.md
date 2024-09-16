@@ -1,6 +1,6 @@
 ## Cancer Type 
 
-If the type_of_cancer that you have specified in your meta_study.txt file does not exist in the database of cBioportal database (<enter URL>) then you are required to provide two files describing the cancer type from which the your data is being generated.
+If the type_of_cancer that you have specified in your meta_study.txt file does not exist in the cBioportal [database] (https://github.com/FredHutch/tg-cbioportal-data/resources/type_of_cancer.txt) then you are required to provide two files describing the cancer type from which the your data is being generated.
 
 | Filename (suggested)    | Filetype    | Requirement
 |-------------|-------------|-------------
