@@ -47,7 +47,7 @@ This setup starts four containers:
 The first run imports the seed database and applies migrations. 
 Logs from each container are shown, and if there are no critical errors, cBioPortal will be accessible at http://localhost:8080 from your favorite browser (Chrome, Safari etc.), though no studies will be displayed initially.
 
-_Note: Let the terminal keep running in the background
+_Note: Let the terminal keep running in the background_
 
 After testing this for the first time you can also start cBioportal locally without logging everything to the terminal by doing this:
 ```
