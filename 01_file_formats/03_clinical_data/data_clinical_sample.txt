@@ -1,0 +1,7 @@
+#Patient Identifier	Sample Identifier	Subtype
+#Patient identifier	Sample Identifier	Subtype description
+#STRING	STRING	STRING
+#1	1	1
+PATIENT_ID_	SAMPLE_ID	SUBTYPE
+PATIENT_ID_1	SAMPLE_ID_1	basal-like
+PATIENT_ID_2	SAMPLE_ID_2	Her2 enriched

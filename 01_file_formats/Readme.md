@@ -1,6 +1,6 @@
 ## File formats
 
-This part of the repository provides helpful instructions to prepare your data into a format that can be "read" into cBioportal. 
+This part of the repository provides helpful instructions to prepare your data into a format that can be "read" into cBioportal. In this part of the repository you will find different sub-directories for the different file formats. Each sub-directory has its own Readme with detailed instructions on how to prepare you files. It also has examples/templates that you can copy for the different files needed which you can use to prepare your own study files
 
 
 ## File types 

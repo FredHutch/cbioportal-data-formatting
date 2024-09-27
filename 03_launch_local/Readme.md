@@ -95,4 +95,4 @@ In order to use this local instance to see how your study will look you can copy
 
 ### cBioportal documentation
 
-Detailed instructions on how to deploy a local instance of cBioportal with Docker: [https://docs.cbioportal.org/deployment/docker/#deploy-with-docker]
+Detailed instructions on how to deploy a local instance of cBioportal with Docker(https://docs.cbioportal.org/deployment/docker/#deploy-with-docker)

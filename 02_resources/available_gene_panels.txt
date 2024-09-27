@@ -1,0 +1,8 @@
+| STABLE_ID                   | DESCRIPTION                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------|
+| prad_mskcc_sanger           | Targeted panel of 137 genes.                                                |
+| prad_mskcc_sequenom_sanger  | Targeted panel of 145 genes. (merge of prad_mskcc_sanger and prad_mskcc_sequenom) |
+| prad_mskcc_sequenom         | Targeted panel of 21 genes.                                                 |
+| IMPACT341                   | Targeted (341 cancer genes) sequencing of various tumor types via MSK-IMPACT on Illumina HiSeq sequencers. |
+| IMPACT410                   | Targeted (410 cancer genes) sequencing of various tumor types via MSK-IMPACT on Illumina HiSeq sequencers. |
+| IMPACT468                   | Targeted (468 cancer genes) sequencing of various tumor types via MSK-IMPACT on Illumina HiSeq sequencers. |

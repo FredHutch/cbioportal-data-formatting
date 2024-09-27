@@ -1,0 +1,6 @@
+cancer_study_identifier: luad_berger_2024
+stable_id: luad_berger_2024_sv
+case_list_name: Samples with SV data
+case_list_description: Samples with mutation data (10/73 samples)
+case_list_category: all_cases_with_sv_data
+case_list_ids: AHB_30_LC_WXS	AHB_22_LC_WXS	AHB_24_LC_WXS	AHB_45_LC_WXS	AHB_44_LC_WXS	AHB_20_LC_WXS	AHB_18_LC_WXS	AHB_54_LC_WXS	AHB_13_LC_WXS	AHB_50_LC_WXS

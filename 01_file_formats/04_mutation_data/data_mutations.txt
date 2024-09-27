@@ -1,0 +1,6 @@
+Hugo_Symbol	NCBI_Build	Chromosome	Variant_Classification	Reference_Allele	Tumor_Seq_Allele2	Tumor_Sample_Barcode	HGVSp_Short
+LRRC47	GRCh37	1	Silent	C	T	SAMPLE_ID_3	p.G28G
+KIAA0319L	GRCh37	1	Missense_Mutation	G	T	SAMPLE_ID_1	p.S312Y
+GTF2B	GRCh37	1	Nonsense_Mutation	T	A	SAMPLE_ID_2	p.R12X
+GJA8	GRCh37	1	Missense_Mutation	G	A	SAMPLE_ID_3	p.V93M
+PIGR	GRCh37	1	Missense_Mutation	C	T	SAMPLE_ID_1	p.G170S

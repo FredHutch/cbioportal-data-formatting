@@ -1,0 +1,5 @@
+cancer_study_identifier: brca_tcga_pub
+stable_id: brca_tcga_pub_custom
+case_list_name: Custom subset of samples
+case_list_description: Custom subset of samples (825 samples)
+case_list_ids: SAMPLE_ID_1	SAMPLE_ID_2	SAMPLE_ID_3
