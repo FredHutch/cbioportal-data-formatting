@@ -10,7 +10,7 @@ The repository is structured into four sections:
 
 3. **03_launch_local**: Instructions on how to launch a local version of cBioportal on your computer and test the upload of your study or the example study. You would want to do this to ensure that your study data files are formatted correctly and appear they way you intend prior to upload into the public-facing cBioportal instance. 
 
-4.**04_example_study**: An example study (from the Berger Lab at Fred Hutch) that can be either used as a template for your own study or can be used to test the useful_tools or the local instance of cBioportal.  This is how your study folder should look like once it is ready for upload into cBioPortal.(_Note: You may have more or less files depending on your study_)
+4. **04_example_study**: An example study (from the Berger Lab at Fred Hutch) that can be either used as a template for your own study or can be used to test the useful_tools or the local instance of cBioportal.  This is how your study folder should look like once it is ready for upload into cBioPortal.(_Note: You may have more or less files depending on your study_)
 
 5. **05_useful_tools**: A collection of public repositories and helpful instructions that can help with formatting different types of study data files. 
 
