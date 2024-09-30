@@ -1,0 +1,182 @@
+{
+    "_doc":{
+        "_description": "This section of the document is meant to help understand the organization of key-value pairs and how it supports the creation of files from  https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats as part of the cBioportal ETL",
+        "sections": {
+            "merged_x": {
+                "_description": "Support information for merged genomic data and supporting meta files. ",
+                "dir": "output directory for merged results. Should match output dir specified by etl conversion script at run time",
+                "dtypes": {
+                    "_description": "Data types - cBio defined data types. _comment has link to detailed specifics in each section.",
+                    "ext": "File extension of merged outputs from etl script",
+                    "cbio_name": "cBio output file name - a soft link to the etl output created inside the study directory",
+                    "meta_file_attributes": "Direct key-value paris used by cBio in a meta_x file used to describe data_x files"
+                }
+            },
+            "study": "Special meta file used to describe the cBio study",
+            "case_x": "cBio case lists - sample lists describing which samples have mutation data, sv data, cnv data, etc. See https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#case-lists for specifics",
+            "data_sheets": "Clinical patient and sample data as well as gene matrix if panel data present. Distinct from other data_x files in that in contains sample and patient metadata and not genomic data",
+            "database_pulls": {
+                "_description": "This section is used to support pulling auto-generated clinical data tables and supporting genomics etl information from the D3b Data Warehouse",
+                "manifests": {
+                    "<manifest descriptor>": {
+                        "_description": "The key for this field is meant to be a convenient descriptor of what sub-study files derive from, as a cBio study make come from many sources",
+                        "table": "D3b warehouse table name with relevant file info",
+                        "file_types": "Manifests typically contain all possible harmonization outputs. Specifying specific file_type(s) limits to relevant outputs. Exception is annotated_public_output, etl will pull only he maf as vcfs are included in that query.",
+                        "out_file": "Desired output file name"
+                    }
+                },
+                "x_head": "Special header file table for data_clinical(sample/patient). cBio data_clinical headers have 5 header rows, and which columns are used are determined by the x_file table",
+                "x_file": "sample or patient tables with corresponding metadata at the sample and patient levels",
+                "genomics_etl": "a helper file with relevant cBio sample names and individual genomic files names for ETL merging",
+                "seq_center": "only if project has RNA data, a helper file to fill in missing sequencing center information for genomics etl",
+                "gene_file": "Only if study has panel data, the source information for gene matrix in the data_sheets section"
+
+            }
+        }
+    },
+    "merged_mafs": {
+        "_comment": "See https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#mutation-data for detailed specifics",
+        "dir": "merged_mafs",
+        "dtypes": {
+            "mutation": {
+                "ext": "maf",
+                "cbio_name": "data_mutations_extended.txt",
+                "meta_file_attr": {
+                    "stable_id": "mutations",
+                    "profile_name": "Mutations",
+                    "profile_description": "For matched T/N sample: consensus calls from strelka2, mutect2, lancet, and VarDict Java. Two or more callers required to pass, < 0.001 frequency in gnomAD, and min read depth 8 in normal sample, unless in a TERT promoter region or in a hotspot region (see https://www.cancerhotspots.org). For tumor/model-only, mutect2 calls with < 0.001 frequency in gnomAD, unless in a hotspot region",
+                    "genetic_alteration_type": "MUTATION_EXTENDED",
+                    "datatype": "MAF",
+                    "variant_classification_filter": "Silent,Intron,3'UTR,3'Flank,5'UTR,IGR,RNA",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+      },
+    "merged_cnvs": {
+        "dir": "merged_cnvs",
+        "dtypes": {
+            "linear": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#continuous-copy-number-data for detailed specifics",
+                "ext": "predicted_cnv.txt",
+                "cbio_name": "data_linear_CNA.txt",
+                "meta_file_attr": {
+                    "stable_id": "linear_CNA",
+                    "profile_name": "copy-number values",
+                    "profile_description": "Predicted copy number values from WGS (Continuous). Copy number calls obtained using ControlFreeC, filtering calls smaller than 50KB",
+                    "genetic_alteration_type": "COPY_NUMBER_ALTERATION",
+                    "datatype": "CONTINUOUS",
+                    "show_profile_in_analysis_tab": "false"
+                }
+            },
+            "discrete": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#discrete-copy-number-data for detailed specifics",
+                "ext": "discrete_cnvs.txt",
+                "cbio_name": "data_CNA.txt",
+                "meta_file_attr": {
+                    "stable_id": "cna",
+                    "profile_name": "Binned copy-number values",
+                    "profile_description": "Predicted copy number values from WGS (Discrete). Values: -2 = homozygous deletion; -1 = hemizygous deletion; 0 = neutral / no change; 1 = gain; 2 = high level amplification",
+                    "genetic_alteration_type": "COPY_NUMBER_ALTERATION",
+                    "datatype": "DISCRETE",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            },
+            "segment": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#segmented-data for detailed specifics",
+                "ext": "merged_seg.txt",
+                "cbio_name": "data_cna.seg.txt",
+                "meta_file_attr": {
+                    "description": "Tumor/model-only CNA data (with the exception of some paired T/N)",
+                    "genetic_alteration_type": "COPY_NUMBER_ALTERATION",
+                    "datatype": "SEG",
+                    "reference_genome_id": "hg38"
+                }
+            }
+        }
+    },
+    "data_sheets": {
+        "dir": "datasheets",
+        "dtypes": {
+            "patient": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#example-clinical-header for detailed specifics",
+                "cbio_name": "data_clinical_patient.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "PATIENT_ATTRIBUTES"
+                }
+            },
+            "sample": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#clinical-sample-columns for detailed specifics",
+                "cbio_name": "data_clinical_sample.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "SAMPLE_ATTRIBUTES"
+                }
+            }
+        }
+    },
+    "study": {
+        "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#cancer-study for detailed specifics",
+        "description": "Chordoma is a rare bone tumor, which is believed to originate from notochordal remnants. Based on the United States Surveillance Epidemiology and End Results (SEER) data, the incidence of chordoma varies by gender and race; however, little is known about the etiologic factors that predispose to it. Genomic profiling studies of chordoma are limited, particularly in the Chinese population. We therefore conducted a detailed molecular characterization of paired chordoma tumor/normal tissues using fresh frozen tissues and blood collected from skull-based Chinese chordoma patients. These analyses included whole exome sequencing and RNA sequencing analyses. For updates, please see here: <a href=\"https://tinyurl.com/55cxz9am\">Release Notes</a>",
+        "groups": "phs002301",
+        "cancer_study_identifier": "chdm_phs002301_2021",
+        "type_of_cancer": "chdm",
+        "short_name": "chdm_phs002301_2021",
+        "reference_genome": "hg38",
+        "display_name": "Whole Genome Sequencing of Skull-Based Chordoma (phs002301, Provisional)",
+        "pmid": "PMC7859411"
+    },
+    "cases_all": {
+        "stable_id": "all",
+        "case_list_name": "All Tumors and models",
+        "case_list_description": "All tumor and model samples",
+        "case_list_category": "all_cases_in_study"
+    },
+    "cases_cnaseq": {
+        "stable_id": "cnaseq",
+        "case_list_name": "Tumor samples with mutation and CNA data",
+        "case_list_description": "All tumor samples with mutation and CNA data",
+        "case_list_category": "all_cases_with_mutation_and_cna_data"
+    },
+    "cases_cna": {
+        "stable_id": "cna",
+        "case_list_name": "Tumor and model Samples with CNA data",
+        "case_list_description": "All tumors and models with CNA data",
+        "case_list_category": "all_cases_with_cna_data"
+    },
+    "cases_sequenced": {
+        "stable_id": "sequenced",
+        "case_list_name": "Tumor and model samples with mutations",
+        "case_list_description": "All tumor and model samples with mutation data",
+        "case_list_category": "all_cases_with_mutation_data"
+    },
+    "database_pulls": {
+        "_comment": "This section is used to numerate relevant database schema and tables needed for clinical data and supporting genomic etl files",
+        "manifests": {
+            "chdm_phs002301_2021": {
+                "table": "bix_genomics_file.sd_q8d06qqh-genomics_file_manifest",
+                "file_type": ["annotated_public_outputs","ctrlfreec_pval","ctrlfreec_info","ctrlfreec_bam_seg"],
+                "out_file": "chdm_phs002301_2021_genomics_file_manifest.txt"
+            }
+        },
+        "sample_head": {
+            "table": "template_sample_header.txt"
+        },
+        "sample_file": {
+            "table": "brownm28_dev_schema_cbio.chdm_phs002301_2021_data_clinical_sample",
+            "out_file": "data_clinical_sample.txt"
+        },
+        "patient_head": {
+            "table": "template_patient_header.txt"
+        },
+        "patient_file": {
+            "table": "brownm28_dev_schema_cbio.chdm_phs002301_2021_data_clinical_patient",
+            "out_file": "data_clinical_patient.txt"
+        },
+        "genomics_etl": {
+            "table": "brownm28_dev_schema_cbio.chdm_phs002301_2021_genomics_etl_file",
+            "out_file": "cbio_file_name_id.txt"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "bedtools": "bedtools",
+  "cp_only_script": "/home/ubuntu/tools/kf-cbioportal-etl/scripts/get_cbio_copy_only_num.pl",
+  "bed_genes": "/home/ubuntu/tools/kf-cbioportal-etl/REFS/GRCh38.84.gtf_genes.bed",
+  "hugo_tsv": "/home/ubuntu/tools/kf-cbioportal-etl/REFS/HUGO_EntrezID.tsv",
+  "entrez_tsv": "/home/ubuntu/tools/kf-cbioportal-etl/REFS/EntrezGeneId_HugoGeneSymbol.tsv",
+  "dna_samp_id_style": "cbttc_dna_std",
+  "dna_norm_id_style": "cbttc_norm_std",
+  "rna_samp_id_style": "cbttc_rna_std",
+  "rna_ext_list": {
+    "expression": "rsem.genes.results.gz"
+  },
+  "dna_ext_list": {
+    "mutation": "strelka2.vep.maf",
+    "copy_number": "CNVs.p.value.txt"
+  },
+  "ens_gene_list":"/home/ubuntu/tools/kf-cbioportal-etl/REFS/gencode27_gene_list.txt",
+  "script_dir": "/home/ubuntu/tools/kf-cbioportal-etl/scripts/",
+  "dx_tbl_fn": "dx_index.txt",
+  "cna_flag": 1,
+  "cnv_high_gain": 4,
+  "cnv_min_len": 50000,
+  "rna_flag": 1,
+  "cpus": 8,
+  "threads": 40,
+  "ds_samp_desc": ["#Patient Identifier\tSample Identifier\tSPECIMEN_ID\tCANCER_TYPE\tCANCER_TYPE_DETAILED\tTUMOR_TISSUE_SITE\tTUMOR_TYPE\tSAMPLE_TYPE\tMATCHED_NORMAL_SAMPLE_ID\tMATCHED_NORMAL_SPECIMEN_ID\tCBTN_PAIRED_IDS",
+    "#Patient identifier\tSample Identifier using external_sample_id\tkfdrc tumor biopsecimen ID\tStudy-defined cancer type\tStudy-defined cancer type detail\ttumor tissue location\tprimary v metastatic tumor designation\tpatient tissue sample or cell line\tmatched normal external_sample_id\tkfdrc matched normal biospecimen ID\tOriginal CBTN DNA/RNA pair ids, where applicable",
+    "#STRING\tSTRING\tSTRING\tSTRING\tSTRING\tSTRING\tSTRING\tSTRING\tSTRING\tSTRING\tSTRING",
+    "#1\t1\t1\t1\t0\t1\t1\t1\t1\t1\t0",
+    "PATIENT_ID\tSAMPLE_ID\tSPECIMEN_ID\tCANCER_TYPE\tCANCER_TYPE_DETAILED\tTUMOR_TISSUE_SITE\tTUMOR_TYPE\tSAMPLE_TYPE\tMATCHED_NORMAL_SAMPLE_ID\tMATCHED_NORMAL_SPECIMEN_ID\tCBTN_PAIRED_IDS\n"],
+  "ds_pt_desc": ["#Patient Identifier\tExternal Patient Identifier\tGENDER\tAGE\tTUMOR_SITE\tRACE\tETHNICITY\tOS_STATUS\tOS_MONTHS",
+    "#Patient identifier\tPatient ID used by generator of data\tGender or sex of the patient\tAge at which the condition or disease was first diagnosed, in years\tTumor location\tracial demographic\tethnic demographic\tOverall patient survival status\tOverall survival in months since initial diagnosis",
+    "#STRING\tSTRING\tSTRING\tNUMBER\tSTRING\tSTRING\tSTRING\tSTRING\tNUMBER",
+    "#1\t1\t1\t1\t1\t1\t1\t1\t1",
+    "PATIENT_ID\tEXTERNAL_PATIENT_ID\tGENDER\tAGE\tTUMOR_SITE\tRACE\tETHNICITY\tOS_STATUS\tOS_MONTHS\n"]
+}

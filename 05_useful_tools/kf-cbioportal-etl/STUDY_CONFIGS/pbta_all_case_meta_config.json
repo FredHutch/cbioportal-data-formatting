@@ -1,0 +1,346 @@
+{
+    "_doc":{
+        "_description": "This section of the document is meant to help understand the organization of key-value pairs and how it supports the creation of files from  https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats as part of the cBioportal ETL",
+        "sections": {
+            "merged_x": {
+                "_description": "Support information for merged genomic data and supporting meta files. ",
+                "dir": "output directory for merged results. Should match output dir specified by etl conversion script at run time",
+                "dtypes": {
+                    "_description": "Data types - cBio defined data types. _comment has link to detailed specifics in each section.",
+                    "ext": "File extension of merged outputs from etl script",
+                    "cbio_name": "cBio output file name - a soft link to the etl output created inside the study directory",
+                    "meta_file_attributes": "Direct key-value paris used by cBio in a meta_x file used to describe data_x files"
+                }
+            },
+            "study": "Special meta file used to describe the cBio study",
+            "case_x": "cBio case lists - sample lists describing which samples have mutation data, sv data, cnv data, etc. See https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#case-lists for specifics",
+            "data_sheets": "Clinical patient and sample data as well as gene matrix if panel data present. Distinct from other data_x files in that in contains sample and patient metadata and not genomic data",
+            "database_pulls": {
+                "_description": "This section is used to support pulling auto-generated clinical data tables and supporting genomics etl information from the D3b Data Warehouse",
+                "manifests": {
+                    "<manifest descriptor>": {
+                        "_description": "The key for this field is meant to be a convenient descriptor of what sub-study files derive from, as a cBio study make come from many sources",
+                        "table": "D3b warehouse table name with relevant file info",
+                        "file_types": "Manifests typically contain all possible harmonization outputs. Specifying specific file_type(s) limits to relevant outputs. Exception is annotated_public_output, etl will pull only he maf as vcfs are included in that query.",
+                        "out_file": "Desired output file name"
+                    }
+                },
+                "x_head": "Special header tsv file for data_clinical(sample/patient). cBio data_clinical headers have 5 header rows, and which columns are used are determined by the x_file table. Should be just the file name",
+                "x_file": "sample or patient tables with corresponding metadata at the sample and patient levels",
+                "genomics_etl": "a helper file with relevant cBio sample names and individual genomic files names for ETL merging",
+                "seq_center": "only if project has RNA data, a helper file to fill in missing sequencing center information for genomics etl",
+                "gene_file": "Only if study has panel data, the source information for gene matrix in the data_sheets section"
+
+            }
+        }
+    },
+    "merged_mafs": {
+        "_comment": "See https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#mutation-data for detailed specifics",
+        "dir": "merged_mafs",
+        "dtypes": {
+            "mutation": {
+                "ext": "maf",
+                "cbio_name": "data_mutations_extended.txt",
+                "meta_file_attr": {
+                    "stable_id": "mutations",
+                    "profile_name": "Mutations",
+                    "profile_description": "PBTA consensus calls from strelka2, mutect2, lancet, and VarDict Java. Two or more callers required to pass, < 0.001 frequency in gnomAD, and min read depth 8 in normal sample, unless in a TERT promoter region or in a hotspot region (see https://www.cancerhotspots.org)",
+                    "genetic_alteration_type": "MUTATION_EXTENDED",
+                    "datatype": "MAF",
+                    "variant_classification_filter": "Silent,Intron,3'UTR,3'Flank,5'UTR,IGR,RNA",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+      },
+    "merged_cnvs": {
+        "dir": "merged_cnvs",
+        "dtypes": {
+            "linear": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#continuous-copy-number-data for detailed specifics",
+                "ext": "predicted_cnv.txt",
+                "cbio_name": "data_linear_CNA.txt",
+                "meta_file_attr": {
+                    "stable_id": "linear_CNA",
+                    "profile_name": "copy-number values",
+                    "profile_description": "Predicted copy number values from WGS (Continuous). Copy number calls obtained using ControlFreeC, filtering calls smaller than 50KB",
+                    "genetic_alteration_type": "COPY_NUMBER_ALTERATION",
+                    "datatype": "CONTINUOUS",
+                    "show_profile_in_analysis_tab": "false"
+                }
+            },
+            "discrete": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#discrete-copy-number-data for detailed specifics",
+                "ext": "discrete_cnvs.txt",
+                "cbio_name": "data_CNA.txt",
+                "meta_file_attr": {
+                    "stable_id": "cna",
+                    "profile_name": "Binned copy-number values",
+                    "profile_description": "Predicted copy number values from WGS (Discrete). Values: -2 = homozygous deletion; -1 = hemizygous deletion; 0 = neutral / no change; 1 = gain; 2 = high level amplification",
+                    "genetic_alteration_type": "COPY_NUMBER_ALTERATION",
+                    "datatype": "DISCRETE",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            },
+            "segment": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#segmented-data for detailed specifics",
+                "ext": "merged_seg.txt",
+                "cbio_name": "data_cna.seg.txt",
+                "meta_file_attr": {
+                    "description": "Somatic CNA data (copy number ratio from tumor samples minus ratio from matched normals)",
+                    "genetic_alteration_type": "COPY_NUMBER_ALTERATION",
+                    "datatype": "SEG",
+                    "reference_genome_id": "hg38"
+                }
+            }
+        }
+      },
+    "merged_rsem": {
+        "_comment": " see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#expression-data for detailed specifics",
+        "dir": "merged_rsem",
+        "dtypes": {
+            "counts": {
+                "ext": "rsem_merged.txt",
+                "cbio_name": "data_rna_seq_v2_mrna.txt",
+                "meta_file_attr": {
+                    "stable_id": "rna_seq_v2_mrna",
+                    "profile_name": "RNA expression",
+                    "profile_description": "Expression levels from RNA-Seq (rsem FPKM)",
+                    "genetic_alteration_type": "MRNA_EXPRESSION",
+                    "datatype": "CONTINUOUS",
+                    "show_profile_in_analysis_tab": "false"
+                }
+            },
+            "zscore": {
+                "ext": "rsem_merged_zscore.txt",
+                "cbio_name": "data_rna_seq_v2_mrna_median_Zscores.txt",
+                "meta_file_attr": {
+                    "stable_id": "rna_seq_v2_mrna_median_Zscores",
+                    "profile_name": "RNA expression z-scores",
+                    "profile_description": "Expression levels from RNA-Seq, Z scores of log2(FPKM + 1) values",
+                    "genetic_alteration_type": "MRNA_EXPRESSION",
+                    "datatype": "Z-SCORE",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+    },
+    "merged_fusion": {
+        "_comment": "see https://docs.cbioportal.org/file-formats/#structural-variant-data for detailed specifics",
+        "dir": "merged_fusion",
+        "dtypes": {
+            "fusion": {
+                "ext": "fusions.txt",
+                "cbio_name": "data_sv.txt",
+                "meta_file_attr": {
+                    "stable_id": "structural_variants",
+                    "profile_name": "Predicted RNA fusions",
+                    "profile_description": "PBTA fusion data using arriba and STAR Fusion, annotated and filtered using annoFuse. Also contains DGD custom filtered fusions",
+                    "genetic_alteration_type": "STRUCTURAL_VARIANT",
+                    "datatype": "SV",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+    },
+    "data_sheets": {
+        "dir": "datasheets",
+        "dtypes": {
+            "patient": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#example-clinical-header for detailed specifics",
+                "cbio_name": "data_clinical_patient.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "PATIENT_ATTRIBUTES"
+                }
+            },
+            "sample": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#clinical-sample-columns for detailed specifics",
+                "cbio_name": "data_clinical_sample.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "SAMPLE_ATTRIBUTES"
+                }
+            },
+            "imaging": {
+                "_comment": "see https://docs.cbioportal.org/file-formats/#event-types for detailed specifics",
+                "cbio_name": "data_clinical_timeline_imaging.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "TIMELINE"
+                }
+            },
+            "clinical_event": {
+                "_comment": "see https://docs.cbioportal.org/file-formats/#event-types for detailed specifics",
+                "cbio_name": "data_clinical_timeline_clinical_event.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "TIMELINE"
+                }
+            },
+            "specimen": {
+                "_comment": "see https://docs.cbioportal.org/file-formats/#event-types for detailed specifics",
+                "cbio_name": "data_clinical_timeline_specimen.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "TIMELINE"
+                }
+            },
+            "surgery": {
+                "_comment": "see https://docs.cbioportal.org/file-formats/#event-types for detailed specifics",
+                "cbio_name": "data_clinical_timeline_surgery.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "TIMELINE"
+                }
+            },
+            "treatment": {
+                "_comment": "see https://docs.cbioportal.org/file-formats/#event-types for detailed specifics",
+                "cbio_name": "data_clinical_timeline_treatment.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "TIMELINE"
+                }
+            }
+        }
+    },
+    "study": {
+        "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#cancer-study for detailed specifics",
+        "description": "Genomic characterization of Pediatric Brain Tumor Atlas samples provided by the <a href=\"http://cbtn.org\">Children's Brain Tumor Network</a>, the <a href=\"http://www.pnoc.us/\">Pacific Neuro-Oncology Consortium (PNOC)</a>, and its partners via the <a href=\"http://kidsfirstdrc.org\">Gabriella Miller Kids First Data Resource Center</a>. For updates, please see here: <a href=\"https://tinyurl.com/55cxz9am\">Release Notes</a>",
+        "groups": "PUBLIC",
+        "cancer_study_identifier": "pbta_all",
+        "type_of_cancer": "brain",
+        "short_name": "pbta_all",
+        "reference_genome": "hg38",
+        "display_name": "Pediatric Brain Tumor Atlas (PBTA, Provisional)"
+    },
+    "cases_3way_complete": {
+        "stable_id": "3way_complete",
+        "case_list_name": "Tumor samples with mutation, CNA and mRNA data",
+        "case_list_description": "All tumor samples with mutation, CNA, and mRNA data",
+        "case_list_category": "all_cases_with_mutation_and_cna_and_mrna_data"
+    },
+    "cases_all": {
+        "stable_id": "all",
+        "case_list_name": "All Tumors",
+        "case_list_description": "All tumor samples",
+        "case_list_category": "all_cases_in_study"
+    },
+    "cases_cnaseq": {
+        "stable_id": "cnaseq",
+        "case_list_name": "Tumor samples with mutation and CNA data",
+        "case_list_description": "All tumor samples with mutation and CNA data",
+        "case_list_category": "all_cases_with_mutation_and_cna_data"
+    },
+    "cases_cna": {
+        "stable_id": "cna",
+        "case_list_name": "Tumor Samples with CNA data",
+        "case_list_description": "All tumors with CNA data",
+        "case_list_category": "all_cases_with_cna_data"
+    },
+    "cases_RNA_Seq_v2_mRNA": {
+        "stable_id": "rna_seq_v2_mrna",
+        "case_list_name": "Tumor Samples with mRNA data (RNA Seq V2)",
+        "case_list_description": "All samples with mRNA expression data",
+        "case_list_category": "all_cases_with_mrna_rnaseq_data"
+    },
+    "cases_sequenced": {
+        "stable_id": "sequenced",
+        "case_list_name": "Tumor samples with mutations",
+        "case_list_description": "All tumor samples with mutation data",
+        "case_list_category": "all_cases_with_mutation_data"
+    },
+    "cases_sv": {
+        "stable_id": "sv",
+        "case_list_name": "Tumor samples with fusions",
+        "case_list_description": "All tumor samples with fusion data",
+        "case_list_category": "all_cases_with_sv_data"
+    },
+    "database_pulls": {
+        "_comment": "This section is used to numerate relevant database schema and tables needed for clinical data and supporting genomic etl files",
+        "manifests": {
+            "cbtn": {
+                "table": "bix_genomics_file.sd_bhjxbdqk-genomics_file_manifest",
+                "file_type": ["RSEM_gene","annofuse_filtered_fusions_tsv","annotated_public_outputs","consensus_public_outputs","ctrlfreec_pval","ctrlfreec_info","ctrlfreec_bam_seg"],
+                "out_file": "cbtn_genomics_file_manifest.txt"
+            },
+            "x01": {
+                "table": "bix_genomics_file.sd_bhjxbdqk_x01-genomics_file_manifest",
+                "file_type": ["RSEM_gene","annofuse_filtered_fusions_tsv","annotated_public_outputs","consensus_public_outputs","ctrlfreec_pval","ctrlfreec_info","ctrlfreec_bam_seg"],
+                "out_file": "x01_genomics_file_manifest.txt"
+            },
+            "cbtn_extra": {
+                "table": "bix_genomics_file.sd_bhjxbdqk_x01_extra-genomics_file_manifest",
+                "file_type": ["RSEM_gene","annofuse_filtered_fusions_tsv","annotated_public_outputs","consensus_public_outputs","ctrlfreec_pval","ctrlfreec_info","ctrlfreec_bam_seg"],
+                "out_file": "cbtn_extra_genomics_file_manifest.txt"
+            },
+            "pnoc": {
+                "table": "bix_genomics_file.sd_8y99qzjj-genomics_file_manifest",
+                "file_type": ["RSEM_gene","annofuse_filtered_fusions_tsv","annotated_public_outputs","ctrlfreec_pval","ctrlfreec_info","ctrlfreec_bam_seg"],
+                "out_file":  "pnoc_genomics_file_manifest.txt"
+            },
+            "oligo": {
+                "table": "bix_genomics_file.sd_bhjxbdqk_oligo-genomics_file_manifest",
+                "file_type": ["RSEM_gene","annofuse_filtered_fusions_tsv","annotated_public_outputs","ctrlfreec_pval","ctrlfreec_info","ctrlfreec_bam_seg"],
+                "out_file": "oligo_nation_genomics_file_manifest.txt"
+            },
+            "mioncoseq": {
+                "table": "bix_genomics_file.sd_bhjxbdqk_mioncoseq-genomics_file_manifest",
+                "file_type": ["RSEM_gene","annofuse_filtered_fusions_tsv","annotated_public_outputs","ctrlfreec_pval","ctrlfreec_info","ctrlfreec_bam_seg"],
+                "out_file": "mioncoseq_genomics_file_manifest.txt"
+            },
+            "dgd_cbtn_panel": {
+                "table": "bix_genomics_file.sd_bhjxbdqk_dgd_panel-genomics_file_manifest",
+                "file_type": ["RSEM_gene","annofuse_filtered_fusions_tsv","annotated_public_outputs","ctrlfreec_pval","ctrlfreec_info","ctrlfreec_bam_seg"],
+                "out_file": "dgd_cbtn_panel_genomics_file_manifest.txt"
+            },
+            "dgd__panel": {
+                "table": "bix_genomics_file.sd_6g58hhsx_dgd_panel-genomics_file_manifest",
+                "file_type": ["RSEM_gene","annofuse_filtered_fusions_tsv","annotated_public_outputs","ctrlfreec_pval","ctrlfreec_info","ctrlfreec_bam_seg"],
+                "out_file": "dgd_panel_genomics_file_manifest.txt"
+            }
+        },
+        "sample_head": {
+            "table": "template_sample_header.txt"
+        },
+        "sample_file": {
+            "table": "prod_cbio.pbta_all_data_clinical_sample",
+            "out_file": "data_clinical_sample.txt"
+        },
+        "patient_head": {
+            "table": "template_patient_header.txt"
+        },
+        "patient_file": {
+            "table": "prod_cbio.pbta_all_data_clinical_patient",
+            "out_file": "data_clinical_patient.txt"
+        },
+        "imaging_timeline": {
+            "table": "prod_cbio.pbta_all_timeline_imaging",
+            "out_file": "data_clinical_timeline_imaging.txt"
+        },
+        "specimen_timeline": {
+            "table": "prod_cbio.pbta_all_timeline_specimen",
+            "out_file": "data_clinical_timeline_specimen.txt"
+
+        },
+        "clinical_event_timeline": {
+            "table": "prod_cbio.pbta_all_timeline_clinical_event",
+            "out_file": "data_clinical_timeline_clinical_event.txt"
+
+        },
+        "surgery_timeline": {
+            "table": "prod_cbio.pbta_all_timeline_surgery",
+            "out_file": "data_clinical_timeline_surgery.txt"
+
+        },
+        "treatment_timeline": {
+            "table": "prod_cbio.pbta_all_timeline_treatment",
+            "out_file": "data_clinical_timeline_treatment.txt"
+
+        },
+        "genomics_etl": {
+            "table": "prod_cbio.pbta_all_genomics_etl_file",
+            "out_file": "cbio_file_name_id.txt"
+        }
+    }
+}

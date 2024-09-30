@@ -1,0 +1,178 @@
+{
+    "merged_mafs": {
+        "dir": "study_build",
+        "dtypes": {
+            "mutation": {
+                "ext": "maf",
+                "cbio_name": "data_mutations_extended.txt",
+                "meta_file_attr": {
+                    "stable_id": "mutations",
+                    "profile_name": "Mutations",
+                    "profile_description": "Consensus calls from strelka2, mutect2, lancet, and VarDict Java.  Two or more callers required to pass, < 0.001 frequeney in gnomAD, and min read depth 8 in normal sample. DGD sample subset is a custom panel.",
+                    "genetic_alteration_type": "MUTATION_EXTENDED",
+                    "variant_classification_filter": "Silent,Intron,3'UTR,3'Flank,5'UTR,IGR,RNA",
+                    "datatype": "MAF",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+      },
+    "merged_cnvs": {
+        "dir": "study_build",
+        "dtypes": {
+            "linear": {
+                "ext": "predicted_cnv.txt",
+                "cbio_name": "data_linear_CNA.txt",
+                "meta_file_attr": {
+                    "stable_id": "linear_CNA",
+                    "profile_name": "copy-number values",
+                    "profile_description": "Predicted copy number values from WGS and WXS (Continuous). openPBTA consensus method used",
+                    "genetic_alteration_type": "COPY_NUMBER_ALTERATION",
+                    "datatype": "CONTINUOUS",
+                    "show_profile_in_analysis_tab": "false"
+                }
+
+            },
+            "discrete": {
+                "ext": "discrete_cnvs.txt",
+                "cbio_name": "data_CNA.txt",
+                "meta_file_attr": {
+                    "stable_id": "cna",
+                    "profile_name": "Binned copy-number values",
+                    "profile_description": "Predicted copy number values from WGS and WXS sequencing (Discrete). Values: -2 = homozygous deletion; -1 = hemizygous deletion; 0 = neutral / no change; 1 = gain; 2 = high level amplification. openPBTA consensus method used",
+                    "genetic_alteration_type": "COPY_NUMBER_ALTERATION",
+                    "datatype": "DISCRETE",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+      },
+    "merged_rsem": {
+        "dir": "study_build",
+        "dtypes": {
+            "counts": {
+                "ext": "rsem_merged.txt",
+                "cbio_name": "data_mrna_seq_v2_rsem.txt",
+                "meta_file_attr": {
+                    "stable_id": "rna_seq_v2_mrna",
+                    "profile_name": "RNA expression",
+                    "profile_description": "Expression levels from RNA-Seq (rsem TPM). Only common transcripts between OpenPedCan harmonized (GENCODE27) and TCGA (GENCODE36) were kept.",
+                    "genetic_alteration_type": "MRNA_EXPRESSION",
+                    "datatype": "CONTINUOUS",
+                    "show_profile_in_analysis_tab": "false"
+                }
+            },
+            "zscore": {
+                "ext": "rsem_merged_zscore.txt",
+                "cbio_name": "data_mrna_seq_v2_rsem_zscores_ref_all_samples.txt",
+                "meta_file_attr": {
+                    "stable_id": "rna_seq_v2_mrna_median_Zscores",
+                    "profile_name": "RNA expression z-scores",
+                    "profile_description": "Expression levels from RNA-Seq, Z scores of log2(TPM + 1) values",
+                    "genetic_alteration_type": "MRNA_EXPRESSION",
+                    "datatype": "Z-SCORE",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+    },
+    "merged_fusion": {
+        "dir": "study_build",
+        "dtypes": {
+            "fusion": {
+                "ext": "fusions.txt",
+                "cbio_name": "data_fusions.txt",
+                "meta_file_attr": {
+                    "stable_id": "fusion",
+                    "profile_name": "Predicted RNA fusions",
+                    "profile_description": "Fusion data, from openPBTA using arriba and STAR Fusion, annotated and filtered using annoFuse. DGD sample subset consists of panel fusions",
+                    "genetic_alteration_type": "FUSION",
+                    "datatype": "FUSION",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+    },
+    "data_sheets": {
+        "dir": "datasheets",
+        "dtypes": {
+            "patient": {
+                "cbio_name": "data_clinical_patient.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "PATIENT_ATTRIBUTES"
+                }
+            },
+            "sample": {
+                "cbio_name": "data_clinical_sample.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "SAMPLE_ATTRIBUTES"
+                }
+            },
+            "genes": {
+                "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#gene-panel-matrix-file for detailed specifics",
+                "cbio_name": "data_gene_matrix_CHOP.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "GENE_PANEL_MATRIX",
+                    "datatype": "GENE_PANEL_MATRIX",
+                    "data_filename": "data_gene_matrix_CHOP.txt"
+                }
+            }
+
+        }
+    },
+    "study": {
+        "_comment": "see https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#cancer-study for detailed specifics",
+        "description": "<a href=\"https://github.com/PediatricOpenTargets/OpenPedCan-analysis\">OpenPedCan</a> is a collaborative project between the National Cancer Institute and the Children's Hospital of Philadelphia as part of the NCI's Childhood Cancer Data Initiative. Here, we harmonize pan-cancer data using <a href=\"https://kidsfirstdrc.org/\">KidsFirst Data Resource Center</a> workflows and harness <a href=\"https://github.com/AlexsLemonade/OpenPBTA-analysis/\">OpenPBTA analytics</a> workflows to scale and add modules across pediatric cancer datasets. This data has been integrated into the pediatric open targets platform to assist in development and query of the FDA's Relevant Pediatric Molecular Targets List (PMTL) to identify new therapeutics for children with cancer. This is the v11 release of this effort, for v10 please see <a href=\"https://pedcbioportal.kidsfirstdrc.org/study/summary?id=ped_opentargets_2021\">OpenPedCan v10</a>. For study release details, please see <a href=\"https://tinyurl.com/55cxz9am\">Release Notes</a>",
+        "groups": "PUBLIC",
+        "cancer_study_identifier": "openpedcan_v11",
+        "reference_genome": "hg38",
+        "display_name": "Open Pediatric Cancer (OpenPedCan) Project v11",
+        "type_of_cancer": "mixed",
+        "short_name": "openpedcan_v11"
+
+    },
+    "cases_3way_complete": {
+        "stable_id": "3way_complete",
+        "case_list_name": "Tumor samples with mutation, CNA and mRNA data",
+        "case_list_description": "All tumor samples with mutation, CNA, and mRNA data",
+        "case_list_category": "all_cases_with_mutation_and_cna_and_mrna_data"
+    },
+    "cases_all": {
+        "stable_id": "all",
+        "case_list_name": "All Samples",
+        "case_list_description": "All samples in study",
+        "case_list_category": "all_cases_in_study"
+    },
+    "cases_cnaseq": {
+        "stable_id": "cnaseq",
+        "case_list_name": "Tumor samples with mutation and CNA data",
+        "case_list_description": "All tumor samples with mutation and CNA data",
+        "case_list_category": "all_cases_with_mutation_and_cna_data"
+    },
+    "cases_cna": {
+        "stable_id": "cna",
+        "case_list_name": "Tumor Samples with CNA data",
+        "case_list_description": "All tumors with CNA data",
+        "case_list_category": "all_cases_with_cna_data"
+    },
+    "cases_RNA_Seq_v2_mRNA": {
+        "stable_id": "rna_seq_v2_mrna",
+        "case_list_name": "All Samples with mRNA data (RNA Seq V2)",
+        "case_list_description": "All samples with mRNA expression data",
+        "case_list_category": "all_cases_with_mrna_rnaseq_data"
+    },
+    "cases_sequenced": {
+        "stable_id": "sequenced",
+        "case_list_name": "Tumor samples with mutations",
+        "case_list_description": "All tumor samples with mutation data",
+        "case_list_category": "all_cases_with_mutation_data"
+    },
+    "cases_sv": {
+        "stable_id": "sv",
+        "case_list_name": "Tumor samples with fusions",
+        "case_list_description": "All tumor samples with fusion data",
+        "case_list_category": "all_cases_with_sv_data"
+    }
+}

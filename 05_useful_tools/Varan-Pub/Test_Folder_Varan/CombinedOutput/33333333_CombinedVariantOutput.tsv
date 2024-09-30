@@ -1,0 +1,14 @@
+[TMB]		
+Total TMB	6.3	
+Coding Region Size in Megabases	1.26	
+Number of Passing Eligible Variants	8	
+		
+[MSI]		
+Usable MSI Sites	119	
+Total MSI Sites Unstable	4	
+Percent Unstable MSI Sites	3.36	
+				
+[Fusions]		
+Gene Pair	Breakpoint 1	Breakpoint 2	Fusion Supporting Reads	Gene 1 Reference Reads	Gene 2 Reference Reads
+RPS24-CSF1R	chr10:79800503	chr5:149460585	7	0	47
+		

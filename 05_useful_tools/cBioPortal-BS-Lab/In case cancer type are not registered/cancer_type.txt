@@ -1,0 +1,3 @@
+#### In this order ####
+type_of_cancer	name	clinical_trial_keywords	dedicated_color	parent_type_of_cancer
+brca	Breast Invasive Carcinoma	breast,breast invasive	HotPink	Breast

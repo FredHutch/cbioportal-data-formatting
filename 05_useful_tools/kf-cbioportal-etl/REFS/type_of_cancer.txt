@@ -1,0 +1,859 @@
+TYPE_OF_CANCER_ID	NAME	CLINICAL_TRIAL_KEYWORDS	DEDICATED_COLOR	SHORT_NAME	PARENT
+aa	Aggressive Angiomyxoma	aggressive angiomyxoma	LightYellow	AA	soft_tissue
+aastr	Anaplastic Astrocytoma	anaplastic astrocytoma	Gray	AASTR	difg
+abc	Activated B-cell Type	activated b-cell type	LimeGreen	ABC	dlbclnos
+abl	Acute Basophilic Leukemia	acute basophilic leukemia	LightSalmon	ABL	amlnos
+aca	Adrenocortical Adenoma	adrenocortical adenoma	Purple	ACA	adrenal_gland
+acbc	Adenoid Cystic Breast Cancer	adenoid cystic breast cancer	HotPink	ACBC	brca
+acc	Adrenocortical Carcinoma	adrenocortical carcinoma	Purple	ACC	adrenal_gland
+accc	Acinic Cell Carcinoma	acinic cell carcinoma	DarkRed	ACCC	saca
+acml	Atypical Chronic Myeloid Leukemia, BCR-ABL1-	atypical chronic myeloid leukemia, bcr-abl1-	LightSalmon	ACML	mds/mpn
+acn	Acinar Cell Carcinoma, NOS	acinar cell carcinoma, nos	Black	ACN	cup
+acpg	Craniopharyngioma, Adamantinomatous Type	craniopharyngioma, adamantinomatous type	Gray	ACPG	selt
+acpp	Atypical Choroid Plexus Papilloma	atypical choroid plexus papilloma	Gray	ACPP	cpt
+acrm	Acral Melanoma	acral melanoma	Black	ACRM	mel
+acyc	Adenoid Cystic Carcinoma	adenoid cystic carcinoma	DarkRed	ACYC	saca
+adma	Adamantinoma	adamantinoma	White	ADMA	bone
+adnos	Adenocarcinoma, NOS	adenocarcinoma, nos	Black	ADNOS	cup
+adpa	Aggressive Digital Papillary Adenocarcinoma	aggressive digital papillary adenocarcinoma	Black	ADPA	skin
+adrenal_gland	Adrenal Gland	adrenal gland	Purple	ADRENAL_GLAND	tissue
+aeca	Sweat Gland Carcinoma/Apocrine Eccrine Carcinoma	sweat gland carcinoma/apocrine eccrine carcinoma	Black	AECA	skin
+afh	Angiomatoid Fibrous Histiocytoma	angiomatoid fibrous histiocytoma	LightYellow	AFH	soft_tissue
+afx	Atypical Fibroxanthoma	atypical fibroxanthoma	Black	AFX	skin
+aga	Anal Gland Adenocarcinoma	anal gland adenocarcinoma	SaddleBrown	AGA	bowel
+agng	Anaplastic Ganglioglioma	anaplastic ganglioglioma	Gray	AGNG	encg
+ahcd	Alpha Heavy-Chain Disease	alpha heavy-chain disease	LimeGreen	AHCD	mbn
+ais	Adenocarcinoma In Situ	adenocarcinoma in situ	Black	AIS	other
+aitl	Angioimmunoblastic T-Cell Lymphoma	angioimmunoblastic t-cell lymphoma	LimeGreen	AITL	mtnn
+alal	Acute Leukemias of Ambiguous Lineage	acute leukemias of ambiguous lineage	LightSalmon	ALAL	mnm
+alcl	Anaplastic Large Cell Lymphoma	anaplastic large cell lymphoma	LimeGreen	ALCL	mtnn
+alclalkn	Anaplastic Large-Cell Lymphoma ALK Negative	anaplastic large-cell lymphoma alk negative	LimeGreen	ALCLALKN	alcl
+alclalkp	Anaplastic Large-Cell Lymphoma ALK Positive	anaplastic large-cell lymphoma alk positive	LimeGreen	ALCLALKP	alcl
+alklbcl	ALK Positive Large B-Cell Lymphoma	alk positive large b-cell lymphoma	LimeGreen	ALKLBCL	mbn
+aluca	Atypical Lung Carcinoid	atypical lung carcinoid	Gainsboro	ALUCA	lnet
+am	AML with Maturation	aml with maturation	LightSalmon	AM	amlnos
+ambl	Large Cell/Anaplastic Medulloblastoma	large cell/anaplastic medulloblastoma	Gray	AMBL	embt
+amkl	Acute Megakaryoblastic Leukemia	acute megakaryoblastic leukemia	LightSalmon	AMKL	amlnos
+aml	Acute Myeloid Leukemia	acute myeloid leukemia	LightSalmon	AML	mnm
+amlbcrabl1	AML with BCR-ABL1	aml with bcr-abl1	LightSalmon	AMLBCRABL1	amlrga
+amlcbfbmyh11	AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22);CBFB-MYH11	aml with inv(16)(p13.1q22) or t(16;16)(p13.1;q22);cbfb-myh11	LightSalmon	AMLCBFBMYH11	amlrga
+amlcebpa	AML with Biallelic Mutations of CEBPA	aml with biallelic mutations of cebpa	LightSalmon	AMLCEBPA	amlrga
+amldeknup214	AML with t(6;9)(p23;q34.1);DEK-NUP214	aml with t(6;9)(p23;q34.1);dek-nup214	LightSalmon	AMLDEKNUP214	amlrga
+amlgata2mecom	AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM	aml with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); gata2, mecom	LightSalmon	AMLGATA2MECOM	amlrga
+amlmd	AML with Minimal Differentiation	aml with minimal differentiation	LightSalmon	AMLMD	amlnos
+amlmllt3kmt2a	AML with t(9;11)(p21.3;q23.3);MLLT3-KMT2A	aml with t(9;11)(p21.3;q23.3);mllt3-kmt2a	LightSalmon	AMLMLLT3KMT2A	amlrga
+amlmrc	AML with Myelodysplasia-Related Changes	aml with myelodysplasia-related changes	LightSalmon	AMLMRC	aml
+amlnos	AML, NOS	aml, nos	LightSalmon	AMLNOS	aml
+amlnpm1	AML with Mutated NPM1	aml with mutated npm1	LightSalmon	AMLNPM1	amlrga
+amlrbm15mkl1	AML (megakaryoblastic) with t(1;22)(p13.3;q13.3);RBM15-MKL1	aml (megakaryoblastic) with t(1;22)(p13.3;q13.3);rbm15-mkl1	LightSalmon	AMLRBM15MKL1	amlrga
+amlrga	AML with Recurrent Genetic Abnormalities	aml with recurrent genetic abnormalities	LightSalmon	AMLRGA	aml
+amlrunx1	AML with Mutated RUNX1	aml with mutated runx1	LightSalmon	AMLRUNX1	amlrga
+amlrunx1runx1t1	AML with t(8;21)(q22;q22.1);RUNX1-RUNX1T1	aml with t(8;21)(q22;q22.1);runx1-runx1t1	LightSalmon	AMLRUNX1RUNX1T1	amlrga
+amml	Acute Myelomonocytic Leukemia	acute myelomonocytic leukemia	LightSalmon	AMML	amlnos
+amol	Acute Monoblastic/Monocytic Leukemia	acute monoblastic/monocytic leukemia	LightSalmon	AMOL	amlnos
+ampca	Ampullary Carcinoma	ampullary carcinoma	Purple	AMPCA	ampulla_of_vater
+ampulla_of_vater	Ampulla of Vater	ampulla of vater	Purple	AMPULLA_OF_VATER	tissue
+an	Atypical Nevus	atypical nevus	Black	AN	skin
+angl	Angiocentric Glioma	angiocentric glioma	Gray	ANGL	mnet
+angs	Angiosarcoma	angiosarcoma	LightYellow	ANGS	soft_tissue
+ankl	Aggressive NK-Cell Leukemia	aggressive nk-cell leukemia	LimeGreen	ANKL	mtnn
+anm	Anaplastic Meningioma	anaplastic meningioma	Gray	ANM	mngt
+ansc	Anal Squamous Cell Carcinoma	anal squamous cell carcinoma	SaddleBrown	ANSC	bowel
+aoast	Anaplastic Oligoastrocytoma	anaplastic oligoastrocytoma	Gray	AOAST	difg
+aodg	Anaplastic Oligodendroglioma	anaplastic oligodendroglioma	Gray	AODG	difg
+apad	Appendiceal Adenocarcinoma	appendiceal adenocarcinoma	SaddleBrown	APAD	bowel
+ape	Anaplastic Ependymoma	anaplastic ependymoma	Gray	APE	epmt
+aplpmlrara	APL with PML-RARA	apl with pml-rara	LightSalmon	APLPMLRARA	amlrga
+apmf	Acute Panmyelosis with Myelofibrosis	acute panmyelosis with myelofibrosis	LightSalmon	APMF	amlnos
+aptad	Atypical Pituitary Adenoma	atypical pituitary adenoma	Gray	APTAD	selt
+apxa	Anaplastic Pleomorphic Xanthoastrocytoma	anaplastic pleomorphic xanthoastrocytoma	Gray	APXA	encg
+armm	Anorectal Mucosal Melanoma	anorectal mucosal melanoma	SaddleBrown	ARMM	bowel
+arms	Alveolar Rhabdomyosarcoma	alveolar rhabdomyosarcoma	LightYellow	ARMS	rms
+asct	Adenosquamous Carcinoma of the Tongue	adenosquamous carcinoma of the tongue	DarkRed	ASCT	ohnca
+asm	Aggressive Systemic Mastocytosis	aggressive systemic mastocytosis	LightSalmon	ASM	sm
+asps	Alveolar Soft Part Sarcoma	alveolar soft part sarcoma	LightYellow	ASPS	soft_tissue
+astb	Astroblastoma	astroblastoma	Gray	ASTB	mnet
+astr	Astrocytoma	astrocytoma	Gray	ASTR	difg
+atll	Adult T-Cell Leukemia/Lymphoma	adult t-cell leukemia/lymphoma	LimeGreen	ATLL	mtnn
+atm	Atypical Meningioma	atypical meningioma	Gray	ATM	mngt
+atrt	Atypical Teratoid/Rhabdoid Tumor	atypical teratoid/rhabdoid tumor	Gray	ATRT	embt
+aul	Acute Undifferentiated Leukemia	acute undifferentiated leukemia	LightSalmon	AUL	alal
+awdnet	Well-Differentiated Neuroendocrine Tumor of the Appendix	well-differentiated neuroendocrine tumor of the appendix	SaddleBrown	AWDNET	ginet
+awm	AML without Maturation	aml without maturation	LightSalmon	AWM	amlnos
+ba	Breast Angiosarcoma	breast angiosarcoma	HotPink	BA	pbs
+bcc	Basal Cell Carcinoma	basal cell carcinoma	Black	BCC	skin
+bcca	Choriocarcinoma	choriocarcinoma	Gray	BCCA	bgct
+bclu	B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma	b-cell lymphoma, unclassifiable, with features intermediate between dlbcl and classical hodgkin lymphoma	LimeGreen	BCLU	mbn
+bec	Embryonal Carcinoma	embryonal carcinoma	Gray	BEC	bgct
+bfn	Breast Fibroepithelial Neoplasms	breast fibroepithelial neoplasms	HotPink	BFN	breast
+bgct	Germ Cell Tumor, Brain	germ cell tumor, brain	Gray	BGCT	brain
+bialcl	Breast Implant-Associated Anaplastic Large-Cell Lymphoma	breast implant-associated anaplastic large-cell lymphoma	LimeGreen	BIALCL	alcl
+biliary_tract	Biliary Tract	biliary tract	Green	BILIARY_TRACT	tissue
+bimt	Immature Teratoma	immature teratoma	Gray	BIMT	bgct
+bl	Burkitt Lymphoma	burkitt lymphoma	LimeGreen	BL	mbn
+blad	Bladder Adenocarcinoma	bladder adenocarcinoma	Yellow	BLAD	bladder
+bladder	Bladder/Urinary Tract	bladder/urinary tract	Yellow	BLADDER	tissue
+blca	Bladder Urothelial Carcinoma	bladder urothelial carcinoma	Yellow	BLCA	bladder
+blclc	Basaloid Large Cell Carcinoma of the Lung	basaloid large cell carcinoma of the lung	Gainsboro	BLCLC	lclc
+bll	B-Lymphoblastic Leukemia/Lymphoma	b-lymphoblastic leukemia/lymphoma	LimeGreen	BLL	lnm
+bll11q	Burkitt-Like Lymphoma with 11q Aberration	burkitt-like lymphoma with 11q aberration	LimeGreen	BLL11Q	mbn
+bllbcrabl1	B-Lymphoblastic Leukemia/Lymphoma with t(9;22)(q34.1;q11.2);BCR-ABL1	b-lymphoblastic leukemia/lymphoma with t(9;22)(q34.1;q11.2);bcr-abl1	LimeGreen	BLLBCRABL1	bllrga
+bllbcrabl1l	B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like	b-lymphoblastic leukemia/lymphoma, bcr-abl1 like	LimeGreen	BLLBCRABL1L	bllrga
+blletv6runx1	B-Lymphoblastic Leukemia/Lymphoma with t(12;21)(p13.2;q22.1); ETV6-RUNX1	b-lymphoblastic leukemia/lymphoma with t(12;21)(p13.2;q22.1); etv6-runx1	LimeGreen	BLLETV6RUNX1	bllrga
+bllhyper	B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy	b-lymphoblastic leukemia/lymphoma with hyperdiploidy	LimeGreen	BLLHYPER	bllrga
+bllhypo	B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy	b-lymphoblastic leukemia/lymphoma with hypodiploidy	LimeGreen	BLLHYPO	bllrga
+blliamp21	B-Lymphoblastic Leukemia/Lymphoma with iAMP21	b-lymphoblastic leukemia/lymphoma with iamp21	LimeGreen	BLLIAMP21	bllrga
+bllil3igh	B-Lymphoblastic Leukemia/Lymphoma with t(5;14)(q31.1;q32.3) IL3-IGH	b-lymphoblastic leukemia/lymphoma with t(5;14)(q31.1;q32.3) il3-igh	LimeGreen	BLLIL3IGH	bllrga
+bllkmt2a	B-Lymphoblastic Leukemia/Lymphoma with t(v;11q23.3);KMT2A Rearranged	b-lymphoblastic leukemia/lymphoma with t(v;11q23.3);kmt2a rearranged	LimeGreen	BLLKMT2A	bllrga
+bllnos	B-Lymphoblastic Leukemia/Lymphoma, NOS	b-lymphoblastic leukemia/lymphoma, nos	LimeGreen	BLLNOS	bll
+bllrga	B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities	b-lymphoblastic leukemia/lymphoma with recurrent genetic abnormalities	LimeGreen	BLLRGA	bll
+blltcf3pbx1	B-Lymphoblastic Leukemia/Lymphoma with t(1;19)(q23;p13.3);TCF3-PBX1	b-lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3);tcf3-pbx1	LimeGreen	BLLTCF3PBX1	bllrga
+blpt	Borderline Phyllodes Tumor of the Breast	borderline phyllodes tumor of the breast	HotPink	BLPT	pt
+blsc	Bladder Squamous Cell Carcinoma	bladder squamous cell carcinoma	Yellow	BLSC	bladder
+bmgct	Mixed Germ Cell Tumor	mixed germ cell tumor	Gray	BMGCT	bgct
+bmgt	Malignant Teratoma	malignant teratoma	Gray	BMGT	bgct
+bmt	Mature Teratoma	mature teratoma	Gray	BMT	bgct
+bnnos	Breast Neoplasm, NOS	breast neoplasm, nos	HotPink	BNNOS	breast
+bone	Bone	bone	White	BONE	tissue
+bowel	Bowel	bowel	SaddleBrown	BOWEL	tissue
+bpdcn	Blastic Plasmacytoid Dendritic Cell Neoplasm	blastic plasmacytoid dendritic cell neoplasm	LightSalmon	BPDCN	mnm
+bpll	B-Cell Prolymphocytic Leukemia	b-cell prolymphocytic leukemia	LimeGreen	BPLL	mbn
+bpscc	Basaloid Penile Squamous Cell Carcinoma	basaloid penile squamous cell carcinoma	Blue	BPSCC	pscc
+bpt	Benign Phyllodes Tumor of the Breast	benign phyllodes tumor of the breast	HotPink	BPT	pt
+brain	CNS/Brain	cns/brain	Gray	BRAIN	tissue
+brame	Adenomyoepithelioma of the Breast	adenomyoepithelioma of the breast	HotPink	BRAME	breast
+brca	Invasive Breast Carcinoma	invasive breast carcinoma	HotPink	BRCA	breast
+brcanos	Breast Invasive Cancer, NOS	breast invasive cancer, nos	HotPink	BRCANOS	brca
+brcnos	Breast Invasive Carcinoma, NOS	breast invasive carcinoma, nos	HotPink	BRCNOS	brca
+breast	Breast	breast	HotPink	BREAST	tissue
+brsrcc	Breast Carcinoma with Signet Ring	breast carcinoma with signet ring	HotPink	BRSRCC	brca
+btbeov	Brenner Tumor, Benign	brenner tumor, benign	LightBlue	BTBEOV	btov
+btbov	Brenner Tumor, Borderline	brenner tumor, borderline	LightBlue	BTBOV	btov
+btmov	Brenner Tumor, Malignant	brenner tumor, malignant	LightBlue	BTMOV	btov
+btov	Brenner Tumor	brenner tumor	LightBlue	BTOV	ovt
+byst	Yolk Sac Tumor	yolk sac tumor	Gray	BYST	bgct
+cabc	Cervical Adenoid Basal Carcinoma	cervical adenoid basal carcinoma	Teal	CABC	cervix
+cacc	Cervical Adenoid Cystic Carcinoma	cervical adenoid cystic carcinoma	Teal	CACC	cervix
+cais	Colon Adenocarcinoma In Situ	colon adenocarcinoma in situ	SaddleBrown	CAIS	coadread
+ccbov	Clear Cell Borderline Ovarian Tumor	clear cell borderline ovarian tumor	LightBlue	CCBOV	ovt
+cce	Clear Cell Ependymoma	clear cell ependymoma	Gray	CCE	epmt
+cchdm	Conventional Type Chordoma	conventional type chordoma	White	CCHDM	chdm
+cchm	Carcinoma with Chondroid Metaplasia	carcinoma with chondroid metaplasia	HotPink	CCHM	mmbc
+cclc	Clear Cell Carcinoma of the Lung	clear cell carcinoma of the lung	Gainsboro	CCLC	lclc
+ccm	Clear cell Meningioma	clear cell meningioma	Gray	CCM	mngt
+ccoc	Clear Cell Odontogenic Carcinoma	clear cell odontogenic carcinoma	DarkRed	CCOC	odgc
+ccov	Clear Cell Ovarian Cancer	clear cell ovarian cancer	LightBlue	CCOV	ovt
+ccprc	Clear Cell Papillary Renal Cell Carcinoma	clear cell papillary renal cell carcinoma	Orange	CCPRC	nccrcc
+ccrcc	Renal Clear Cell Carcinoma	renal clear cell carcinoma	Orange	CCRCC	rcc
+ccs	Clear Cell Sarcoma	clear cell sarcoma	LightYellow	CCS	soft_tissue
+ccsk	Clear Cell Sarcoma of Kidney	clear cell sarcoma of kidney	Orange	CCSK	kidney
+cdrcc	Collecting Duct Renal Cell Carcinoma	collecting duct renal cell carcinoma	Orange	CDRCC	nccrcc
+cead	Cervical Adenocarcinoma	cervical adenocarcinoma	Teal	CEAD	cervix
+ceais	Cervical Adenocarcinoma In Situ	cervical adenocarcinoma in situ	Teal	CEAIS	cervix
+ceas	Cervical Adenosquamous Carcinoma	cervical adenosquamous carcinoma	Teal	CEAS	cervix
+cecc	Cervical Clear Cell Carcinoma	cervical clear cell carcinoma	Teal	CECC	cead
+ceen	Cervical Endometrioid Carcinoma	cervical endometrioid carcinoma	Teal	CEEN	cead
+cegcc	Glassy Cell Carcinoma of the Cervix	glassy cell carcinoma of the cervix	Teal	CEGCC	cervix
+celi	Cervical Leiomyosarcoma	cervical leiomyosarcoma	Teal	CELI	cervix
+celnos	Chronic Eosinophilic Leukemia, NOS	chronic eosinophilic leukemia, nos	LightSalmon	CELNOS	mpn
+cemn	Mesonephric Carcinoma	mesonephric carcinoma	Teal	CEMN	cead
+cemu	Mucinous Carcinoma	mucinous carcinoma	Teal	CEMU	cead
+cene	Cervical Neuroendocrine Tumor	cervical neuroendocrine tumor	Teal	CENE	cervix
+cerms	Cervical Rhabdomyosarcoma	cervical rhabdomyosarcoma	Teal	CERMS	cervix
+cervix	Cervix	cervix	Teal	CERVIX	tissue
+cesc	Cervical Squamous Cell Carcinoma	cervical squamous cell carcinoma	Teal	CESC	cervix
+cese	Cervical Serous Carcinoma	cervical serous carcinoma	Teal	CESE	cead
+cevg	Villoglandular Carcinoma	villoglandular carcinoma	Teal	CEVG	cead
+chbl	Chondroblastoma	chondroblastoma	White	CHBL	bone
+chdm	Chordoma	chordoma	White	CHDM	bone
+chgl	Chordoid Glioma of the Third Ventricle	chordoid glioma of the third ventricle	Gray	CHGL	mnet
+chl	Classical Hodgkin Lymphoma	classical hodgkin lymphoma	LimeGreen	CHL	hl
+chlptld	Classical Hodgkin Lymphoma PTLD	classical hodgkin lymphoma ptld	LimeGreen	CHLPTLD	ptld
+chm	Complete Hydatidiform Mole	complete hydatidiform mole	PeachPuff	CHM	mp
+chol	Cholangiocarcinoma	cholangiocarcinoma	Green	CHOL	biliary_tract
+chom	Chordoid Meningioma	chordoid meningioma	Gray	CHOM	mngt
+chos	Chondroblastic Osteosarcoma	chondroblastic osteosarcoma	White	CHOS	os
+chrcc	Chromophobe Renal Cell Carcinoma	chromophobe renal cell carcinoma	Orange	CHRCC	nccrcc
+chs	Chondrosarcoma	chondrosarcoma	White	CHS	bone
+cllsll	Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma	chronic lymphocytic leukemia/small lymphocytic lymphoma	LimeGreen	CLLSLL	mbn
+clnc	Cerebellar Liponeurocytoma	cerebellar liponeurocytoma	Gray	CLNC	mnet
+clpdnk	Chronic Lymphoproliferative Disorder of NK Cells	chronic lymphoproliferative disorder of nk cells	LimeGreen	CLPDNK	mtnn
+cm	Conjunctival Melanoma	conjunctival melanoma	Green	CM	om
+cmc	Medullary Carcinoma of the Colon	medullary carcinoma of the colon	SaddleBrown	CMC	bowel
+cmcd	Cutaneous Mastocytosis	cutaneous mastocytosis	LightSalmon	CMCD	mcd
+cml	Chronic Myelogenous Leukemia	chronic myelogenous leukemia	LightSalmon	CML	mpn
+cmlbcrabl1	Chronic Myeloid Leukemia, BCR-ABL1+	chronic myeloid leukemia, bcr-abl1+	LightSalmon	CMLBCRABL1	cml
+cmml	Chronic Myelomonocytic Leukemia	chronic myelomonocytic leukemia	LightSalmon	CMML	mds/mpn
+cmml0	Chronic Myelomonocytic Leukemia-0	chronic myelomonocytic leukemia-0	LightSalmon	CMML0	cmml
+cmml1	Chronic Myelomonocytic Leukemia-1	chronic myelomonocytic leukemia-1	LightSalmon	CMML1	cmml
+cmml2	Chronic Myelomonocytic Leukemia-2	chronic myelomonocytic leukemia-2	LightSalmon	CMML2	cmml
+cmpt	Ciliated Muconodular Papillary Tumor of the Lung	ciliated muconodular papillary tumor of the lung	Gainsboro	CMPT	nsclc
+cnc	Central Neurocytoma	central neurocytoma	Gray	CNC	mnet
+cnl	Chronic Neutrophilic Leukemia	chronic neutrophilic leukemia	LightSalmon	CNL	mpn
+coad	Colon Adenocarcinoma	colon adenocarcinoma	SaddleBrown	COAD	coadread
+coadread	Colorectal Adenocarcinoma	colorectal adenocarcinoma	SaddleBrown	COADREAD	bowel
+com	Carcinoma with Osseous Metaplasia	carcinoma with osseous metaplasia	HotPink	COM	mmbc
+cpc	Choroid Plexus Carcinoma	choroid plexus carcinoma	Gray	CPC	cpt
+cpp	Choroid Plexus Papilloma	choroid plexus papilloma	Gray	CPP	cpt
+cpt	Choroid Plexus Tumor	choroid plexus tumor	Gray	CPT	brain
+cranio	Craniopharyngioma	brain,brain tumor	Yellow	cranio	tissue
+cscc	Cutaneous Squamous Cell Carcinoma	cutaneous squamous cell carcinoma	Black	CSCC	skin
+cschw	Cellular Schwannoma	cellular schwannoma	Gray	CSCHW	schw
+csclc	Combined Small Cell Lung Carcinoma	combined small cell lung carcinoma	Gainsboro	CSCLC	lung
+csnos	Breast Invasive Carcinosarcoma, NOS	breast invasive carcinosarcoma, nos	HotPink	CSNOS	brca
+ctaap	Colonic Type Adenocarcinoma of the Appendix	colonic type adenocarcinoma of the appendix	SaddleBrown	CTAAP	apad
+cup	Cancer of Unknown Primary	cancer of unknown primary	Black	CUP	other
+cupnos	Cancer of Unknown Primary, NOS	cancer of unknown primary, nos	Black	CUPNOS	cup
+da	Duodenal Adenocarcinoma	duodenal adenocarcinoma	SaddleBrown	DA	sbc
+dastr	Diffuse Astrocytoma	diffuse astrocytoma	Gray	DASTR	difg
+dcis	Breast Ductal Carcinoma In Situ	breast ductal carcinoma in situ	HotPink	DCIS	breast
+dcs	Dendritic Cell Sarcoma	dendritic cell sarcoma	LightYellow	DCS	soft_tissue
+ddchdm	Dedifferentiated Chordoma	dedifferentiated chordoma	White	DDCHDM	chdm
+ddchs	Dedifferentiated Chondrosarcoma	dedifferentiated chondrosarcoma	White	DDCHS	chs
+ddls	Dedifferentiated Liposarcoma	dedifferentiated liposarcoma	LightYellow	DDLS	lipo
+des	Desmoid/Aggressive Fibromatosis	desmoid/aggressive fibromatosis	LightYellow	DES	soft_tissue
+desm	Desmoplastic Melanoma	desmoplastic melanoma	Black	DESM	mel
+df	Dermatofibroma	dermatofibroma	Black	DF	skin
+dfl	Duodenal-Type Follicular Lymphoma	duodenal-type follicular lymphoma	LimeGreen	DFL	fl
+dfsp	Dermatofibrosarcoma Protuberans	dermatofibrosarcoma protuberans	Black	DFSP	skin
+dia	Desmoplastic Infantile Astrocytoma	desmoplastic infantile astrocytoma	Gray	DIA	mnet
+difg	Diffuse Glioma	diffuse glioma	Gray	DIFG	brain
+dig	Desmoplastic Infantile Ganglioglioma	desmoplastic infantile ganglioglioma	Gray	DIG	mnet
+dipg	Diffuse Intrinsic Pontine Glioma	diffuse intrinsic pontine glioma	Gray	DIPG	difg
+dlbclci	DLBCL Associated with Chronic Inflammation	dlbcl associated with chronic inflammation	LimeGreen	DLBCLCI	mbn
+dlbclnos	Diffuse Large B-Cell Lymphoma, NOS	diffuse large b-cell lymphoma, nos	LimeGreen	DLBCLNOS	mbn
+dmbl	Desmoplastic/Nodular Medulloblastoma	desmoplastic/nodular medulloblastoma	Gray	DMBL	embt
+dnt	Dysembryoplastic Neuroepithelial Tumor	dysembryoplastic neuroepithelial tumor	Gray	DNT	encg
+dsrct	Desmoplastic Small-Round-Cell Tumor	desmoplastic small-round-cell tumor	LightYellow	DSRCT	soft_tissue
+dstad	Diffuse Type Stomach Adenocarcinoma	diffuse type stomach adenocarcinoma	LightSkyBlue	DSTAD	stad
+dte	Desmoplastic Trichoepithelioma	desmoplastic trichoepithelioma	Black	DTE	skin
+eatl	Enteropathy-Associated T-Cell Lymphoma	enteropathy-associated t-cell lymphoma	LimeGreen	EATL	mtnn
+ebov	Endometrioid Borderlin Ovarian Tumor	endometrioid borderlin ovarian tumor	LightBlue	EBOV	ovt
+ebvdlbclnos	EBV Positive DLBCL, NOS	ebv positive dlbcl, nos	LimeGreen	EBVDLBCLNOS	mbn
+ebvmcu	EBV Positive Mucocutaneous Ulcer	ebv positive mucocutaneous ulcer	LimeGreen	EBVMCU	mbn
+ecad	Endocervical Adenocarcinoma	endocervical adenocarcinoma	Teal	ECAD	cead
+ecd	Erdheim-Chester Disease	erdheim-chester disease	LightSalmon	ECD	hdcn
+egc	Esophagogastric Adenocarcinoma	esophagogastric adenocarcinoma	LightSkyBlue	EGC	stomach
+egct	Extra Gonadal Germ Cell Tumor	extra gonadal germ cell tumor	Black	EGCT	other
+ehae	Epithelioid Hemangioendothelioma	epithelioid hemangioendothelioma	LightYellow	EHAE	soft_tissue
+ehch	Extrahepatic Cholangiocarcinoma	extrahepatic cholangiocarcinoma	Green	EHCH	chol
+emalt	Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue (MALT lymphoma)	extranodal marginal zone lymphoma of mucosa-associated lymphoid tissue (malt lymphoma)	LimeGreen	EMALT	mzl
+embc	Epithelial Type Metaplastic Breast Cancer	epithelial type metaplastic breast cancer	HotPink	EMBC	mbc
+embca	Embryonal Carcinoma	embryonal carcinoma	Red	EMBCA	nsgct
+embt	Embryonal Tumor	embryonal tumor	Gray	EMBT	brain
+emchs	Extraskeletal Myxoid Chondrosarcoma	extraskeletal myxoid chondrosarcoma	White	EMCHS	chs
+empd	Extramammary Paget Disease	extramammary paget disease	Black	EMPD	skin
+empsgc	Endocrine Mucin Producing Sweat Gland Carcinoma	endocrine mucin producing sweat gland carcinoma	Black	EMPSGC	skin
+emyoca	Epithelial-Myoepithelial Carcinoma	epithelial-myoepithelial carcinoma	DarkRed	EMYOCA	ohnca
+encg	Encapsulated Glioma	encapsulated glioma	Gray	ENCG	brain
+enkl	Extranodal NK-/T-Cell Lymphoma, Nasal Type	extranodal nk-/t-cell lymphoma, nasal type	LimeGreen	ENKL	mtnn
+eov	Endometrioid Ovarian Cancer	endometrioid ovarian cancer	LightBlue	EOV	ovt
+ep	Extraosseous Plasmacytoma	extraosseous plasmacytoma	LimeGreen	EP	mbn
+epdca	Esophageal Poorly Differentiated Carcinoma	esophageal poorly differentiated carcinoma	LightSkyBlue	EPDCA	stomach
+epis	Epithelioid Sarcoma	epithelioid sarcoma	LightYellow	EPIS	soft_tissue
+epm	Ependymoma	ependymoma	Gray	EPM	epmt
+epmt	Ependymomal Tumor	ependymomal tumor	Gray	EPMT	brain
+erms	Embryonal Rhabdomyosarcoma	embryonal rhabdomyosarcoma	LightYellow	ERMS	rms
+es	Ewing Sarcoma	ewing sarcoma	White	ES	bone
+esca	Esophageal Adenocarcinoma	esophageal adenocarcinoma	LightSkyBlue	ESCA	egc
+escc	Esophageal Squamous Cell Carcinoma	esophageal squamous cell carcinoma	LightSkyBlue	ESCC	stomach
+esmm	Mucosal Melanoma of the Esophagus	mucosal melanoma of the esophagus	LightSkyBlue	ESMM	stomach
+ess	Endometrial Stromal Sarcoma	endometrial stromal sarcoma	PeachPuff	ESS	usarc
+esst	Ewing Sarcoma of Soft Tissue	ewing sarcoma of soft tissue	LightYellow	ESST	soft_tissue
+et	Essential Thrombocythemia	essential thrombocythemia	LightSalmon	ET	mpn
+etantr	Embryonal Tumor with Abundant Neuropil and True Rosettes	embryonal tumor with abundant neuropil and true rosettes	Gray	ETANTR	embt
+etmf	Essential Thrombocythemia Myelofibrosis	essential thrombocythemia myelofibrosis	LightSalmon	ETMF	et
+etpll	Early T-Cell Precursor Lymphoblastic Leukemia	early t-cell precursor lymphoblastic leukemia	LimeGreen	ETPLL	tll
+ett	Epithelioid Trophoblastic Tumor	epithelioid trophoblastic tumor	PeachPuff	ETT	gtd
+evn	Extraventricular Neurocytoma	extraventricular neurocytoma	Gray	EVN	mnet
+eye	Eye	eye	Green	EYE	tissue
+fa	Fibroadenoma	fibroadenoma	HotPink	FA	bfn
+fdcs	Follicular Dendritic Cell Sarcoma	follicular dendritic cell sarcoma	LightYellow	FDCS	hdcn
+fhptld	Florid Follicular Hyperplasia PTLD	florid follicular hyperplasia ptld	LimeGreen	FHPTLD	ptld
+fhrcc	FH-Deficient Renal Cell Carcinoma	fh-deficient renal cell carcinoma	Orange	FHRCC	nccrcc
+fibs	Fibrosarcoma	fibrosarcoma	LightYellow	FIBS	soft_tissue
+fios	Fibroblastic Osteosarcoma	fibroblastic osteosarcoma	White	FIOS	os
+fl	Follicular Lymphoma	follicular lymphoma	LimeGreen	FL	mbn
+flc	Fibrolamellar Carcinoma	fibrolamellar carcinoma	MediumSeaGreen	FLC	liver
+frct	Fibroblastic Reticular Cell Tumor	fibroblastic reticular cell tumor	LightSalmon	FRCT	hdcn
+ft	Fibrothecoma	fibrothecoma	LightBlue	FT	scst
+ftcl	Follicular T-Cell Lymphoma	follicular t-cell lymphoma	LimeGreen	FTCL	mtnn
+gb	Glioblastoma	glioblastoma	Gray	GB	difg
+gbad	Gallbladder Adenocarcinoma, NOS	gallbladder adenocarcinoma, nos	Green	GBAD	gbc
+gbasc	Adenosquamous Carcinoma of the Gallbladder	adenosquamous carcinoma of the gallbladder	Green	GBASC	gbc
+gbc	Gallbladder Cancer	gallbladder cancer	Green	GBC	biliary_tract
+gbm	Glioblastoma Multiforme	glioblastoma multiforme	Gray	GBM	gb
+gcb	Germinal Center B-Cell Type	germinal center b-cell type	LimeGreen	GCB	dlbclnos
+gccap	Goblet Cell Carcinoid of the Appendix	goblet cell carcinoid of the appendix	SaddleBrown	GCCAP	apad
+gcemu	Gastric Type Mucinous Carcinoma	gastric type mucinous carcinoma	Teal	GCEMU	cemu
+gclc	Giant Cell Carcinoma of the Lung	giant cell carcinoma of the lung	Gainsboro	GCLC	lclc
+gct	Granular Cell Tumor	granular cell tumor	Gray	GCT	selt
+gctb	Giant Cell Tumor of Bone	giant cell tumor of bone	White	GCTB	bone
+gctstm	Germ Cell Tumor with Somatic-Type Malignancy	germ cell tumor with somatic-type malignancy	Red	GCTSTM	nsgct
+gej	Adenocarcinoma of the Gastroesophageal Junction	adenocarcinoma of the gastroesophageal junction	LightSkyBlue	GEJ	egc
+ghcd	Gamma Heavy-Chain Disease	gamma heavy-chain disease	LimeGreen	GHCD	mbn
+ginet	Gastrointestinal Neuroendocrine Tumors	gastrointestinal neuroendocrine tumors	SaddleBrown	GINET	bowel
+ginetes	Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach	gastrointestinal neuroendocrine tumors of the esophagus/stomach	LightSkyBlue	GINETES	stomach
+gist	Gastrointestinal Stromal Tumor	gastrointestinal stromal tumor	LightYellow	GIST	soft_tissue
+gmn	Germinoma	germinoma	Gray	GMN	bgct
+gn	Ganglioneuroma	ganglioneuroma	Gray	GN	pns
+gnbl	Ganglioneuroblastoma	ganglioneuroblastoma	Gray	GNBL	pns
+gnc	Gangliocytoma	gangliocytoma	Gray	GNC	encg
+gng	Ganglioglioma	ganglioglioma	Gray	GNG	encg
+gnos	Glioma, NOS	glioma, nos	Gray	GNOS	difg
+grc	Gastric Remnant Adenocarcinoma	gastric remnant adenocarcinoma	LightSkyBlue	GRC	egc
+grct	Granulosa Cell Tumor	granulosa cell tumor	LightBlue	GRCT	scst
+gs	Glomangiosarcoma	glomangiosarcoma	LightYellow	GS	soft_tissue
+gsarc	Gliosarcoma	gliosarcoma	Gray	GSARC	gb
+gtd	Gestational Trophoblastic Disease	gestational trophoblastic disease	PeachPuff	GTD	uterus
+hcc	Hepatocellular Carcinoma	hepatocellular carcinoma	MediumSeaGreen	HCC	liver
+hccihch	Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma	hepatocellular carcinoma plus intrahepatic cholangiocarcinoma	MediumSeaGreen	HCCIHCH	liver
+hcl	Hairy Cell Leukemia	hairy cell leukemia	LimeGreen	HCL	mbn
+hcl-v	Hairy Cell Leukemia-Variant	hairy cell leukemia-variant	LimeGreen	HCL-V	sblu
+hdcn	Histiocytic and Dendritic Cell Neoplasms	histiocytic and dendritic cell neoplasms	LightSalmon	HDCN	mnm
+hdcs	Histiocytic Dendritic Cell Sarcoma	histiocytic dendritic cell sarcoma	LightYellow	HDCS	dcs
+head_neck	Head and Neck	head and neck	DarkRed	HEAD_NECK	tissue
+hema	Hemangioma	hemangioma	LightYellow	HEMA	soft_tissue
+hgbcl	High-Grade B-Cell Lymphoma, NOS	high-grade b-cell lymphoma, nos	LimeGreen	HGBCL	mbn
+hgbclmycbcl2	High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements	high-grade b-cell lymphoma, with myc and bcl2 and/or bcl6 rearrangements	LimeGreen	HGBCLMYCBCL2	mbn
+hgess	High-Grade Endometrial Stromal Sarcoma	high-grade endometrial stromal sarcoma	PeachPuff	HGESS	ess
+hggnos	High-Grade Glioma, NOS	high-grade glioma, nos	Gray	HGGNOS	difg
+hgnec	High-Grade Neuroendocrine Carcinoma of the Colon and Rectum	high-grade neuroendocrine carcinoma of the colon and rectum	SaddleBrown	HGNEC	ginet
+hgnee	High-Grade Neuroendocrine Carcinoma of the Esophagus	high-grade neuroendocrine carcinoma of the esophagus	LightSkyBlue	HGNEE	ginetes
+hgnes	High-Grade Neuroendocrine Carcinoma of the Stomach	high-grade neuroendocrine carcinoma of the stomach	LightSkyBlue	HGNES	ginetes
+hgnet	High-Grade Neuroepithelial Tumor	high-grade neuroepithelial tumor	Gray	HGNET	mbt
+hgonec	High-Grade Neuroendocrine Carcinoma of the Ovary	high-grade neuroendocrine carcinoma of the ovary	LightBlue	HGONEC	oovc
+hgsft	High-Grade Serous Fallopian Tube Cancer	high-grade serous fallopian tube cancer	LightBlue	HGSFT	oovc
+hgsoc	High-Grade Serous Ovarian Cancer	high-grade serous ovarian cancer	LightBlue	HGSOC	soc
+hgsos	High-Grade Surface Osteosarcoma	high-grade surface osteosarcoma	White	HGSOS	os
+hhv8dlbcl	HHV8 Positive DLBCL, NOS	hhv8 positive dlbcl, nos	LimeGreen	HHV8DLBCL	mbn
+hl	Hodgkin Lymphoma	hodgkin lymphoma	LimeGreen	HL	lnm
+hmbl	Hemangioblastoma	hemangioblastoma	Gray	HMBL	mbt
+hnmasc	Mammary Analogue Secretory Carcinoma of Salivary Gland Origin	mammary analogue secretory carcinoma of salivary gland origin	DarkRed	HNMASC	saca
+hnmucm	Head and Neck Mucosal Melanoma	head and neck mucosal melanoma	DarkRed	HNMUCM	head_neck
+hnne	Head and Neck Neuroendocrine Carcinoma	head and neck neuroendocrine carcinoma	DarkRed	HNNE	ohnca
+hnsc	Head and Neck Squamous Cell Carcinoma	head and neck squamous cell carcinoma	DarkRed	HNSC	head_neck
+hnscup	Head and Neck Squamous Cell Carcinoma of Unknown Primary	head and neck squamous cell carcinoma of unknown primary	DarkRed	HNSCUP	hnsc
+hpccns	Hemangiopericytoma of the Central Nervous System	hemangiopericytoma of the central nervous system	Gray	HPCCNS	mngt
+hphsc	Hypopharynx Squamous Cell Carcinoma	hypopharynx squamous cell carcinoma	DarkRed	HPHSC	hnsc
+hs	Histiocytic Sarcoma	histiocytic sarcoma	LightSalmon	HS	hdcn
+hstcl	Hepatosplenic T-cell Lymphoma	hepatosplenic t-cell lymphoma	LimeGreen	HSTCL	mtnn
+htat	Hyalinizing Trabecular Adenoma of the Thyroid	hyalinizing trabecular adenoma of the thyroid	Teal	HTAT	thyroid
+hvll	Hydroa Vacciniforme Like Lymphoproliferative Disorder	hydroa vacciniforme like lymphoproliferative disorder	LimeGreen	HVLL	mtnn
+iampca	Intestinal Ampullary Carcinoma	intestinal ampullary carcinoma	Purple	IAMPCA	ampca
+ibc	Inflammatory Breast Cancer	inflammatory breast cancer	HotPink	IBC	breast
+icemu	Intestinal Type Mucinous Carcinoma	intestinal type mucinous carcinoma	Teal	ICEMU	cemu
+idc	Breast Invasive Ductal Carcinoma	breast invasive ductal carcinoma	HotPink	IDC	brca
+idcs	Interdigitating Dendritic Cell Sarcoma	interdigitating dendritic cell sarcoma	LightYellow	IDCS	hdcn
+idct	Indeterminate Dendritic Cell Tumor	indeterminate dendritic cell tumor	LightSalmon	IDCT	hdcn
+ifs	Infantile Fibrosarcoma	infantile fibrosarcoma	LightYellow	IFS	soft_tissue
+ihch	Intrahepatic Cholangiocarcinoma	intrahepatic cholangiocarcinoma	Green	IHCH	chol
+ihm	Invasive Hydatidiform Mole	invasive hydatidiform mole	PeachPuff	IHM	mp
+ilc	Breast Invasive Lobular Carcinoma	breast invasive lobular carcinoma	HotPink	ILC	brca
+immc	Breast Invasive Mixed Mucinous Carcinoma	breast invasive mixed mucinous carcinoma	HotPink	IMMC	brca
+imptld	Infectious Mononucleosis PTLD	infectious mononucleosis ptld	LimeGreen	IMPTLD	ptld
+ims	Myofibromatosis	myofibromatosis	LightYellow	IMS	soft_tissue
+imt	Inflammatory Myofibroblastic Tumor	inflammatory myofibroblastic tumor	LightYellow	IMT	soft_tissue
+imtb	Inflammatory Myofibroblastic Bladder Tumor	inflammatory myofibroblastic bladder tumor	Yellow	IMTB	bladder
+imtl	Inflammatory Myofibroblastic Lung Tumor	inflammatory myofibroblastic lung tumor	Gainsboro	IMTL	lung
+ints	Intimal Sarcoma	intimal sarcoma	LightYellow	INTS	soft_tissue
+ipmn	Intraductal Papillary Mucinous Neoplasm	intraductal papillary mucinous neoplasm	Purple	IPMN	pact
+isfn	In Situ Follicular Neoplasia	in situ follicular neoplasia	LimeGreen	ISFN	fl
+ism	Indolent Systemic Mastocytosis	indolent systemic mastocytosis	LightSalmon	ISM	sm
+ismcl	In Situ Mantle Cell Neoplasia	in situ mantle cell neoplasia	LimeGreen	ISMCL	mcl
+istad	Intestinal Type Stomach Adenocarcinoma	intestinal type stomach adenocarcinoma	LightSkyBlue	ISTAD	stad
+itlpdgi	Indolent T-Cell Lymphoproliferative Disorder of the GI Tract	indolent t-cell lymphoproliferative disorder of the gi tract	LimeGreen	ITLPDGI	mtnn
+iup	Inverted Urothelial Papilloma	inverted urothelial papilloma	Yellow	IUP	bladder
+ivbcl	Intravascular Large B-Cell Lymphoma	intravascular large b-cell lymphoma	LimeGreen	IVBCL	mbn
+jmml	Juvenile Myelomonocytic Leukemia	juvenile myelomonocytic leukemia	LightSalmon	JMML	mds/mpn
+jscb	Juvenile Secretory Carcinoma of the Breast	juvenile secretory carcinoma of the breast	HotPink	JSCB	breast
+jxg	Disseminated Juvenile Xanthogranuloma	disseminated juvenile xanthogranuloma	LightSalmon	JXG	hdcn
+kidney	Kidney	kidney	Orange	KIDNEY	tissue
+lais	Lung Adenocarcinoma In Situ	lung adenocarcinoma in situ	Gainsboro	LAIS	lung
+lam	Pulmonary Lymphangiomyomatosis	pulmonary lymphangiomyomatosis	Gainsboro	LAM	lung
+latl	Lymphoid Atypical	lymphoid atypical	LimeGreen	LATL	lymph
+lbgn	Lymphoid Benign	lymphoid benign	LimeGreen	LBGN	lymph
+lblirf4	Large B-Cell Lymphoma with IRF4 Rearrangement	large b-cell lymphoma with irf4 rearrangement	LimeGreen	LBLIRF4	mbn
+lch	Langerhans Cell Histiocytosis	langerhans cell histiocytosis	LightSalmon	LCH	hdcn
+lcis	Breast Lobular Carcinoma In Situ	breast lobular carcinoma in situ	HotPink	LCIS	breast
+lclc	Large Cell Lung Carcinoma	large cell lung carcinoma	Gainsboro	LCLC	nsclc
+lcs	Langerhans Cell Sarcoma	langerhans cell sarcoma	LightSalmon	LCS	hdcn
+ldchl	Lymphocyte-Depleted Classical Hodgkin Lymphoma	lymphocyte-depleted classical hodgkin lymphoma	LimeGreen	LDCHL	chl
+ldd	Dysplastic Gangliocytoma of the Cerebellum/Lhermitte-Duclos Disease	dysplastic gangliocytoma of the cerebellum/lhermitte-duclos disease	Gray	LDD	mnet
+leclc	Lymphoepithelioma-like Carcinoma of the Lung	lymphoepithelioma-like carcinoma of the lung	Gainsboro	LECLC	lclc
+lgcos	Low-Grade Central Osteosarcoma	low-grade central osteosarcoma	White	LGCOS	os
+lgess	Low-Grade Endometrial Stromal Sarcoma	low-grade endometrial stromal sarcoma	PeachPuff	LGESS	ess
+lgfms	Low-Grade Fibromyxoid Sarcoma	low-grade fibromyxoid sarcoma	LightYellow	LGFMS	soft_tissue
+lggnos	Low-Grade Glioma, NOS	low-grade glioma, nos	Gray	LGGNOS	encg
+lgnet	Low-Grade Neuroepithelial Tumor	low-grade neuroepithelial tumor	Gray	LGNET	mbt
+lgsoc	Low-Grade Serous Ovarian Cancer	low-grade serous ovarian cancer	LightBlue	LGSOC	soc
+liad	Hepatocellular Adenoma	hepatocellular adenoma	MediumSeaGreen	LIAD	liver
+lias	Liver Angiosarcoma	liver angiosarcoma	MediumSeaGreen	LIAS	liver
+lihb	Hepatoblastoma	hepatoblastoma	MediumSeaGreen	LIHB	liver
+limnet	Malignant Nonepithelial Tumor of the Liver	malignant nonepithelial tumor of the liver	MediumSeaGreen	LIMNET	liver
+lipo	Liposarcoma	liposarcoma	LightYellow	LIPO	soft_tissue
+liver	Liver	liver	MediumSeaGreen	LIVER	tissue
+lm	Leiomyoma	leiomyoma	LightYellow	LM	soft_tissue
+lms	Leiomyosarcoma	leiomyosarcoma	LightYellow	LMS	soft_tissue
+lnet	Lung Neuroendocrine Tumor	lung neuroendocrine tumor	Gainsboro	LNET	lung
+lnm	Lymphoid Neoplasm	lymphoid neoplasm	LimeGreen	LNM	lymph
+lpl	Lymphoplasmacytic Lymphoma	lymphoplasmacytic lymphoma	LimeGreen	LPL	mbn
+lrchl	Lymphocyte-Rich Classical Hodgkin Lymphoma	lymphocyte-rich classical hodgkin lymphoma	LimeGreen	LRCHL	chl
+luacc	Adenoid Cystic Carcinoma of the Lung	adenoid cystic carcinoma of the lung	Gainsboro	LUACC	sgttl
+luad	Lung Adenocarcinoma	lung adenocarcinoma	Gainsboro	LUAD	nsclc
+luas	Lung Adenosquamous Carcinoma	lung adenosquamous carcinoma	Gainsboro	LUAS	nsclc
+luca	Lung Carcinoid	lung carcinoid	Gainsboro	LUCA	lnet
+lumec	Mucoepidermoid Carcinoma of the Lung	mucoepidermoid carcinoma of the lung	Gainsboro	LUMEC	sgttl
+lune	Large Cell Neuroendocrine Carcinoma	large cell neuroendocrine carcinoma	Gainsboro	LUNE	lnet
+lung	Lung	lung	Gainsboro	LUNG	tissue
+lupc	Pleomorphic Carcinoma of the Lung	pleomorphic carcinoma of the lung	Gainsboro	LUPC	nsclc
+lusc	Lung Squamous Cell Carcinoma	lung squamous cell carcinoma	Gainsboro	LUSC	nsclc
+lxsc	Larynx Squamous Cell Carcinoma	larynx squamous cell carcinoma	DarkRed	LXSC	hnsc
+lyg	Lymphomatoid Granulomatosis	lymphomatoid granulomatosis	LimeGreen	LYG	mbn
+lymph	Lymphoid	lymphoid	LimeGreen	LYMPH	tissue
+lyp	Lymphomatoid Papulosis	lymphomatoid papulosis	LimeGreen	LYP	pclpd
+maap	Mucinous Adenocarcinoma of the Appendix	mucinous adenocarcinoma of the appendix	SaddleBrown	MAAP	apad
+mac	Microcystic Adnexal Carcinoma	microcystic adnexal carcinoma	Black	MAC	skin
+macr	Mucinous Adenocarcinoma of the Colon and Rectum	mucinous adenocarcinoma of the colon and rectum	SaddleBrown	MACR	coadread
+mampca	Mixed Ampullary Carcinoma	mixed ampullary carcinoma	Purple	MAMPCA	ampca
+masc	Metaplastic Adenosquamous Carcinoma	metaplastic adenosquamous carcinoma	HotPink	MASC	embc
+mascc	Metaplastic Adenocarcinoma with Spindle Cell Differentiation	metaplastic adenocarcinoma with spindle cell differentiation	HotPink	MASCC	embc
+matpl	Myeloid Atypical	myeloid atypical	LightSalmon	MATPL	myeloid
+mbc	Metaplastic Breast Cancer	metaplastic breast cancer	HotPink	MBC	breast
+mben	Medulloblastoma with Extensive Nodularity	medulloblastoma with extensive nodularity	Gray	MBEN	embt
+mbgn	Myeloid Benign	myeloid benign	LightSalmon	MBGN	myeloid
+mbl	Medulloblastoma	medulloblastoma	Gray	MBL	embt
+mbn	Mature B-Cell Neoplasms	mature b-cell neoplasms	LimeGreen	MBN	nhl
+mbov	Mucinous Borderline Ovarian Tumor	mucinous borderline ovarian tumor	LightBlue	MBOV	ovt
+mbt	Miscellaneous Brain Tumor	miscellaneous brain tumor	Gray	MBT	brain
+mcbcl	Monoclonal B-Cell Lymphocytosis	monoclonal b-cell lymphocytosis	LimeGreen	MCBCL	mbn
+mcc	Merkel Cell Carcinoma	merkel cell carcinoma	Black	MCC	skin
+mcce	Mixed Cervical Carcinoma	mixed cervical carcinoma	Teal	MCCE	cervix
+mcchl	Mixed Cellularity Classical Hodgkin Lymphoma	mixed cellularity classical hodgkin lymphoma	LimeGreen	MCCHL	chl
+mcd	Mastocytosis	mastocytosis	LightSalmon	MCD	mnm
+mchs	Mesenchymal Chondrosarcoma	mesenchymal chondrosarcoma	White	MCHS	chs
+mchscns	Mesenchymal Chondrosarcoma of the CNS	mesenchymal chondrosarcoma of the cns	Gray	MCHSCNS	mbt
+mcl	Mantle Cell Lymphoma	mantle cell lymphoma	LimeGreen	MCL	mbn
+mcn	Mucinous Cystic Neoplasm	mucinous cystic neoplasm	Purple	MCN	pact
+mcs	Metaplastic Carcinosarcoma	metaplastic carcinosarcoma	HotPink	MCS	mmbc
+mcsl	Mast Cell Sarcoma	mast cell sarcoma	LightSalmon	MCSL	mcd
+mdep	Medulloepithelioma	medulloepithelioma	Gray	MDEP	embt
+mdlc	Breast Mixed Ductal and Lobular Carcinoma	breast mixed ductal and lobular carcinoma	HotPink	MDLC	brca
+mds	Myelodysplastic Syndromes	myelodysplastic syndromes	LightSalmon	MDS	mnm
+mds/mpn	Myelodysplastic/Myeloproliferative Neoplasms	myelodysplastic/myeloproliferative neoplasms	LightSalmon	MDS/MPN	mnm
+mdseb	MDS with Excess Blasts	mds with excess blasts	LightSalmon	MDSEB	mds
+mdseb1	MDS with excess blasts-1	mds with excess blasts-1	LightSalmon	MDSEB1	mdseb
+mdseb2	MDS with excess blasts-2	mds with excess blasts-2	LightSalmon	MDSEB2	mdseb
+mdsid5q	MDS with Isolated Del(5q)	mds with isolated del(5q)	LightSalmon	MDSID5Q	mds
+mdsmd	MDS with Multilineage Dysplasia	mds with multilineage dysplasia	LightSalmon	MDSMD	mds
+mdsmpnrst	MDS/MPN with Ring Sideroblasts and Thrombocytosis	mds/mpn with ring sideroblasts and thrombocytosis	LightSalmon	MDSMPNRST	mds/mpn
+mdsmpnu	MDS/MPN, Unclassifiable	mds/mpn, unclassifiable	LightSalmon	MDSMPNU	mds/mpn
+mdsrs	MDS with Ring Sideroblasts	mds with ring sideroblasts	LightSalmon	MDSRS	mds
+mdsrsmd	MDS with Ring Sideroblasts and Multilineage Dysplasia	mds with ring sideroblasts and multilineage dysplasia	LightSalmon	MDSRSMD	mdsrs
+mdsrssld	MDS with Ring Sideroblasts and Single Lineage Dysplasia	mds with ring sideroblasts and single lineage dysplasia	LightSalmon	MDSRSSLD	mdsrs
+mdssld	MDS with Single Lineage Dysplasia	mds with single lineage dysplasia	LightSalmon	MDSSLD	mds
+mdsu	MDS, Unclassifiable	mds, unclassifiable	LightSalmon	MDSU	mds
+meitl	Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma	monomorphic epitheliotropic intestinal t-cell lymphoma	LimeGreen	MEITL	mtnn
+mel	Melanoma	melanoma	Black	MEL	skin
+melc	Melanocytoma	melanocytoma	Gray	MELC	pcnsmt
+mf	Myofibroma	myofibroma	LightYellow	MF	soft_tissue
+mfh	Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma	undifferentiated pleomorphic sarcoma/malignant fibrous histiocytoma/high-grade spindle cell sarcoma	LightYellow	MFH	soft_tissue
+mfs	Myxofibrosarcoma	myxofibrosarcoma	LightYellow	MFS	soft_tissue
+mgct	Mixed Germ Cell Tumor	mixed germ cell tumor	Red	MGCT	nsgct
+mgst	Malignant Glomus Tumor	malignant glomus tumor	LightYellow	MGST	soft_tissue
+mgus	Monoclonal Gammopathy of Undetermined Significance	monoclonal gammopathy of undetermined significance	LimeGreen	MGUS	mbn
+mgusiga	IgA	iga	LimeGreen	MGUSIGA	mgus
+mgusigg	IgG	igg	LimeGreen	MGUSIGG	mgus
+mgusigm	IgM	igm	LimeGreen	MGUSIGM	mgus
+mhcd	Mu Heavy-Chain Disease	mu heavy-chain disease	LimeGreen	MHCD	mbn
+midd	Monoclonal Immunoglobulin Deposition Diseases	monoclonal immunoglobulin deposition diseases	LimeGreen	MIDD	mbn
+midda	Amyloidosis	amyloidosis	LimeGreen	MIDDA	midd
+middo	Monoclonal Immunoglobulin Deposition Diseases, Other	monoclonal immunoglobulin deposition diseases, other	LimeGreen	MIDDO	midd
+mixed	Mixed Cancer Types	mixed cancer types	Black	MIXED	cup
+mlads	Myeloid Leukemia Associated with Down Syndrome	myeloid leukemia associated with down syndrome	LightSalmon	MLADS	mprds
+mlner	Myeloid/Lymphoid Neoplasms with Eosinophilia and Rearrangement of  PDGFRA/PDGFRB or FGFR1 or with PCM1-JAK2	myeloid/lymphoid neoplasms with eosinophilia and rearrangement of  pdgfra/pdgfrb or fgfr1 or with pcm1-jak2	LightSalmon	MLNER	mnm
+mlnfgfr1	Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement	myeloid/lymphoid neoplasms with fgfr1 rearrangement	LightSalmon	MLNFGFR1	mlner
+mlnpcm1jak2	Myeloid/Lymphoid Neoplasms with PCM1-JAK2	myeloid/lymphoid neoplasms with pcm1-jak2	LightSalmon	MLNPCM1JAK2	mlner
+mlnpdgfra	Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement	myeloid/lymphoid neoplasms with pdgfra rearrangement	LightSalmon	MLNPDGFRA	mlner
+mlnpdgfrb	Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement	myeloid/lymphoid neoplasms with pdgfrb rearrangement	LightSalmon	MLNPDGFRB	mlner
+mlym	Malignant Lymphoma	malignant lymphoma	Gray	MLYM	mbt
+mmb	Medullomyoblastoma	medullomyoblastoma	Gray	MMB	embt
+mmbc	Mixed Type Metaplastic Breast Cancer	mixed type metaplastic breast cancer	HotPink	MMBC	mbc
+mmbl	Melanotic Medulloblastoma	melanotic medulloblastoma	Gray	MMBL	embt
+mnet	Miscellaneous Neuroepithelial Tumor	miscellaneous neuroepithelial tumor	Gray	MNET	brain
+mng	Meningioma	meningioma	Gray	MNG	mngt
+mnglp	Myeloid Neoplasms with Germ Line Predisposition	myeloid neoplasms with germ line predisposition	LightSalmon	MNGLP	mnm
+mngt	Meningothelial Tumor	meningothelial tumor	Gray	MNGT	brain
+mnm	Myeloid Neoplasm	myeloid neoplasm	LightSalmon	MNM	myeloid
+mov	Mucinous Ovarian Cancer	mucinous ovarian cancer	LightBlue	MOV	ovt
+mp	Molar Pregnancy	molar pregnancy	PeachPuff	MP	gtd
+mpalbcrabl1	Mixed Phenotype Acute Leukemia with t(9;22)(q34.1;q11.2); BCR-ABL1	mixed phenotype acute leukemia with t(9;22)(q34.1;q11.2); bcr-abl1	LightSalmon	MPALBCRABL1	alal
+mpalbnos	Mixed Phenotype Acute Leukemia, B/Myeloid, NOS	mixed phenotype acute leukemia, b/myeloid, nos	LightSalmon	MPALBNOS	alal
+mpalkmt2a	Mixed Phenotype Acute Leukemia with t(v;11q23.3); KMT2A Rearranged	mixed phenotype acute leukemia with t(v;11q23.3); kmt2a rearranged	LightSalmon	MPALKMT2A	alal
+mpaltnos	Mixed Phenotype Acute Leukemia, T/Myeloid, NOS	mixed phenotype acute leukemia, t/myeloid, nos	LightSalmon	MPALTNOS	alal
+mpc	Myopericytoma	myopericytoma	LightYellow	MPC	soft_tissue
+mpe	Myxopapillary Ependymoma	myxopapillary ependymoma	Gray	MPE	epmt
+mpn	Myeloproliferative Neoplasms	myeloproliferative neoplasms	LightSalmon	MPN	mnm
+mpnst	Malignant Peripheral Nerve Sheath Tumor	malignant peripheral nerve sheath tumor	Gray	MPNST	nst
+mpnu	Myeloproliferative Neoplasms, Unclassifiable	myeloproliferative neoplasms, unclassifiable	LightSalmon	MPNU	mpn
+mprds	Myeloid Proliferations Related to Down Syndrome	myeloid proliferations related to down syndrome	LightSalmon	MPRDS	aml
+mpt	Malignant Phyllodes Tumor of the Breast	malignant phyllodes tumor of the breast	HotPink	MPT	pt
+mptld	Monomorphic PTLD (B- and T-/NK-cell types)	monomorphic ptld (b- and t-/nk-cell types)	LimeGreen	MPTLD	ptld
+mrc	Renal Medullary Carcinoma	renal medullary carcinoma	Orange	MRC	nccrcc
+mrls	Myxoid/Round-Cell Liposarcoma	myxoid/round-cell liposarcoma	LightYellow	MRLS	lipo
+mrt	Rhabdoid Cancer	rhabdoid cancer	Orange	MRT	kidney
+mrtl	Malignant Rhabdoid Tumor of the Liver	malignant rhabdoid tumor of the liver	MediumSeaGreen	MRTL	liver
+ms	Myeloid Sarcoma	myeloid sarcoma	LightSalmon	MS	aml
+mscc	Metaplastic Squamous Cell Carcinoma	metaplastic squamous cell carcinoma	HotPink	MSCC	embc
+mschw	Melanotic Schwannoma	melanotic schwannoma	Gray	MSCHW	schw
+mstad	Mucinous Stomach Adenocarcinoma	mucinous stomach adenocarcinoma	LightSkyBlue	MSTAD	stad
+mt	Malignant Tumor	malignant tumor	Gray	MT	mbt
+mtnn	Mature T and NK Neoplasms	mature t and nk neoplasms	LimeGreen	MTNN	nhl
+mtscc	Renal Mucinous Tubular Spindle Cell Carcinoma	renal mucinous tubular spindle cell carcinoma	Orange	MTSCC	nccrcc
+mucc	Mucoepidermoid Carcinoma	mucoepidermoid carcinoma	DarkRed	MUCC	saca
+mup	Melanoma of Unknown Primary	melanoma of unknown primary	Black	MUP	mel
+mxov	Mixed Ovarian Carcinoma	mixed ovarian carcinoma	LightBlue	MXOV	ovt
+mycf	Mycosis Fungoides	mycosis fungoides	LimeGreen	MYCF	mtnn
+mychs	Myxoid Chondrosarcoma	myxoid chondrosarcoma	White	MYCHS	chs
+myec	Myoepithelial Carcinoma	myoepithelial carcinoma	DarkRed	MYEC	saca
+myeloid	Myeloid	myeloid	LightSalmon	MYELOID	tissue
+myxo	Myxoma	myxoma	LightYellow	MYXO	soft_tissue
+mzl	Marginal Zone Lymphoma	marginal zone lymphoma	LimeGreen	MZL	mbn
+nbl	Neuroblastoma	neuroblastoma	Gray	NBL	pns
+nccrcc	Renal Non-Clear Cell Carcinoma	renal non-clear cell carcinoma	Orange	NCCRCC	rcc
+necnos	Neuroendocrine Carcinoma, NOS	neuroendocrine carcinoma, nos	Black	NECNOS	cup
+netnos	Neuroendocrine Tumor, NOS	neuroendocrine tumor, nos	Black	NETNOS	cup
+nfib	Neurofibroma	neurofibroma	Gray	NFIB	nst
+nhl	Non-Hodgkin Lymphoma	non-hodgkin lymphoma	LimeGreen	NHL	lnm
+nkcll	Natural Killer (NK) Cell Lymphoblastic Leukemia/Lymphoma	natural killer (nk) cell lymphoblastic leukemia/lymphoma	LimeGreen	NKCLL	tll
+nlphl	Nodular Lymphocyte-Predominant Hodgkin Lymphoma	nodular lymphocyte-predominant hodgkin lymphoma	LimeGreen	NLPHL	hl
+nmchn	NUT Midline Carcinoma of the Head and Neck	nut midline carcinoma of the head and neck	DarkRed	NMCHN	ohnca
+nmzl	Nodal Marginal Zone Lymphoma	nodal marginal zone lymphoma	LimeGreen	NMZL	mzl
+npc	Nasopharyngeal Carcinoma	nasopharyngeal carcinoma	DarkRed	NPC	head_neck
+nptltfh	Nodal Peripheral T-Cell Lymphoma with TFH Phenotype	nodal peripheral t-cell lymphoma with tfh phenotype	LimeGreen	NPTLTFH	mtnn
+nschl	Nodular Sclerosis Classical Hodgkin Lymphoma	nodular sclerosis classical hodgkin lymphoma	LimeGreen	NSCHL	chl
+nsclc	Non-Small Cell Lung Cancer	non-small cell lung cancer	Gainsboro	NSCLC	lung
+nsclcpd	Poorly Differentiated Non-Small Cell Lung Cancer	poorly differentiated non-small cell lung cancer	Gainsboro	NSCLCPD	nsclc
+nsgct	Non-Seminomatous Germ Cell Tumor	non-seminomatous germ cell tumor	Red	NSGCT	testis
+nst	Nerve Sheath Tumor	nerve sheath tumor	Gray	NST	pns
+nutcl	NUT Carcinoma of the Lung	nut carcinoma of the lung	Gainsboro	NUTCL	nsclc
+oast	Oligoastrocytoma	oligoastrocytoma	Gray	OAST	difg
+oat	Oncocytic Adenoma of the Thyroid	oncocytic adenoma of the thyroid	Teal	OAT	thyroid
+ocnos	Ovarian Choriocarcinoma, NOS	ovarian choriocarcinoma, nos	LightBlue	OCNOS	oovc
+ocs	Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor	ovarian carcinosarcoma/malignant mixed mesodermal tumor	LightBlue	OCS	ovt
+ocsc	Oral Cavity Squamous Cell Carcinoma	oral cavity squamous cell carcinoma	DarkRed	OCSC	hnsc
+odg	Oligodendroglioma	oligodendroglioma	Gray	ODG	difg
+odgc	Odontogenic Carcinoma	odontogenic carcinoma	DarkRed	ODGC	ohnca
+odys	Dysgerminoma	dysgerminoma	LightBlue	ODYS	ogct
+oec	Embryonal Carcinoma	embryonal carcinoma	LightBlue	OEC	ogct
+ofmt	Ossifying Fibromyxoid Tumor	ossifying fibromyxoid tumor	LightYellow	OFMT	myxo
+ogbl	Gonadoblastoma	gonadoblastoma	LightBlue	OGBL	scst
+ogct	Ovarian Germ Cell Tumor	ovarian germ cell tumor	LightBlue	OGCT	ovary
+ohnca	Head and Neck Carcinoma, Other	head and neck carcinoma, other	DarkRed	OHNCA	head_neck
+oimt	Immature Teratoma	immature teratoma	LightBlue	OIMT	ogct
+om	Ocular Melanoma	ocular melanoma	Green	OM	eye
+omgct	Mixed Germ Cell Tumor	mixed germ cell tumor	LightBlue	OMGCT	ogct
+omt	Mature Teratoma	mature teratoma	LightBlue	OMT	ogct
+onbl	Olfactory Neuroblastoma	olfactory neuroblastoma	Gray	ONBL	embt
+oovc	Ovarian Cancer, Other	ovarian cancer, other	LightBlue	OOVC	ovary
+ope	Polyembryoma	polyembryoma	LightBlue	OPE	ogct
+ophsc	Oropharynx Squamous Cell Carcinoma	oropharynx squamous cell carcinoma	DarkRed	OPHSC	hnsc
+os	Osteosarcoma	osteosarcoma	White	OS	bone
+osaca	Salivary Carcinoma, Other	salivary carcinoma, other	DarkRed	OSACA	saca
+osgct	Osteoclastic Giant Cell Tumor	osteoclastic giant cell tumor	Purple	OSGCT	ucp
+osmad	Ovarian Seromucinous Adenoma	ovarian seromucinous adenoma	LightBlue	OSMAD	ovt
+osmbt	Ovarian Seromucinous Borderline Tumor	ovarian seromucinous borderline tumor	LightBlue	OSMBT	ovt
+osmca	Ovarian Seromucinous Carcinoma	ovarian seromucinous carcinoma	LightBlue	OSMCA	ovt
+osos	Osteoblastic Osteosarcoma	osteoblastic osteosarcoma	White	OSOS	os
+other	Other	other	Black	OTHER	tissue
+ousarc	Uterine Sarcoma, Other	uterine sarcoma, other	PeachPuff	OUSARC	usarc
+outt	Other Uterine Tumor	other uterine tumor	PeachPuff	OUTT	uterus
+ovary	Ovary/Fallopian Tube	ovary/fallopian tube	LightBlue	OVARY	tissue
+ovt	Ovarian Epithelial Tumor	ovarian epithelial tumor	LightBlue	OVT	ovary
+oyst	Yolk Sac Tumor	yolk sac tumor	LightBlue	OYST	ogct
+paac	Acinar Cell Carcinoma of the Pancreas	acinar cell carcinoma of the pancreas	Purple	PAAC	pancreas
+paad	Pancreatic Adenocarcinoma	pancreatic adenocarcinoma	Purple	PAAD	pancreas
+paasc	Adenosquamous Carcinoma of the Pancreas	adenosquamous carcinoma of the pancreas	Purple	PAASC	pancreas
+pact	Cystic Tumor of the Pancreas	cystic tumor of the pancreas	Purple	PACT	pancreas
+pampca	Pancreatobiliary Ampullary Carcinoma	pancreatobiliary ampullary carcinoma	Purple	PAMPCA	ampca
+pancreas	Pancreas	pancreas	Purple	PANCREAS	tissue
+panet	Pancreatic Neuroendocrine Tumor	pancreatic neuroendocrine tumor	Purple	PANET	pancreas
+paos	Parosteal Osteosarcoma	parosteal osteosarcoma	White	PAOS	os
+past	Pilocytic Astrocytoma	pilocytic astrocytoma	Gray	PAST	encg
+pb	Pancreatoblastoma	pancreatoblastoma	Purple	PB	pancreas
+pbl	Pineoblastoma	pineoblastoma	Gray	PBL	pint
+pbs	Breast Sarcoma	breast sarcoma	HotPink	PBS	breast
+pbt	Primary Brain Tumor	primary brain tumor	Gray	PBT	mbt
+pcaectcl	Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma	primary cutaneous cd8 positive aggressive epidermotropic cytotoxic t-cell lymphoma	LimeGreen	PCAECTCL	mtnn
+pcalcl	Primary Cutaneous Anaplastic Large Cell Lymphoma	primary cutaneous anaplastic large cell lymphoma	LimeGreen	PCALCL	pclpd
+pcatcl	Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma	primary cutaneous acral cd8 positive t-cell lymphoma	LimeGreen	PCATCL	mtnn
+pcfcl	Primary Cutaneous Follicle Center Lymphoma	primary cutaneous follicle center lymphoma	LimeGreen	PCFCL	mbn
+pcgdtcl	Primary Cutaneous Gamma Delta T-Cell Lymphoma	primary cutaneous gamma delta t-cell lymphoma	LimeGreen	PCGDTCL	mtnn
+pcgp	Craniopharyngioma, Papillary Type	craniopharyngioma, papillary type	Gray	PCGP	selt
+pclbcllt	Primary Cutaneous DLBCL, Leg Type	primary cutaneous dlbcl, leg type	LimeGreen	PCLBCLLT	mbn
+pclpd	Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders	primary cutaneous cd30 positive t-cell lymphoproliferative disorders	LimeGreen	PCLPD	mtnn
+pcm	Plasma Cell Myeloma	plasma cell myeloma	LimeGreen	PCM	mbn
+pcnsl	Primary DLBCL of the central nervous system	primary dlbcl of the central nervous system	LimeGreen	PCNSL	mbn
+pcnsm	Primary CNS Melanoma	primary cns melanoma	LightSkyBlue	PCNSM	pcnsmt
+pcnsmt	Primary CNS Melanocytic Tumors	primary cns melanocytic tumors	Gray	PCNSMT	brain
+pcsmtpld	Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder	primary cutaneous cd4 positive small/medium t-cell lymphoproliferative disorder	LimeGreen	PCSMTPLD	mtnn
+pct	Porphyria Cutania Tarda	porphyria cutania tarda	Black	PCT	skin
+pd	Paget Disease of the Nipple	paget disease of the nipple	HotPink	PD	dcis
+pdc	Poorly Differentiated Carcinoma, NOS	poorly differentiated carcinoma, nos	Black	PDC	cup
+pecoma	Perivascular Epithelioid Cell Tumor	perivascular epithelioid cell tumor	LightYellow	PECOMA	soft_tissue
+pel	Primary Effusion Lymphoma	primary effusion lymphoma	LimeGreen	PEL	mbn
+pemeso	Peritoneal Mesothelioma	peritoneal mesothelioma	Green	PEMESO	peritoneum
+penis	Penis	penis	Blue	PENIS	tissue
+peos	Periosteal Osteosarcoma	periosteal osteosarcoma	White	PEOS	os
+peritoneum	Peritoneum	peritoneum	Green	PERITONEUM	tissue
+perl	Pure Erythroid Leukemia	pure erythroid leukemia	LightSalmon	PERL	amlnos
+pgng	Paraganglioma	paraganglioma	Gray	PGNG	soft_tissue
+pgnt	Papillary Glioneuronal Tumor	papillary glioneuronal tumor	Gray	PGNT	mnet
+phc	Pheochromocytoma	pheochromocytoma	Purple	PHC	adrenal_gland
+phch	Perihilar Cholangiocarcinoma	perihilar cholangiocarcinoma	Green	PHCH	chol
+phgg	Pediatric High Grade Gliomas	brain,brain tumor	Gray	phgg	difg
+phm	Partial Hydatidiform Mole	partial hydatidiform mole	PeachPuff	PHM	mp
+phptld	Plasmacytic Hyperplasia PTLD	plasmacytic hyperplasia ptld	LimeGreen	PHPTLD	ptld
+pinc	Pineocytoma	pineocytoma	Gray	PINC	pint
+pint	Pineal Tumor	pineal tumor	Gray	PINT	brain
+plbl	Plasmablastic Lymphoma	plasmablastic lymphoma	LimeGreen	PLBL	mbn
+plbmeso	Pleural Mesothelioma, Biphasic Type	pleural mesothelioma, biphasic type	Blue	PLBMESO	plmeso
+plemeso	Pleural Mesothelioma, Epithelioid Type	pleural mesothelioma, epithelioid type	Blue	PLEMESO	plmeso
+pleura	Pleura	pleura	Blue	PLEURA	tissue
+plgg	Pediatric Low Grade Gliomas	brain,brain tumor	Turquoise	plgg	difg
+plls	Pleomorphic Liposarcoma	pleomorphic liposarcoma	LightYellow	PLLS	lipo
+plmeso	Pleural Mesothelioma	pleural mesothelioma	Blue	PLMESO	pleura
+plrms	Pleomorphic Rhabdomyosarcoma	pleomorphic rhabdomyosarcoma	LightYellow	PLRMS	rms
+plsmeso	Pleural Mesothelioma, Sarcomatoid Type	pleural mesothelioma, sarcomatoid type	Blue	PLSMESO	plmeso
+pma	Pilomyxoid Astrocytoma	pilomyxoid astrocytoma	Gray	PMA	encg
+pmbl	Primary Mediastinal (Thymic) Large B-Cell Lymphoma	primary mediastinal (thymic) large b-cell lymphoma	LimeGreen	PMBL	mbn
+pmf	Primary Myelofibrosis	primary myelofibrosis	LightSalmon	PMF	mpn
+pmfofs	Primary Myelofibrosis,Overt Fibrotic Stage	primary myelofibrosis,overt fibrotic stage	LightSalmon	PMFOFS	pmf
+pmfpes	Primary Myelofibrosis, Prefibrotic/Early Stage	primary myelofibrosis, prefibrotic/early stage	LightSalmon	PMFPES	pmf
+pmhe	Pseudomyogenic Hemangioendothelioma	pseudomyogenic hemangioendothelioma	LightYellow	PMHE	soft_tissue
+pnet	Primitive Neuroectodermal Tumor	primitive neuroectodermal tumor	Gray	PNET	embt
+pns	Peripheral Nervous System	peripheral nervous system	Gray	PNS	tissue
+poca	Porocarcinoma/Spiroadenocarcinoma	porocarcinoma/spiroadenocarcinoma	Black	POCA	skin
+poro	Poroma/Acrospiroma	poroma/acrospiroma	Black	PORO	skin
+ppb	Pleuropulmonary Blastoma	pleuropulmonary blastoma	Gainsboro	PPB	lung
+ppct	Proliferating Pilar Cystic Tumor	proliferating pilar cystic tumor	Black	PPCT	skin
+ppm	Papillary Meningioma	papillary meningioma	Gray	PPM	mngt
+pptid	Pineal Parenchymal Tumor of Intermediate Differentiation	pineal parenchymal tumor of intermediate differentiation	Gray	PPTID	pint
+pptld	Polymorphic PTLD	polymorphic ptld	LimeGreen	PPTLD	ptld
+prad	Prostate Adenocarcinoma	prostate adenocarcinoma	Cyan	PRAD	prostate
+prcc	Papillary Renal Cell Carcinoma	papillary renal cell carcinoma	Orange	PRCC	nccrcc
+prne	Prostate Neuroendocrine Carcinoma	prostate neuroendocrine carcinoma	Cyan	PRNE	prostate
+prnet	Primary Neuroepithelial Tumor	primary neuroepithelial tumor	Gray	PRNET	mbt
+prostate	Prostate	prostate	Cyan	PROSTATE	tissue
+prsc	Prostate Squamous Cell Carcinoma	prostate squamous cell carcinoma	Cyan	PRSC	prostate
+prscc	Prostate Small Cell Carcinoma	prostate small cell carcinoma	Cyan	PRSCC	prostate
+psc	Serous Cystadenoma of the Pancreas	serous cystadenoma of the pancreas	Purple	PSC	pact
+pscc	Penile Squamous Cell Carcinoma	penile squamous cell carcinoma	Blue	PSCC	penis
+psec	Peritoneal Serous Carcinoma	peritoneal serous carcinoma	Green	PSEC	peritoneum
+pstad	Papillary Stomach Adenocarcinoma	papillary stomach adenocarcinoma	LightSkyBlue	PSTAD	stad
+pstt	Placental Site Trophoblastic Tumor	placental site trophoblastic tumor	PeachPuff	PSTT	gtd
+pt	Phyllodes Tumor of the Breast	phyllodes tumor of the breast	HotPink	PT	bfn
+ptad	Pituitary Adenoma	pituitary adenoma	Gray	PTAD	selt
+ptca	Pituitary Carcinoma	pituitary carcinoma	Gray	PTCA	selt
+ptcl	Peripheral T-Cell lymphoma, NOS	peripheral t-cell lymphoma, nos	LimeGreen	PTCL	mtnn
+ptcy	Pituicytoma	pituicytoma	Gray	PTCY	selt
+ptes	Proximal-Type Epithelioid Sarcoma	proximal-type epithelioid sarcoma	LightYellow	PTES	epis
+ptfl	Pediatric-Type Follicular Lymphoma	pediatric-type follicular lymphoma	LimeGreen	PTFL	mbn
+pth	Parathyroid Cancer	parathyroid cancer	DarkRed	PTH	head_neck
+pthc	Parathyroid Carcinoma	parathyroid carcinoma	DarkRed	PTHC	pth
+ptld	Posttransplant Lymphoproliferative Disorders	posttransplant lymphoproliferative disorders	LimeGreen	PTLD	lnm
+ptpr	Papillary Tumor of the Pineal Region	papillary tumor of the pineal region	Gray	PTPR	pint
+pv	Polycythemia Vera	polycythemia vera	LightSalmon	PV	mpn
+pvmf	Polycythaemia Vera Myelofibrosis	polycythaemia vera myelofibrosis	LightSalmon	PVMF	pv
+pxa	Pleomorphic Xanthoastrocytoma	pleomorphic xanthoastrocytoma	Gray	PXA	encg
+raml	Renal Angiomyolipoma	renal angiomyolipoma	Orange	RAML	nccrcc
+ras	Radiation-Associated Sarcoma	radiation-associated sarcoma	LightYellow	RAS	soft_tissue
+rbl	Retinoblastoma	retinoblastoma	Green	RBL	eye
+rcc	Renal Cell Carcinoma	renal cell carcinoma	Orange	RCC	kidney
+rcsnos	Round Cell Sarcoma, NOS	round cell sarcoma, nos	LightYellow	RCSNOS	soft_tissue
+rcyc	Refractory Cytopenia of Childhood	refractory cytopenia of childhood	LightSalmon	RCYC	mds
+rdd	Rosai-Dorfman Disease	rosai-dorfman disease	LightSalmon	RDD	hdcn
+read	Rectal Adenocarcinoma	rectal adenocarcinoma	SaddleBrown	READ	coadread
+rgnt	Rosette-forming Glioneuronal Tumor of the Fourth Ventricle	rosette-forming glioneuronal tumor of the fourth ventricle	Gray	RGNT	mnet
+rhm	Rhabdoid Meningioma	rhabdoid meningioma	Gray	RHM	mngt
+rlclc	Large Cell Lung Carcinoma With Rhabdoid Phenotype	large cell lung carcinoma with rhabdoid phenotype	Gainsboro	RLCLC	lclc
+rms	Rhabdomyosarcoma	rhabdomyosarcoma	LightYellow	RMS	soft_tissue
+rnet	Renal Neuroendocrine Tumor	renal neuroendocrine tumor	Orange	RNET	kidney
+rocy	Renal Oncocytoma	renal oncocytoma	Orange	ROCY	nccrcc
+rscc	Renal Small Cell Carcinoma	renal small cell carcinoma	Orange	RSCC	nccrcc
+rwdnet	Well-Differentiated Neuroendocrine Tumor of the Rectum	well-differentiated neuroendocrine tumor of the rectum	SaddleBrown	RWDNET	ginet
+saad	Salivary Adenocarcinoma	salivary adenocarcinoma	DarkRed	SAAD	saca
+saca	Salivary Carcinoma	salivary carcinoma	DarkRed	SACA	head_neck
+sarcl	Sarcomatoid Carcinoma of the Lung	sarcomatoid carcinoma of the lung	Gainsboro	SARCL	lung
+sarcnos	Sarcoma, NOS	sarcoma, nos	LightYellow	SARCNOS	soft_tissue
+sbc	Small Bowel Cancer	small bowel cancer	SaddleBrown	SBC	bowel
+sbl	Sialoblastoma	sialoblastoma	DarkRed	SBL	head_neck
+sblu	Splenic B-Cell Lymphoma/Leukemia, Unclassifiable	splenic b-cell lymphoma/leukemia, unclassifiable	LimeGreen	SBLU	mbn
+sbmov	Serous Borderline Ovarian Tumor, Micropapillary	serous borderline ovarian tumor, micropapillary	LightBlue	SBMOV	ovt
+sbov	Serous Borderline Ovarian Tumor	serous borderline ovarian tumor	LightBlue	SBOV	ovt
+sbwdnet	Small Bowel Well-Differentiated Neuroendocrine Tumor	small bowel well-differentiated neuroendocrine tumor	SaddleBrown	SBWDNET	ginet
+scb	Sarcomatoid Carcinoma of the Urinary Bladder	sarcomatoid carcinoma of the urinary bladder	Yellow	SCB	bladder
+scbc	Small Cell Bladder Cancer	small cell bladder cancer	Yellow	SCBC	bladder
+scce	Small Cell Carcinoma of the Cervix	small cell carcinoma of the cervix	Teal	SCCE	cervix
+sccnos	Squamous Cell Carcinoma, NOS	squamous cell carcinoma, nos	Black	SCCNOS	cup
+scco	Small Cell Carcinoma of the Ovary	small cell carcinoma of the ovary	LightBlue	SCCO	ovt
+sccrcc	Renal Clear Cell Carcinoma with Sarcomatoid Features	renal clear cell carcinoma with sarcomatoid features	Orange	SCCRCC	ccrcc
+scemu	Signet Ring Mucinous Carcinoma	signet ring mucinous carcinoma	Teal	SCEMU	cemu
+scgbc	Small Cell Gallbladder Carcinoma	small cell gallbladder carcinoma	Green	SCGBC	gbc
+scgbm	Small Cell Glioblastoma	small cell glioblastoma	Gray	SCGBM	gb
+schw	Schwannoma	schwannoma	Gray	SCHW	nst
+sclc	Small Cell Lung Cancer	small cell lung cancer	Gainsboro	SCLC	lnet
+scoah	Spindle Cell Oncocytoma of the Adenohypophysis	spindle cell oncocytoma of the adenohypophysis	Gray	SCOAH	selt
+scos	Small Cell Osteosarcoma	small cell osteosarcoma	White	SCOS	os
+scrms	Spindle Cell Rhabdomyosarcoma	spindle cell rhabdomyosarcoma	LightYellow	SCRMS	rms
+scsrms	Spindle Cell/Sclerosing Rhabdomyosarcoma	spindle cell/sclerosing rhabdomyosarcoma	LightYellow	SCSRMS	rms
+scst	Sex Cord Stromal Tumor	sex cord stromal tumor	LightBlue	SCST	ovary
+sct	Steroid Cell Tumor, NOS	steroid cell tumor, nos	LightBlue	SCT	scst
+scup	Small Cell Carcinoma of Unknown Primary	small cell carcinoma of unknown primary	Black	SCUP	cup
+sdca	Salivary Duct Carcinoma	salivary duct carcinoma	DarkRed	SDCA	saca
+sdrpl	Splenic Diffuse Red Pulp Small B-Cell Lymphoma	splenic diffuse red pulp small b-cell lymphoma	LimeGreen	SDRPL	sblu
+seba	Sebaceous Carcinoma	sebaceous carcinoma	Black	SEBA	skin
+sebvtlc	Systemic EBV Positive T-Cell Lymphoma of Childhood	systemic ebv positive t-cell lymphoma of childhood	LimeGreen	SEBVTLC	mtnn
+secos	Secondary Osteosarcoma	secondary osteosarcoma	White	SECOS	os
+sef	Sclerosing Epithelioid Fibrosarcoma	sclerosing epithelioid fibrosarcoma	LightYellow	SEF	fibs
+selt	Sellar Tumor	sellar tumor	Gray	SELT	brain
+sem	Seminoma	seminoma	Red	SEM	testis
+sft	Solitary Fibrous Tumor/Hemangiopericytoma	solitary fibrous tumor/hemangiopericytoma	LightYellow	SFT	soft_tissue
+sftcns	Solitary Fibrous Tumor of the Central Nervous System	solitary fibrous tumor of the central nervous system	Gray	SFTCNS	mngt
+sgad	Sweat Gland Adenocarcinoma	sweat gland adenocarcinoma	Black	SGAD	skin
+sgo	Salivary Gland Oncocytoma	salivary gland oncocytoma	DarkRed	SGO	saca
+sgttl	Salivary Gland-Type Tumor of the Lung	salivary gland-type tumor of the lung	Gainsboro	SGTTL	nsclc
+sic	Small Intestinal Carcinoma	small intestinal carcinoma	SaddleBrown	SIC	bowel
+skac	Skin Adnexal Carcinoma	skin adnexal carcinoma	Black	SKAC	skin
+skcm	Cutaneous Melanoma	cutaneous melanoma	Black	SKCM	mel
+skcn	Congenital Nevus	congenital nevus	Black	SKCN	mel
+skin	Skin	skin	Black	SKIN	tissue
+sklmm	Lentigo Maligna Melanoma	lentigo maligna melanoma	Black	SKLMM	mel
+slct	Sertoli-Leydig Cell Tumor	sertoli-leydig cell tumor	LightBlue	SLCT	scst
+sm	Systemic Mastocytosis	systemic mastocytosis	LightSalmon	SM	mcd
+smahn	Systemic Mastocytosis with an Associated Hematological Neoplasm	systemic mastocytosis with an associated hematological neoplasm	LightSalmon	SMAHN	sm
+smmcl	Mast Cell Leukemia	mast cell leukemia	LightSalmon	SMMCL	sm
+smn	Smooth Muscle Neoplasm, NOS	smooth muscle neoplasm, nos	LightSkyBlue	SMN	stomach
+smzl	Splenic Marginal Zone Lymphoma	splenic marginal zone lymphoma	LimeGreen	SMZL	mzl
+sna	Sinonasal Adenocarcinoma	sinonasal adenocarcinoma	DarkRed	SNA	ohnca
+snsc	Sinonasal Squamous Cell Carcinoma	sinonasal squamous cell carcinoma	DarkRed	SNSC	hnsc
+snuc	Sinonasal Undifferentiated Carcinoma	sinonasal undifferentiated carcinoma	DarkRed	SNUC	ohnca
+soc	Serous Ovarian Cancer	serous ovarian cancer	LightBlue	SOC	ovt
+soft_tissue	Soft Tissue	soft tissue	LightYellow	SOFT_TISSUE	tissue
+spb	Solitary Plasmacytoma of Bone	solitary plasmacytoma of bone	LimeGreen	SPB	mbn
+spc	Solid Papillary Carcinoma of the Breast	solid papillary carcinoma of the breast	HotPink	SPC	brca
+spcc	Spindle Cell Carcinoma of the Lung	spindle cell carcinoma of the lung	Gainsboro	SPCC	nsclc
+spdac	Poorly Differentiated Carcinoma of the Stomach	poorly differentiated carcinoma of the stomach	LightSkyBlue	SPDAC	ustad
+spir	Spiroma/Spiradenoma	spiroma/spiradenoma	Black	SPIR	skin
+spn	Solid Pseudopapillary Neoplasm of the Pancreas	solid pseudopapillary neoplasm of the pancreas	Purple	SPN	pancreas
+sptcl	Subcutaneous Panniculitis-Like T-Cell Lymphoma	subcutaneous panniculitis-like t-cell lymphoma	LimeGreen	SPTCL	mtnn
+spzm	Spitzoid Melanoma	spitzoid melanoma	Black	SPZM	mel
+srap	Signet Ring Cell Type of the Appendix	signet ring cell type of the appendix	SaddleBrown	SRAP	apad
+srcbc	Plasmacytoid/Signet Ring Cell Bladder Carcinoma	plasmacytoid/signet ring cell bladder carcinoma	Yellow	SRCBC	bladder
+srcc	Sarcomatoid Renal Cell Carcinoma	sarcomatoid renal cell carcinoma	Orange	SRCC	nccrcc
+srccr	Signet Ring Cell Adenocarcinoma of the Colon and Rectum	signet ring cell adenocarcinoma of the colon and rectum	SaddleBrown	SRCCR	coadread
+ss	Sezary Syndrome	sezary syndrome	LimeGreen	SS	mtnn
+ssm	Smoldering Systemic Mastocytosis	smoldering systemic mastocytosis	LightSalmon	SSM	sm
+ssrcc	Signet Ring Cell Carcinoma of the Stomach	signet ring cell carcinoma of the stomach	LightSkyBlue	SSRCC	ustad
+stad	Stomach Adenocarcinoma	stomach adenocarcinoma	LightSkyBlue	STAD	egc
+stas	Adenosquamous Carcinoma of the Stomach	adenosquamous carcinoma of the stomach	LightSkyBlue	STAS	egc
+stmyec	Soft Tissue Myoepithelial Carcinoma	soft tissue myoepithelial carcinoma	LightYellow	STMYEC	soft_tissue
+stomach	Esophagus/Stomach	esophagus/stomach	LightSkyBlue	STOMACH	tissue
+stsc	Small Cell Carcinoma of the Stomach	small cell carcinoma of the stomach	LightSkyBlue	STSC	egc
+sube	Subependymoma	subependymoma	Gray	SUBE	epmt
+swdnet	Well-Differentiated Neuroendocrine Tumors of the Stomach	well-differentiated neuroendocrine tumors of the stomach	LightSkyBlue	SWDNET	ginetes
+syns	Synovial Sarcoma	synovial sarcoma	LightYellow	SYNS	soft_tissue
+tac	Tubular Adenoma of the Colon	tubular adenoma of the colon	SaddleBrown	TAC	bowel
+tam	Transient Abnormal Myelopoiesis	transient abnormal myelopoiesis	LightSalmon	TAM	mprds
+taml	Therapy-Related Acute Myeloid Leukemia	therapy-related acute myeloid leukemia	LightSalmon	TAML	tmn
+tcca	Choriocarcinoma	choriocarcinoma	Red	TCCA	nsgct
+teos	Telangiectatic Osteosarcoma	telangiectatic osteosarcoma	White	TEOS	os
+testis	Testis	testis	Red	TESTIS	tissue
+tet	Thymic Epithelial Tumor	thymic epithelial tumor	Purple	TET	thymus
+tgct	Tenosynovial Giant Cell Tumor Diffuse Type	tenosynovial giant cell tumor diffuse type	LightYellow	TGCT	soft_tissue
+thap	Anaplastic Thyroid Cancer	anaplastic thyroid cancer	Teal	THAP	thyroid
+thfo	Follicular Thyroid Cancer	follicular thyroid cancer	Teal	THFO	wdtc
+thhc	Hurthle Cell Thyroid Cancer	hurthle cell thyroid cancer	Teal	THHC	thyroid
+thme	Medullary Thyroid Cancer	medullary thyroid cancer	Teal	THME	thyroid
+thpa	Papillary Thyroid Cancer	papillary thyroid cancer	Teal	THPA	wdtc
+thpd	Poorly Differentiated Thyroid Cancer	poorly differentiated thyroid cancer	Teal	THPD	thyroid
+thrlbcl	T-Cell/Histiocyte-Rich Large B-Cell Lymphoma	t-cell/histiocyte-rich large b-cell lymphoma	LimeGreen	THRLBCL	mbn
+thyc	Thymic Carcinoma	thymic carcinoma	Purple	THYC	tet
+thym	Thymoma	thymoma	Purple	THYM	tet
+thymus	Thymus	thymus	Purple	THYMUS	tissue
+thyroid	Thyroid	thyroid	Teal	THYROID	tissue
+tissue	Tissue	tissue		TISSUE	null
+tlgl	T-Cell Large Granular Lymphocytic Leukemia	t-cell large granular lymphocytic leukemia	LimeGreen	TLGL	mtnn
+tll	T-Lymphoblastic Leukemia/Lymphoma	t-lymphoblastic leukemia/lymphoma	LimeGreen	TLL	lnm
+tlym	Testicular Lymphoma	testicular lymphoma	Red	TLYM	testis
+tmds	Therapy-Related Myelodysplastic Syndrome	therapy-related myelodysplastic syndrome	LightSalmon	TMDS	tmn
+tmeso	Testicular Mesothelioma	testicular mesothelioma	Red	TMESO	testis
+tmn	Therapy-Related Myeloid Neoplasms	therapy-related myeloid neoplasms	LightSalmon	TMN	aml
+tnet	Thymic Neuroendocrine Tumor	thymic neuroendocrine tumor	Purple	TNET	thymus
+tpll	T-Cell Prolymphocytic Leukemia	t-cell prolymphocytic leukemia	LimeGreen	TPLL	mtnn
+trcc	Translocation-Associated Renal Cell Carcinoma	translocation-associated renal cell carcinoma	Orange	TRCC	nccrcc
+tscst	Sex Cord Stromal Tumor	sex cord stromal tumor	Red	TSCST	testis
+tstad	Tubular Stomach Adenocarcinoma	tubular stomach adenocarcinoma	LightSkyBlue	TSTAD	stad
+tt	Teratoma	teratoma	Red	TT	nsgct
+tyst	Yolk Sac Tumor	yolk sac tumor	Red	TYST	nsgct
+ua	Urachal Adenocarcinoma	urachal adenocarcinoma	Yellow	UA	urca
+uad	Urethral Adenocarcinoma	urethral adenocarcinoma	Yellow	UAD	uca
+uas	Uterine Adenosarcoma	uterine adenosarcoma	PeachPuff	UAS	usarc
+uasc	Uterine Adenosquamous Carcinoma	uterine adenosquamous carcinoma	PeachPuff	UASC	ucec
+uca	Urethral Cancer	urethral cancer	Yellow	UCA	bladder
+ucca	Choriocarcinoma	choriocarcinoma	PeachPuff	UCCA	gtd
+uccc	Uterine Clear Cell Carcinoma	uterine clear cell carcinoma	PeachPuff	UCCC	ucec
+ucec	Endometrial Carcinoma	endometrial carcinoma	PeachPuff	UCEC	uterus
+ucp	Undifferentiated Carcinoma of the Pancreas	undifferentiated carcinoma of the pancreas	Purple	UCP	pancreas
+ucs	Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor	uterine carcinosarcoma/uterine malignant mixed mullerian tumor	PeachPuff	UCS	ucec
+ucu	Urethral Urothelial Carcinoma	urethral urothelial carcinoma	Yellow	UCU	uca
+uddc	Uterine Dedifferentiated Carcinoma	uterine dedifferentiated carcinoma	PeachPuff	UDDC	ucec
+udmn	Undifferentiated Malignant Neoplasm	undifferentiated malignant neoplasm	Black	UDMN	cup
+uec	Uterine Endometrioid Carcinoma	uterine endometrioid carcinoma	PeachPuff	UEC	ucec
+uelms	Uterine Epithelioid Leiomyosarcoma	uterine epithelioid leiomyosarcoma	PeachPuff	UELMS	usmt
+uesl	Undifferentiated Embryonal Sarcoma of the Liver	undifferentiated embryonal sarcoma of the liver	MediumSeaGreen	UESL	liver
+ulm	Uterine Leiomyoma	uterine leiomyoma	PeachPuff	ULM	usmt
+ulms	Uterine Leiomyosarcoma	uterine leiomyosarcoma	PeachPuff	ULMS	usmt
+um	Uveal Melanoma	uveal melanoma	Green	UM	om
+umc	Uterine Mucinous Carcinoma	uterine mucinous carcinoma	PeachPuff	UMC	ucec
+umec	Uterine Mixed Endometrial Carcinoma	uterine mixed endometrial carcinoma	PeachPuff	UMEC	ucec
+umlms	Uterine Myxoid Leiomyosarcoma	uterine myxoid leiomyosarcoma	PeachPuff	UMLMS	usmt
+umnc	Uterine Mesonephric Carcinoma	uterine mesonephric carcinoma	PeachPuff	UMNC	ucec
+unec	Uterine Neuroendocrine Carcinoma	uterine neuroendocrine carcinoma	PeachPuff	UNEC	ucec
+upa	Urothelial Papilloma	urothelial papilloma	Yellow	UPA	bladder
+updc	Poorly Differentiated Carcinoma of the Uterus	poorly differentiated carcinoma of the uterus	PeachPuff	UPDC	ucec
+upecoma	Uterine Perivascular Epithelioid Cell Tumor	uterine perivascular epithelioid cell tumor	PeachPuff	UPECOMA	usarc
+urca	Urachal Carcinoma	urachal carcinoma	Yellow	URCA	bladder
+urcc	Unclassified Renal Cell Carcinoma	unclassified renal cell carcinoma	Orange	URCC	nccrcc
+urmm	Mucosal Melanoma of the Urethra	mucosal melanoma of the urethra	Yellow	URMM	bladder
+usarc	Uterine Sarcoma/Mesenchymal	uterine sarcoma/mesenchymal	PeachPuff	USARC	uterus
+usc	Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma	uterine serous carcinoma/uterine papillary serous carcinoma	PeachPuff	USC	ucec
+uscc	Urethral Squamous Cell Carcinoma	urethral squamous cell carcinoma	Yellow	USCC	uca
+usmt	Uterine Smooth Muscle Tumor	uterine smooth muscle tumor	PeachPuff	USMT	usarc
+ustad	Undifferentiated Stomach Adenocarcinoma	undifferentiated stomach adenocarcinoma	LightSkyBlue	USTAD	egc
+ustump	Uterine Smooth Muscle Tumor of Uncertain Malignant Potential	uterine smooth muscle tumor of uncertain malignant potential	PeachPuff	USTUMP	usmt
+uterus	Uterus	uterus	PeachPuff	UTERUS	tissue
+utuc	Upper Tract Urothelial Carcinoma	upper tract urothelial carcinoma	Yellow	UTUC	bladder
+uuc	Uterine Undifferentiated Carcinoma	uterine undifferentiated carcinoma	PeachPuff	UUC	ucec
+uus	Undifferentiated Uterine Sarcoma	undifferentiated uterine sarcoma	PeachPuff	UUS	usarc
+va	Vaginal Adenocarcinoma	vaginal adenocarcinoma	Purple	VA	vulva
+vdys	Dysgerminoma	dysgerminoma	Purple	VDYS	vgct
+vgce	Villoglandular Adenocarcinoma of the Cervix	villoglandular adenocarcinoma of the cervix	Teal	VGCE	cervix
+vgct	Germ Cell Tumor of the Vulva	germ cell tumor of the vulva	Purple	VGCT	vulva
+vimt	Immature Teratoma	immature teratoma	Purple	VIMT	vgct
+vma	Mucinous Adenocarcinoma of the Vulva/Vagina	mucinous adenocarcinoma of the vulva/vagina	Purple	VMA	vulva
+vmgct	Mixed Germ Cell Tumor	mixed germ cell tumor	Purple	VMGCT	vgct
+vmm	Mucosal Melanoma of the Vulva/Vagina	mucosal melanoma of the vulva/vagina	Purple	VMM	vulva
+vmt	Mature Teratoma	mature teratoma	Purple	VMT	vgct
+voec	Embryonal Carcinoma	embryonal carcinoma	Purple	VOEC	vgct
+vpdc	Poorly Differentiated Vaginal Carcinoma	poorly differentiated vaginal carcinoma	Purple	VPDC	vulva
+vpe	Polyembryoma	polyembryoma	Purple	VPE	vgct
+vpscc	Verrucous Penile Squamous Cell Carcinoma	verrucous penile squamous cell carcinoma	Blue	VPSCC	pscc
+vsc	Squamous Cell Carcinoma of the Vulva/Vagina	squamous cell carcinoma of the vulva/vagina	Purple	VSC	vulva
+vulva	Vulva/Vagina	vulva/vagina	Purple	VULVA	tissue
+vyst	Yolk Sac Tumor	yolk sac tumor	Purple	VYST	vgct
+wdls	Well-Differentiated Liposarcoma	well-differentiated liposarcoma	LightYellow	WDLS	lipo
+wdtc	Well-Differentiated Thyroid Cancer	well-differentiated thyroid cancer	Teal	WDTC	thyroid
+wm	Waldenstrom Macroglobulinemia	waldenstrom macroglobulinemia	LimeGreen	WM	lpl
+wpscc	Warty Penile Squamous Cell Carcinoma	warty penile squamous cell carcinoma	Blue	WPSCC	pscc
+wt	Wilms' Tumor	wilms' tumor	Orange	WT	kidney

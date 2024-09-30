@@ -1,0 +1,121 @@
+---
+title: "Data Management for cBioPortal"
+author: "Kemmapon Chumchuen"
+date: "5/25/2021"
+output: html_document
+---
+
+```{r, message=F, warning=F}
+library(epicalc)
+library(stringr)
+library(BSL)
+library(readxl)
+library(Hmisc)
+zap()
+```
+
+
+Load cleaned dataset (should be the data from Data prep.R)
+
+```{r}
+data <- read_excel("Human.1.0.xlsx", skip = 11, sheet = 1)
+```
+
+
+Check for column names
+
+```{r}
+colnames(data)
+#str(data)
+```
+
+Select variables to import 
+
+```{r}
+select <- c(1:3,5:6,8:9,15,17,21,23)
+data <- data[,select]
+colnames(data)
+```
+
+
+Identify PATIENT_ID and SAMPLE_ID(required) columns and rename
+
+```{r, echo=F}
+colnames(data)[2] <- "PATIENT_ID" 
+colnames(data)[1] <- "SAMPLE_ID"
+colnames(data)
+data <- cbind(data[,2],data[,-2])
+colnames(data)
+```
+
+Change other column names to uppercase
+
+```{r}
+colnames(data)[] <- toupper(colnames(data))
+colnames(data)
+```
+
+In case _ is needed
+
+```{r}
+#colnames(data) <- gsub(" ", "_", colnames(data))
+```
+
+Change the column names to match the format of cBioPortal survival plot
+
+```{r}
+#colnames(data)[7:8] <- c("DS_STATUS","DS_YRS")
+#colnames(data)
+```
+
+Delete the unwant symbol in the column names (from the original dataset)
+
+```{r}
+colnames(data) <- gsub("\\*","",colnames(data))
+colnames(data)
+```
+
+Creat TNM_STAGE for the trial run
+
+```{r}
+tnm <- c("T0","T1","T2","T3","T4","N0","N1","N2","N3","M0","M1")
+data$TNM_STAGE <- sample(tnm,116,replace = T)
+```
+
+
+
+Create metadata, if the data did not come from REDcap or contain no labels,
+specify labelled = FALSE
+
+```{r, message=F, warning=F}
+meta <- cbio_meta(data = data, labelled = FALSE)
+meta
+```
+
+In case of no labels, manually add the labels (description) in row 2
+
+```{r}
+meta[2,] <- c("#Patient identifer","Sample identifier","Accession number","Sample isolate","Age",
+              "Sex","Type of tissue","Disease","Patient's ethnicity","Nationality",
+              "Type of sample","TNM staging for breast cancer.")
+meta
+```
+
+
+
+Add meta data to the dataset and export in tab seperated format (patient and sample data)
+
+```{r}
+colnames(meta) <- colnames(data)
+met.dat <- rbind(meta,data)
+pat <- c(1,5,6,9,10)
+pat.dat <- met.dat[,pat]
+sam <- c(1,2,3,4,7,8,11,12)
+sam.dat <- met.dat[,sam]
+
+write.table(pat.dat, file='data_clinical_patient.txt', quote=FALSE, sep='\t', 
+            row.names = F, fileEncoding = "UTF-8",col.names = F)
+
+write.table(sam.dat, file='data_clinical_sample.txt', quote=FALSE, sep='\t', 
+            row.names = F, fileEncoding = "UTF-8",col.names = F)
+```

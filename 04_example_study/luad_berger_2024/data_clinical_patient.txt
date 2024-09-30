@@ -1,0 +1,78 @@
+#PATIENT_ID	SEER_STAGE	SMOKING_STATUS	SEX	RACE	SMOKING_HISTORY	SMOKING_PACK_YEARS	SMOKING_AGE_START_YEARS	SMOKING_AGE_QUIT_YEARS	SMOKER_YEARS	AGE
+#Patient identifier	SEER stage	Smoking status of the patient	Sex of the patient	Race of the patient	Smoking history of the patient	Pack-years smoked	Age at which the patient started smoking	Age at which the patient quit smoking	Number of years a patient smoked	Age at diagnosis
+#STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	STRING	NUMBER
+#1	1	1	1	1	1	1	1	1	1	1
+PATIENT_ID	SEER_STAGE	SMOKING_STATUS	SEX	RACE	SMOKING_HISTORY	SMOKING_PACK_YEARS	SMOKING_AGE_START_YEARS	SMOKING_AGE_QUIT_YEARS	SMOKER_YEARS	AGE
+AHB_66	Regional	Light_smoker	FEMALE	Non_hispanic white	Past	0.3125	20_24 years	20_24 years	Less than 5 years	66
+AHB_36	Regional	Light_smoker	FEMALE	Non_hispanic white	Past	0.3125	15_19 years	20_24 years	Less than 5 years	79
+AHB_71	Localized	Light_smoker	FEMALE	Non_hispanic white	Past	0.3125	20_24 years	20_24 years	Less than 5 years	81
+AHB_7	Regional	Light_smoker	FEMALE	Non_hispanic white	Past	3.5	15_19 years	20_24 years	5_9 years	76
+AHB_27	Localized	Light_smoker	FEMALE	Non_hispanic white	Past	3.5	15_19 years	20_24 years	5_9 years	67
+AHB_28	Localized	Light_smoker	FEMALE	Non_hispanic white	Past	0.3125	20_24 years	25_29 years	Less than 5 years	75
+AHB_68	Regional	Light_smoker	FEMALE	Non_hispanic white	Past	0.875	20_24 years	25_29 years	5_9 years	85
+AHB_29	Regional	Light_smoker	FEMALE	Non_hispanic white	Past	0.875	Less than 15 years	25_29 years	5_9 years	88
+AHB_50	Localized	Light_smoker	FEMALE	Non_hispanic white	Past	1.875	15_19 years	25_29 years	10_19 years	74
+AHB_64	Localized	Light_smoker	FEMALE	Non_hispanic white	Past	3.5	15_19 years	25_29 years	5_9 years	80
+AHB_69	Distant	Light_smoker	FEMALE	Non_hispanic white	Past	0.375	15_19 years	30_34 years	10_19 years	80
+AHB_62	Regional	Light_smoker	FEMALE	Non_hispanic white	Past	0.875	20_24 years	30_34 years	5_9 years	79
+AHB_6	Regional	Light_smoker	FEMALE	Non_hispanic white	Past	1.875	15_19 years	30_34 years	10_19 years	77
+AHB_61	Localized	Light_smoker	FEMALE	Non_hispanic white	Past	1.875	15_19 years	30_34 years	10_19 years	79
+AHB_53	Localized	Light_smoker	FEMALE	Non_hispanic white	Past	3.5	20_24 years	30_34 years	5_9 years	75
+AHB_39	Localized	Light_smoker	FEMALE	Hispanic	Past	3.125	15_19 years	40_44 years	20_29 years	73
+AHB_52	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Past	37.5	15_19 years	45_49 years	20_29 years	71
+AHB_45	Localized	Light_smoker	FEMALE	Non_hispanic white	Past	0.625	20_24 years	50_54 years	20_29 years	74
+AHB_11	Regional	Heavy_smoker	FEMALE	Black	Past	35	20_24 years	50_54 years	30_39 years	75
+AHB_15	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Past	35	20_24 years	50_54 years	30_39 years	75
+AHB_20	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Past	37.5	15_19 years	50_54 years	20_29 years	70
+AHB_37	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Past	45	Less than 15 years	50_54 years	40_49 years	73
+AHB_16	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Past	87.5	15_19 years	50_54 years	30_39 years	71
+AHB_51	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Past	35	20_24 years	55_59 years	30_39 years	78
+AHB_2	Regional	Heavy_smoker	FEMALE	Non_hispanic white	Past	67.5	15_19 years	55_59 years	40_49 years	76
+AHB_43	Distant	Heavy_smoker	FEMALE	Non_hispanic white	Past	22.5	15_19 years	Over 60 years	40_49 years	81
+AHB_30	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Past	45	15_19 years	Over 60 years	40_49 years	74
+AHB_24	Localized	Light_smoker	FEMALE	Non_hispanic white	Current	3.125	15_19 years	Unknown	20_29 years	68
+AHB_4	Distant	Heavy_smoker	FEMALE	Non_hispanic white	Current	22.5	20_24 years	Unknown	40_49 years	84
+AHB_12	Regional	Heavy_smoker	FEMALE	Non_hispanic white	Current	35	20_24 years	Unknown	30_39 years	67
+AHB_33	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Current	35	15_19 years	Unknown	30_39 years	66
+AHB_57	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Current	50	25_29 years	Unknown	20_29 years	72
+AHB_22	Regional	Heavy_smoker	FEMALE	Non_hispanic white	Current	52.5	15_19 years	Unknown	30_39 years	60
+AHB_54	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Current	67.5	Less than 15 years	Unknown	40_49 years	70
+AHB_14	Localized	Heavy_smoker	FEMALE	Non_hispanic white	Current	67.5	20_24 years	Unknown	40_49 years	80
+AHB_18	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	88
+AHB_65	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	81
+AHB_25	Localized	Never_smoker	FEMALE	Asian Pacific Islander	Never	0	Never smoked	Unknown	Never	80
+AHB_73	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	76
+AHB_49	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	80
+AHB_56	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	79
+AHB_10	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	82
+AHB_5	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	77
+AHB_32	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	71
+AHB_34	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	72
+AHB_63	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	77
+AHB_72	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	72
+AHB_26	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	79
+AHB_19	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	71
+AHB_67	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	77
+AHB_23	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	66
+AHB_9	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	82
+AHB_44	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	77
+AHB_1	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	86
+AHB_60	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	85
+AHB_59	Localized	Never_smoker	FEMALE	Native American	Never	0	Never smoked	Unknown	Never	76
+AHB_3	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	89
+AHB_21	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	83
+AHB_47	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	77
+AHB_40	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	75
+AHB_70	Distant	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	82
+AHB_75	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	84
+AHB_42	Localized	Never_smoker	FEMALE	Black	Never	0	Never smoked	Unknown	Never	76
+AHB_46	Regional	Never_smoker	FEMALE	Black	Never	0	Never smoked	Unknown	Never	78
+AHB_74	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	74
+AHB_8	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	68
+AHB_35	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	70
+AHB_38	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	80
+AHB_48	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	77
+AHB_55	Localized	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	71
+AHB_31	Regional	Never_smoker	FEMALE	Non_hispanic white	Never	0	Never smoked	Unknown	Never	75
+AHB_13	Localized	Light_smoker	FEMALE	Non_hispanic white	Past	0.0625	15_19 years	Unknown	Less than 5 years	74
+AHB_58	Distant	Light_smoker	FEMALE	Non_hispanic white	Past	2.5	20_24 years	Unknown	Less than 5 years	80

@@ -1,0 +1,78 @@
+#PATIENT_ID	SAMPLE_ID	SAMPLE_COLLECTION_METHOD	TUMOR_SAMPLE_HISTOLOGY	SAMPLE_SITE	FRACTION_TUMOR_PATHOLOGY
+#Patient identifier	Sample identifier	The method used to collect the tumor	Histology of the tumor sample as determined by pathologist	The site where the tumor sample was collected	The fraction of tumor content as determined by pathologist
+#STRING	STRING	STRING	STRING	STRING	STRING
+#1	1	1	1	1	1
+PATIENT_ID	SAMPLE_ID	SAMPLE_COLLECTION_METHOD	TUMOR_SAMPLE_HISTOLOGY	SAMPLE_SITE	FRACTION_TUMOR_PATHOLOGY
+AHB_66	AHB_66_LC_WXS	LUL wedge resection	Adenocarcinoma NOS	Left upper lobe	0.7
+AHB_36	AHB_36_LC_WXS	LUL wedge resection	Colloidal adenocarcinoma	Left upper lobe	0.5
+AHB_71	AHB_71_LC_WXS	LUL lobectomy	Mixed adenocarcinoma	Left upper lobe	0.55
+AHB_7	AHB_7_LC_WXS	Right upper lobe wedge resection	Acinar adenocarcinoma	Right upper lobe	0.5
+AHB_27	AHB_27_LC_WXS	wedge resection	Lepidic adenocarcinoma	Right lower lobe	0.6
+AHB_28	AHB_28_LC_WXS	RUL lobectomy	Adenocarcinoma NOS	Right upper lobe	0.5
+AHB_68	AHB_68_LC_WXS	RLL wedge excision	Lepidic adenocarcinoma	Right lower lobe	0.65
+AHB_29	AHB_29_LC_WXS	Right upper lobe lung excision	Lepidic adenocarcinoma	Right upper lobe	0.6
+AHB_50	AHB_50_LC_WXS	Right upper lobe lobectomy	Acinar adenocarcinoma	Right upper lobe	0.55
+AHB_64	AHB_64_LC_WXS	RUL lobectomy	Adenocarcinoma NOS	Right upper lobe	0.85
+AHB_69	AHB_69_LC_WXS	LLL wedge resection	Lepidic adenocarcinoma	Left lower lobe	0.7
+AHB_62	AHB_62_LC_WXS	RUL lobectomy	Mixed adenocarcinoma	Right lower lobe	0.55
+AHB_6	AHB_6_LC_WXS	right lung lower lobe wedge resection	Adenocarcinoma NOS	Right lower lobe	0.8
+AHB_61	AHB_61_LC_WXS	LLL wedge resection	Adenocarcinoma NOS	Left lower lobe	0.55
+AHB_53	AHB_53_LC_WXS	RUL lobectomy	Acinar adenocarcinoma	Right upper lobe	0.55
+AHB_39	AHB_39_LC_WXS	Left upper lobe wedge resection	Adenocarcinoma NOS	Left upper lobe	0.7
+AHB_52	AHB_52_LC_WXS	RUL lobectomy	Adenocarcinoma NOS	Right upper lobe	0.75
+AHB_45	AHB_45_LC_WXS	lobectomy, wedge resection	Colloidal adenocarcinoma	Right lower lobe	0.5
+AHB_11	AHB_11_LC_WXS	Right middle lobe lobectomy	Acinar adenocarcinoma	Right middle lobe	0.7
+AHB_15	AHB_15_LC_WXS	Right middle wedge or right lower lobectomy	Adenocarcinoma NOS	Right lower lobe	0.6
+AHB_20	AHB_20_LC_WXS	Right middle lobe lobectomy	Lepidic adenocarcinoma	Right middle lobe	0.7
+AHB_37	AHB_37_LC_WXS	LLL lobectomy	Colloidal adenocarcinoma	Left lower lobe	0.6
+AHB_16	AHB_16_LC_WXS	RUL wedge resection and lobectomy	Adenocarcinoma NOS	Right upper lobe	0.55
+AHB_51	AHB_51_LC_WXS	RLL segmental resection	Papillary adenocarcinoma	Right lower lobe	0.8
+AHB_2	AHB_2_LC_WXS	LUL lobectomy	Acinar adenocarcinoma	Left upper lobe	0.6
+AHB_43	AHB_43_LC_WXS	Wedge resection	Lepidic adenocarcinoma	Other	0.8
+AHB_30	AHB_30_LC_WXS	wedge resection	Adenocarcinoma NOS	Left upper lobe	0.55
+AHB_24	AHB_24_LC_WXS	not specified	Lepidic adenocarcinoma	Right lower lobe	0.75
+AHB_4	AHB_4_LC_WXS	Right mainstem bronchial biopsy	Adenocarcinoma NOS	Other	0.9
+AHB_12	AHB_12_LC_WXS	RLL lobectomy	Adenocarcinoma NOS	Right lower lobe	0.55
+AHB_33	AHB_33_LC_WXS	LUL lobectomy	Lepidic adenocarcinoma	Left upper lobe	0.6
+AHB_57	AHB_57_LC_WXS	RUL segmentectomy	Adenocarcinoma NOS	Right upper lobe	0.6
+AHB_22	AHB_22_LC_WXS	wedge biopsy and lobectomy	Acinar adenocarcinoma	Left Lung, NOS	0.6
+AHB_54	AHB_54_LC_WXS	Left upper lobe excision	Adenocarcinoma NOS	Left upper lobe	0.7
+AHB_14	AHB_14_LC_WXS	Right lower lobe lobectomy	Adenocarcinoma NOS	Right lower lobe	0.65
+AHB_18	AHB_18_LC_WXS	RUL wedge resection	Acinar adenocarcinoma	Right upper lobe	0.6
+AHB_65	AHB_65_LC_WXS	Right lobectomy	Acinar adenocarcinoma	Right upper lobe	0.55
+AHB_25	AHB_25_LC_WXS	Diagnostic Surgery	Acinar adenocarcinoma	Right lower lobe	0.6
+AHB_73	AHB_73_LC_WXS	LUL lobectomy/wedge resection	Acinar adenocarcinoma	Left upper lobe	0.6
+AHB_49	AHB_49_LC_WXS	Right upper lobe wedge resection	Acinar adenocarcinoma	Right upper lobe	0.5
+AHB_56	AHB_56_LC_WXS	RUL lobectomy	Acinar adenocarcinoma	Right upper lobe	0.6
+AHB_10	AHB_10_LC_WXS	RUL wedge resection and RUL lobectomy	Adenocarcinoma NOS	Right upper lobe	0.6
+AHB_5	AHB_5_LC_WXS	Right upper lung lobectomy	Adenocarcinoma NOS	Right upper lobe	0.6
+AHB_32	AHB_32_LC_WXS	lobectomy	Adenocarcinoma NOS	Right upper lobe	0.8
+AHB_34	AHB_34_LC_WXS	upper lobectomy	Adenocarcinoma NOS	Left upper lobe	0.7
+AHB_63	AHB_63_LC_WXS	RML lobectomy	Adenocarcinoma NOS	Right middle lobe	0.75
+AHB_72	AHB_72_LC_WXS	LUL lobectomy	Adenocarcinoma NOS	Left upper lobe	0.7
+AHB_26	AHB_26_LC_WXS	segmental resection	Adenocarcinoma NOS	Left lower lobe	0.7
+AHB_19	AHB_19_LC_WXS	RUL wedge resection and lobectomy	Adenocarcinoma NOS	Right upper lobe	0.55
+AHB_67	AHB_67_LC_WXS	RUL lobectomy	Adenocarcinoma NOS	Right upper lobe	0.6
+AHB_23	AHB_23_LC_WXS	Diagnostic Surgery	Adenocarcinoma NOS	Left lower lobe	0.5
+AHB_9	AHB_9_LC_WXS	LUL wedge resection and LU lobectomy	Adenocarcinoma NOS	Left upper lobe	0.5
+AHB_44	AHB_44_LC_WXS	Right upper lobe wedge resection	Adenocarcinoma NOS	Right upper lobe	0.6
+AHB_1	AHB_1_LC_WXS	LUL and LLL wedge resections	Adenocarcinoma NOS	Left lower lobe	0.8
+AHB_60	AHB_60_LC_WXS	RUL lobectomy	Adenocarcinoma NOS	Right upper lobe	0.75
+AHB_59	AHB_59_LC_WXS	Left upper lobe segmental resection	Adenocarcinoma NOS	Left upper lobe	0.6
+AHB_3	AHB_3_LC_WXS	Right middle lobe upper wedge	Adenocarcinoma NOS	Right middle lobe	0.7
+AHB_21	AHB_21_LC_WXS	Right lower lobe lobectomy	Adenocarcinoma NOS	Right Lung, NOS	0.7
+AHB_47	AHB_47_LC_WXS	Left lobectomy	Adenocarcinoma NOS	Left upper lobe	0.55
+AHB_40	AHB_40_LC_WXS	segment resection	Adenocarcinoma NOS	Right middle lobe	0.65
+AHB_70	AHB_70_LC_WXS	LLL lobectomy	Adenocarcinoma NOS	Left lower lobe	0.95
+AHB_75	AHB_75_LC_WXS	LUL segmentectomy	Adenosquamous carcinoma	Left upper lobe	0.55
+AHB_42	AHB_42_LC_WXS	Left lower lobe wedge resection and LUL lobectomy	Colloidal adenocarcinoma	Left upper lobe	0.65
+AHB_46	AHB_46_LC_WXS	Left lower lobe wedge resection	Colloidal adenocarcinoma	Left lower lobe	0.55
+AHB_74	AHB_74_LC_WXS	Left lingular segmentectomy	Colloidal adenocarcinoma	Left upper lobe	0.55
+AHB_8	AHB_8_LC_WXS	lobe resection	Lepidic adenocarcinoma	Left upper lobe	0.7
+AHB_35	AHB_35_LC_WXS	resection	Lepidic adenocarcinoma	Left lower lobe	0.8
+AHB_38	AHB_38_LC_WXS	RUL lobectomy	Lepidic adenocarcinoma	Right upper lobe	0.5
+AHB_48	AHB_48_LC_WXS	Right lower lobe lobectomy	Mixed adenocarcinoma	Right lower lobe	0.6
+AHB_55	AHB_55_LC_WXS	LLL lobectomy	Papillary adenocarcinoma	Left lower lobe	0.7
+AHB_31	AHB_31_LC_WXS	Left lower wedge	Papillary adenocarcinoma	Left lower lobe	0.6
+AHB_13	AHB_13_LC_WXS	RIght middle lobe wedge resection	Acinar adenocarcinoma	Right middle lobe	0.9
+AHB_58	AHB_58_LC_WXS	Diagnostic Surgery	Adenocarcinoma NOS	Right lower lobe	0.55

@@ -1,0 +1,92 @@
+{
+    "merged_mafs": {
+        "dir": "merged_mafs",
+        "dtypes": {
+            "mutation": {
+                "ext": "maf",
+                "cbio_name": "data_mutations_extended.txt",
+                "meta_file_attr": {
+                    "stable_id": "mutations",
+                    "profile_name": "Mutations",
+                    "profile_description": "DGD custom filtered calls",
+                    "genetic_alteration_type": "MUTATION_EXTENDED",
+                    "datatype": "MAF",
+                    "variant_classification_filter": "Silent,Intron,3'UTR,3'Flank,5'UTR,IGR,RNA",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+      },
+      "merged_fusion": {
+        "dir": "merged_fusion",
+        "dtypes": {
+            "fusion": {
+                "ext": "fusions.txt",
+                "cbio_name": "data_fusions.txt",
+                "meta_file_attr": {
+                    "stable_id": "fusion",
+                    "profile_name": "Predicted RNA fusions",
+                    "profile_description": "DGD custom filtered fusions",
+                    "genetic_alteration_type": "FUSION",
+                    "datatype": "FUSION",
+                    "show_profile_in_analysis_tab": "true"
+                }
+            }
+        }
+    },
+    "data_sheets": {
+        "dir": "datasheets",
+        "dtypes": {
+            "patient": {
+                "cbio_name": "data_clinical_patient.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "PATIENT_ATTRIBUTES"
+                }
+            },
+            "sample": {
+                "cbio_name": "data_clinical_sample.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "CLINICAL",
+                    "datatype": "SAMPLE_ATTRIBUTES"
+                }
+            },
+            "genes": {
+                "cbio_name": "data_gene_matrix_CHOP.txt",
+                "meta_file_attr": {
+                    "genetic_alteration_type": "GENE_PANEL_MATRIX",
+                    "datatype": "GENE_PANEL_MATRIX",
+                    "data_filename": "data_gene_matrix_CHOP.txt"
+                }
+            }
+        }
+    },
+    "study": {
+        "_comment": "If a big study being split into many, make cancer_study_identifer blank, dx will be used",
+        "description": "CHOP Division for Genomic Diagnostics Solid and Liquid Tumors. For updates, please see here: <a href=\"https://tinyurl.com/55cxz9am\">Release Notes</a>",
+        "groups": "PUBLIC",
+        "cancer_study_identifier": "dgd_chop",
+        "type_of_cancer": "mixed",
+        "short_name": "dgd_chop",
+        "reference_genome": "hg38",
+        "display_name": "CHOP Division for Genomic Diagnostics Solid and Liquid Tumors"
+    },
+    "cases_all": {
+        "stable_id": "all",
+        "case_list_name": "All Tumors",
+        "case_list_description": "All tumor samples",
+        "case_list_category": "all_cases_in_study"
+    },
+    "cases_sequenced": {
+        "stable_id": "sequenced",
+        "case_list_name": "Tumor samples with mutations",
+        "case_list_description": "All tumor samples with mutation data",
+        "case_list_category": "all_cases_with_mutation_data"
+    },
+    "cases_sv": {
+        "stable_id": "sv",
+        "case_list_name": "Tumor samples with fusions",
+        "case_list_description": "All tumor samples with fusion data",
+        "case_list_category": "all_cases_with_sv_data"
+    }
+}

@@ -1,0 +1,17 @@
+# absolute paths please!
+id_mapping: example/custom.txt
+gtf: example/Homo_sapiens.GRCh37.73.gtf
+type_of_cancer: 'ovary'
+cancer_study_identifier: 'twins_shahlab_2020'
+name: 'TWINS (Shah Lab, 2020)'
+description: 'Mutation data in TWINS cases'
+short_name: 'TWINS (Shahlab)'
+patients:
+  SPECTRUM-DLP-OV-004:
+    LEFT_ADNEXA:
+      datatype: SCWGS
+      filter_normal: true
+      strelka_vcf: example/strelka_snv.vcf.gz
+      museq_vcf: example/museq.vcf.gz
+      strelka_indel_vcf: example/strelka_indel.vcf.gz
+      hmmcopy_csv: example/A96121B_reads.csv.gz

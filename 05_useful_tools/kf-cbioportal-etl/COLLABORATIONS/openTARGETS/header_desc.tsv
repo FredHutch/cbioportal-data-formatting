@@ -1,0 +1,30 @@
+original	MAP TO	description	sample	patient	type	order	example row	NOTES
+germline_sex_estimate			0	1	STRING	1	Female	
+cancer_predispositions			0	1	STRING	2	None documented	
+OS_days	OS_MONTHS	Overall survival in months since initial diagnosis	0	1	NUMBER	3	NA	just convert to months
+OS_status	OS_STATUS	Overall patient survival status	0	1	STRING	4	LIVING	
+EFS_days	EFS_MONTHS	Event free (months) since initial treatment	0	1	NUMBER	5	Not Reported	just convert to months
+EFS_event_type	EFS_STATUS	Event free status (months) since initial treatment	0	1	STRING	5	Not Reported	
+ethnicity	ETHNICITY		0	1	STRING	6	Not Hispanic or Latino	
+race	RACE		0	1	STRING	7	White	
+primary_site	TUMOR_SITE		0	1	STRING	8		
+age_at_diagnosis_days	AGE	Age at which the condition or disease was first diagnosed, in years	0	1	NUMBER	9	4964	
+reported_gender	GENDER		0	1	STRING	10	Female	
+cohort_participant_id	EXTERNAL_PATIENT_ID	External Patient Identifier	0	1	STRING	11	C333207	
+formatted_sample_id	SAMPLE_ID		1	0	STRING	98	7316-1069-T-353281.WGS	
+Kids_First_Biospecimen_ID	SPECIMEN_ID	KFDRC tumor biopsecimen ID	1	0	STRING	13	BS_A9S5HT6P	
+broad_histology	CANCER_TYPE		1	0	STRING	12	Benign tumor	
+molecular_subtype	MOLECULAR_SUBTYPE	Molecular subtype defined by WHO 2021 guidelines	1	0	STRING	12	EPN, PF A	
+cancer_group	HISTOLOGY		1	0	STRING	11	Adenoma	
+harmonized_diagnosis	CANCER_TYPE_DETAILED		1	0	STRING	10	Adenoma	
+primary_site	TUMOR_TISSUE_SITE		1	0	STRING	9	Suprasellar/Hypothalamic/Pituitary	
+tumor_descriptor	TUMOR_TYPE		1	0	STRING	8	Initial CNS Tumor	
+composition	SAMPLE_TYPE		1	0	STRING	7	Solid Tissue	
+cohort	COHORT	Source study cohort name	1	0	STRING	6	PBTA	
+sub_cohort	SUB_COHORT	Source study sub-cohort name	1	0	STRING	6	DGD	
+CNS_region			1	0	STRING	5	Suprasellar	
+tumor_ploidy			1	0	NUMBER	4	3	
+tumor_fraction			1	0	NUMBER	3	0.476369391	
+extent_of_tumor_resection			1	0	STRING	2	Gross/Near total resection	
+pathology_free_text_diagnosis			1	0	STRING	1	pituitary adenoma	
+Kids_First_Participant_ID	PATIENT_ID	Patient identifier	1	1	STRING	99	PT_9XAA8PF6	

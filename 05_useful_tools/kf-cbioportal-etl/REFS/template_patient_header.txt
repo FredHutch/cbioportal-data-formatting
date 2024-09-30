@@ -1,0 +1,5 @@
+#Patient Identifier	External Patient Identifier	SEX	RACE	ETHNICITY	AGE	AGE_IN_DAYS	OS_STATUS	OS_MONTHS	EFS_MONTHS	EFS_STATUS	germline_sex_estimate	cancer_predispositions
+#Patient identifier	Patient ID used by generator of data	Sex of the patient	racial demographic	ethnic demographic	Age at which the condition or disease was first diagnosed, in years	Patient age in days at initial diagnosis	Overall patient survival status	Overall survival in months since initial diagnosis	Event free (months) since initial treatment	Event free status	germline sex estimate	cancer predispositions
+#STRING	STRING	STRING	STRING	STRING	NUMBER	NUMBER	STRING	NUMBER	NUMBER	STRING	STRING	STRING
+#11	10	9	5	4	8	7	3	2	1	1	1	2
+PATIENT_ID	EXTERNAL_PATIENT_ID	SEX	RACE	ETHNICITY	AGE	AGE_IN_DAYS	OS_STATUS	OS_MONTHS	EFS_MONTHS	EFS_STATUS	GERMLINE_SEX_ESTIMATE	CANCER_PREDISPOSITIONS

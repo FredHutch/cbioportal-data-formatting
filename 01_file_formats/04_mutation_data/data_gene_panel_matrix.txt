@@ -1,0 +1,5 @@
+| SAMPLE_ID   | mutations | gistic    |
+| ----------- | --------- | --------- |
+| SAMPLE_ID_1 | IMPACT410 | IMPACT410 |
+| SAMPLE_ID_2 | IMPACT410 | IMPACT410 |
+| SAMPLE_ID_3 | NA       | NA        |

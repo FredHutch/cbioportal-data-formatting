@@ -1,0 +1,10 @@
+s3://cds-246-phs002517-sequencefiles-p30-fy20	NCI-AR
+s3://cds-306-phs002517-x01	NCI-X01
+s3://d3b-cds-working-bucket	Mgmt-Console-Dev-chopd3bprod@684194535433
+s3://d3b-study-us-east-1-prd-pbta-staging	Mgmt-Console-Dev-chopd3bprod@684194535433
+s3://d3b-study-us-east-1-prd-sd-8y99qzjj	Mgmt-Console-Dev-chopd3bprod@684194535433
+s3://d3b-study-us-east-1-prd-sd-bhjxbdqk	Mgmt-Console-Dev-chopd3bprod@684194535433
+s3://d3b-study-us-east-1-prd-sd-hkrzzhfw	Mgmt-Console-Dev-chopd3bprod@684194535433
+s3://d3b-study-us-east-1-prd-sd-m3dbxd12	Mgmt-Console-Dev-chopd3bprod@684194535433
+s3://kf-strides-study-us-east-1-prd-sd-bhjxbdqk	Mgmt-Console-Dev-D3bCenter@232196027141
+s3://kf-study-us-east-1-prd-sd-8y99qzjj	Mgmt-Console-Dev-D3b@538745987955

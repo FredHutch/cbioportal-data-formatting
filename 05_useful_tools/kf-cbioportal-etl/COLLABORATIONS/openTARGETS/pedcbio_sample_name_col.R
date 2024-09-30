@@ -1,0 +1,282 @@
+# Author: Run Jin
+# Add PedCBio Sample Name Column Addition
+
+suppressPackageStartupMessages({
+  library("optparse")
+  library("tidyverse")
+  library("readr")
+  library("tidyr")
+})
+
+#### Parse command line options ------------------------------------------------
+option_list <- list(
+  make_option(c("-i","--hist_file"),type="character",
+              help="Location of histology file to use"),
+  make_option(c("-n","--names"),type="character",
+              help="File from D3b Warehouse export with existing cBio sample names. Must be csv, double quoted"),
+  make_option(c("-b","--blacklist_strategy"),type="character",
+              help="csv string of experimental_strategy to leave out")
+    )
+opt <- parse_args(OptionParser(option_list=option_list))
+hist_file <- opt$hist_file
+cbio_names_file = opt$names
+
+### Define directories
+
+get_root_dir <- function(x){
+    tryCatch(
+        expr = {
+            rprojroot::find_root(rprojroot::has_dir(".git"))
+        },
+        error = function(e){
+            message('Likely not in git project, using cwd')
+            return (NULL)
+        }
+    )    
+}
+# if in a root dir, set up like typical openpedcan, if not, run as standalone
+root_dir = get_root_dir()
+if (!is.null(root_dir)){
+  data_dir <- file.path(root_dir, "data")
+  analysis_dir <- file.path(root_dir, "analyses", "pedcbio-sample-name")
+  input_dir <- file.path(analysis_dir, "input")
+  results_dir <- file.path(analysis_dir, "results")
+  if(!dir.exists(results_dir)){
+    dir.create(results_dir)
+  }
+  files_list <- list.files(input_dir)
+  result_file <- file.path(results_dir, "histologies-formatted-id-added.tsv")
+}else{
+  files_list <- c(basename(cbio_names_file))
+  input_dir = dirname(cbio_names_file)
+  result_file <- "histologies-formatted-id-added.tsv"
+}
+cbio_names_list <- lapply(files_list, function(cbio_names){
+  cbio_names <- readr::read_csv(file.path(input_dir, cbio_names))
+})
+### Read in files
+# histology file 
+histology_df <- readr::read_tsv(hist_file, guess_max = 100000)
+message("Read histologies file")
+if (!is.null(opt$blacklist_strategy)){
+  drop_list <- as.list(strsplit(opt$blacklist_strategy, split = ",")[[1]])
+  message(paste0("Dropping ", opt$blacklist_strategy," as specified\n"))
+  histology_df <- histology_df %>% dplyr::filter(!experimental_strategy %in% drop_list)
+}
+# tmp update for broad histology bug, to be fixed in v11
+histology_df <- histology_df %>%
+  mutate(broad_histology = ifelse(broad_histology == "Hematologic malignancies", 
+                                 "Hematologic malignancy", broad_histology),
+         # move GTEX to cancer group for pedcbio viz
+         cancer_group = case_when(
+           cohort == "GTEx" ~ paste0(gtex_group, " (GTEx)"), 
+           TRUE ~ as.character(cancer_group)),
+         harmonized_diagnosis = case_when(
+           cohort == "GTEx" ~ paste0(gtex_subgroup, " (GTEx)"),
+         # add NBL subtyping to harm dx
+           (cohort == "TARGET" | cohort == "GMKF") & !is.na(molecular_subtype) ~ paste0(cancer_group, ", ", molecular_subtype),
+         # for remaining without a harm dx, use cancer group
+         is.na(harmonized_diagnosis) ~ cancer_group, 
+           TRUE ~ as.character(harmonized_diagnosis)))
+message("Ran bug fix")
+filled_harm_dx <- histology_df %>%
+  filter(!is.na(harmonized_diagnosis)) # 32652
+
+table(histology_df$cohort) # 17382 gtex
+table(histology_df$sample_type) # 15270 tumor 
+
+
+### Update the ID for those samples if available 
+formatted_specimens_list <- lapply(cbio_names_list, function(x){
+  
+  # format them and select relevant columns
+  formatted <- x %>% 
+    dplyr::mutate(specimen_id = gsub("\\{", "", specimen_id)) %>% 
+    dplyr::mutate(specimen_id = gsub("\\}", "", specimen_id)) %>% 
+    dplyr::mutate(Kids_First_Biospecimen_ID = strsplit(specimen_id, ",")) %>% 
+    tidyr::unnest(Kids_First_Biospecimen_ID) %>%
+    dplyr::select(Kids_First_Biospecimen_ID, formatted_sample_id)
+
+message("Formatted input sample IDs")
+  # add those to histology file
+  histology_formatted_added <- histology_df %>%
+    dplyr::filter(Kids_First_Biospecimen_ID %in% formatted$Kids_First_Biospecimen_ID) %>%
+    left_join(formatted)
+  
+  return(histology_formatted_added)
+})
+message("Added existing sample IDs to histologies")
+# get the combined data
+combined_histology_formatted_added <- do.call("rbind", formatted_specimens_list)
+
+
+### Add IDs to those without sample id already
+# find the samples that do not have an ID yet 
+histology_df_no_format_id <- histology_df %>%
+  dplyr::filter(!Kids_First_Biospecimen_ID %in% combined_histology_formatted_added$Kids_First_Biospecimen_ID)
+
+message("Collated samples missing a cBio ID")
+#### Handle each cohort at a time - start with PBTA
+# get all sample IDs in the PBTA cohort
+sample_ids_pbta <- histology_df_no_format_id %>% 
+  dplyr::filter(cohort == "PBTA" & sub_cohort != "DGD") %>% 
+  pull(sample_id) %>% 
+  unique()
+
+# find the samples that need additional `tie-breaker`
+specimens_id_need_tiebreak <- c()
+message("Tie break PBTA")
+for (i in 1:length(sample_ids_pbta)){
+  # deal with one sample at a time
+  sample_id_of_interest <- sample_ids_pbta[i]
+  
+  # find the number of compositions
+  each_specimen_need_tiebreak <- histology_df_no_format_id %>% 
+    dplyr::filter(sample_type == "Tumor" & sub_cohort != "DGD") %>% 
+    dplyr::filter(sample_id == sample_id_of_interest) %>% 
+    group_by(experimental_strategy) %>% 
+    dplyr::mutate(n_sample_type = n()) %>%
+    dplyr::filter(n_sample_type >1) %>%
+    pull(Kids_First_Biospecimen_ID)
+  
+  # store the samples with multiple compositions
+  specimens_id_need_tiebreak <- c(specimens_id_need_tiebreak, each_specimen_need_tiebreak)
+}
+
+# see the samples that need tiebreak
+pbta_add_tiebreak <- histology_df_no_format_id %>% 
+  dplyr::filter(Kids_First_Biospecimen_ID %in% specimens_id_need_tiebreak,
+                sample_type != "Normal") 
+
+# For DNA, we can use aliquot ID to separate them
+# For RNA, different specimens are generated from the same aliqout but used different seuqencing method, hence RNA_library type can be used to separate them 
+pbta_add_tiebreak <- pbta_add_tiebreak %>% 
+  dplyr::mutate(formatted_sample_id = case_when(
+    experimental_strategy == "RNA-Seq" ~ paste0(sample_id, "-", RNA_library),
+    experimental_strategy != "RNA-Seq" ~ paste0(sample_id, "-", aliquot_id)
+  ))
+
+stopifnot(nrow(pbta_add_tiebreak) != unique(pbta_add_tiebreak$formatted_sample_id))
+
+message("Tie break GTEX")
+### Generate pedcbio ID for GTEx dataset 
+# The format of the sample ID is GTEX-[donor ID]-[tissue site ID]-SM-[aliquot ID].
+# The donor ID (e.g. GTEX-14753) should be used to link between the various RNA-seq and genotype samples that come from the same donor.
+gtex_add_tiebreak <- histology_df_no_format_id %>% 
+  dplyr::filter(cohort == "GTEx") %>%
+  dplyr::mutate(formatted_sample_id = paste0(Kids_First_Participant_ID, "-", aliquot_id))
+
+stopifnot(nrow(gtex_add_tiebreak) != unique(gtex_add_tiebreak$formatted_sample_id))
+
+
+### Generate pedcbio ID for TARGET dataset 
+# Similar to PBTA cohort, only need to add a tiebreak when multiple samples with the same experimental strategy
+# The different is - we need to use `Kids_First_Participant_ID`
+
+# get all participant IDs
+participant_ids_target <- histology_df_no_format_id %>% 
+  dplyr::filter(cohort == "TARGET") %>% 
+  pull(Kids_First_Participant_ID) %>% 
+  unique()
+
+# find the samples that need additional `tie-breaker`
+specimens_id_need_tiebreak <- c()
+message("Tie break TARGET")
+for (i in 1:length(participant_ids_target)){
+  # deal with one sample at a time
+  participant_of_interest <- participant_ids_target[i]
+  
+  # find the number of compositions
+  each_specimen_need_tiebreak <- histology_df_no_format_id %>% 
+    dplyr::filter(Kids_First_Participant_ID == participant_of_interest) %>% 
+    group_by(experimental_strategy) %>% 
+    dplyr::mutate(n_sample_type = n()) %>%
+    dplyr::filter(n_sample_type >1) %>%
+    pull(Kids_First_Biospecimen_ID)
+  
+  # store the samples with multiple compositions
+  specimens_id_need_tiebreak <- c(specimens_id_need_tiebreak, each_specimen_need_tiebreak)
+}
+
+# see the samples that need tiebreak
+target_add_tiebreak <- histology_df_no_format_id %>% 
+  dplyr::filter(Kids_First_Biospecimen_ID %in% specimens_id_need_tiebreak) 
+
+# For TARGET cohort, looks like using the last 7 digits from the specimen ID + Participant ID should be enough 
+target_add_tiebreak <- target_add_tiebreak %>%
+  dplyr::mutate(formatted_sample_id = gsub("^.{0,10}", "", Kids_First_Biospecimen_ID)) %>%
+  dplyr::mutate(formatted_sample_id = case_when(
+    sample_type == "Normal" ~ paste0(formatted_sample_id, "-N"),
+    TRUE ~ formatted_sample_id
+  ))
+stopifnot(nrow(target_add_tiebreak) != unique(target_add_tiebreak$formatted_sample_id))
+
+
+### Generate pedcbio ID for TCGA
+# TCGA-{TSS}-{Participant}-{Sample Vial}-{Portion Analyte}-{Plate}-{Center}
+# Again using the same method as PBTA and TARGET
+
+# get all participant IDs
+participant_ids_tcga <- histology_df_no_format_id %>% 
+  dplyr::filter(cohort == "TCGA") %>% 
+  pull(Kids_First_Participant_ID) %>% 
+  unique()
+message("Tie break TCGA")
+# find the samples that need additional `tie-breaker`
+specimens_id_need_tiebreak <- c()
+
+for (i in 1:length(participant_ids_tcga)){
+  # deal with one sample at a time
+  participant_of_interest <- participant_ids_tcga[i]
+  
+  # find the number of compositions
+  each_specimen_need_tiebreak <- histology_df_no_format_id %>% 
+    dplyr::filter(Kids_First_Participant_ID == participant_of_interest) %>% 
+    group_by(experimental_strategy) %>% 
+    dplyr::mutate(n_sample_type = n()) %>%
+    dplyr::filter(n_sample_type >1) %>%
+    pull(Kids_First_Biospecimen_ID)
+  
+  # store the samples with multiple compositions
+  specimens_id_need_tiebreak <- c(specimens_id_need_tiebreak, each_specimen_need_tiebreak)
+}
+
+# see the samples that need tiebreak
+tcga_add_tiebreak <- histology_df_no_format_id %>% 
+  dplyr::filter(Kids_First_Biospecimen_ID %in% specimens_id_need_tiebreak) 
+
+# From what we can see, using Kids_First_Biospecimen_ID minus the center code is sufficient
+tcga_add_tiebreak <- tcga_add_tiebreak %>%
+  dplyr::mutate(formatted_sample_id = stringr::str_sub(Kids_First_Biospecimen_ID, start = 9, end = -4)) %>%
+  dplyr::mutate(formatted_sample_id = case_when(
+    sample_type == "Normal" ~ paste0(formatted_sample_id, "-N"),
+    TRUE ~ formatted_sample_id
+  ))
+
+stopifnot(nrow(tcga_add_tiebreak) != unique(tcga_add_tiebreak$formatted_sample_id))
+
+### Combine all the samples with tiebreak
+# combine all tie break needed samples
+all_tiebreaks <- bind_rows(combined_histology_formatted_added,
+                           pbta_add_tiebreak,
+                           gtex_add_tiebreak,
+                           target_add_tiebreak,
+                           tcga_add_tiebreak)
+message("FINALIZE NAMES")
+# for samples no need for tie break - use `sample_id` for PBTA and DGD, and participant id for the rest
+no_need_for_tiebreaks <- histology_df %>%
+  dplyr::filter(!Kids_First_Biospecimen_ID %in% all_tiebreaks$Kids_First_Biospecimen_ID) %>%
+  dplyr::mutate(formatted_sample_id = case_when(
+    (cohort == "PBTA" & sub_cohort != "DGD") ~ sample_id,
+    sub_cohort == "DGD" ~ gsub("(^.*DGD)_\\w+_(\\d+$)", "\\1_\\2", aliquot_id),
+    ((cohort == "Maris" | cohort == "PPTC") & composition == "Derived Cell Line") ~ paste0(sample_id,"-CL"),
+    ((cohort == "Maris" | cohort == "PPTC") & composition == "Patient Derived Xenograft") ~ paste0(sample_id,"-PDX"),
+    TRUE ~ Kids_First_Participant_ID
+))
+
+# combine the files
+histology_all_fixed <- bind_rows(all_tiebreaks, no_need_for_tiebreaks)
+
+# write out the results
+histology_all_fixed %>% 
+  readr::write_tsv(result_file)

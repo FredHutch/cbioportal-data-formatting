@@ -1,0 +1,2 @@
+Approved symbol	NCBI Gene ID	Ensembl gene ID
+KCNAB2	8514	ENSG00000069424

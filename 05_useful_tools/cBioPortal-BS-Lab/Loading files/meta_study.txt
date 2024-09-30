@@ -1,0 +1,8 @@
+type_of_cancer: 
+cancer_study_identifier: 
+name: 
+short_name: 
+description: 
+citation:
+add_global_case_list: true 
+reference_genome:

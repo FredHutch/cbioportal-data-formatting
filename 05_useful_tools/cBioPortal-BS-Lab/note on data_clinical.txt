@@ -1,0 +1,36 @@
+For both patients and samples, the clinical data file is a two dimensional matrix with multiple clinical attributes. 
+When the attributes are defined in the patient file they are considered to be patient attributes; when they are defined in the sample file they are considered to be sample attributes.
+The first four rows of the clinical data file contain tab-delimited metadata about the clinical attributes. 
+These rows have to start with a '#' symbol. Each of these four rows contain different type of information regarding each of the attributes that are defined in the fifth row:
+Row 1: The attribute Display Names: The display name for each clinical attribute
+Row 2: The attribute Descriptions: Long(er) description of each clinical attribute
+Row 3: The attribute Datatype: The datatype of each clinical attribute (must be one of:  STRING, NUMBER, BOOLEAN)
+Row 4: The attribute Priority: A number which indicates the importance of each attribute. In the future, 
+higher priority attributes will appear in more prominent places than lower priority ones on relevant pages (such as the Study View). A higher number indicates a higher priority.
+Row 5: The attribute name for the database: This name should be in upper case.
+Row 6: This is the first row that contains actual data.
+
+To promote certain chart in study view, please increase priority to a certain number. The higher the score, the higher priority it will be displayed in the study view.
+If you want to hide chart, please set the priority to 0. For combination chart, as long as one of the clinical attribute has been set to 0, it will be hidden.
+Currently, we preassigned priority to few charts, but as long as you assign a priority except than 1, these preassigned priorities will be overwritten.
+
+The file containing the patient attributes has one required column:
+PATIENT_ID (required): a unique patient ID. This field allows only numbers, letters, points, underscores and hyphens.
+
+Note on survival plots: to generate the survival plots successfully, the columns are required to be in pairs, 
+which means the file should have a pair of columns that have the same prefix but ending with _STATUS and _MONTHS individually. 
+For example, PFS_STATUS and PFS_MONTHS are a valid pair of columns that can generate the survival plots.
+Note on survival status value: the value of survival status must prefixed with 0: or 1:. Value with prefix 0: means that no event (e.g. LIVING, DiseaseFree). 
+Value with prefix 1: means that an event occurred (e.g. DECEASED, Recurred/Progressed).
+
+These columns, when provided, add additional information to the patient description in the header:
+PATIENT_DISPLAY_NAME: Patient display name (string)
+GENDER or SEX: Gender or sex of the patient (string)
+AGE: Age at which the condition or disease was first diagnosed, in years (number)
+TUMOR_SITE
+
+The file containing the sample attributes has two required columns:
+PATIENT_ID (required): A patient ID. This field can only contain numbers, letters, points, underscores and hyphens.
+SAMPLE_ID (required): A sample ID. This field can only contain numbers, letters, points, underscores and hyphens.
+
+For more types of data and their meta file visit https://docs.cbioportal.org/5.1-data-loading/data-loading/file-formats#clinical-data
