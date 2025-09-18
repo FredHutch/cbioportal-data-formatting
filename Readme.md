@@ -12,7 +12,9 @@ The repository is structured into four sections:
 
 4. **04_example_study**: An example study (from the Berger Lab at Fred Hutch) that can be either used as a template for your own study or can be used to test the useful_tools or the local instance of cBioportal.  This is how your study folder should look like once it is ready for upload into cBioPortal.(_Note: You may have more or less files depending on your study_)
 
-5. **05_useful_tools**: A collection of public repositories and helpful instructions that can help with formatting different types of study data files. 
+5. **05_useful_tools**: A collection of public repositories and helpful instructions that can help with formatting different types of study data files.
+
+6. **06_available_panels_on_fh_cbio_instance**: A comprehensive list of gene panels currently available on the Fred Hutch cBioPortal instance, including panel IDs and descriptions to help identify appropriate panels for your study data. 
 
 
 ## How do I make a copy of this repository on my local computer?
