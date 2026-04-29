@@ -185,3 +185,4 @@
 | WAKE-CLINICAL-T7                      | WAKE-CLINICAL-T7, Number of Genes - 259                                                                                                                                                     |
 | YALE-HSM-V1                           | YALE-HSM-V1, Number of Genes - 50                                                                                                                                                           |
 | YALE-OCP-V3                           | YALE-OCP-V3, Number of Genes - 146                                                                                                                                                          |
+| YALE-OCP-V2                           | YALE-OCP-V2, Number of Genes - 133                                                                                                                                                          |
