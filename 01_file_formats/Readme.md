@@ -1,32 +1,58 @@
 ## File formats
 
-This part of the repository provides helpful instructions to prepare your data into a format that can be "read" into cBioportal. In this part of the repository you will find different sub-directories for the different file formats. Each sub-directory has its own Readme with detailed instructions on how to prepare you files. It also has examples/templates that you can copy for the different files needed which you can use to prepare your own study files
+This part of the repository provides helpful instructions to prepare your data into a format that can be "read" into cBioPortal. In this part of the repository, you will find different sub-directories for the different file formats. Each sub-directory has its own README with detailed instructions on how to prepare your files. It also includes examples/templates that you can copy to prepare your own study files.
 
+## File types
 
-## File types 
+To upload a study into cBioPortal, data is presented in two main file types:
 
-To upload a study into cBioportal, data is presented (usually) as two file types:
+1. **Data files** — These contain the actual data to be uploaded (e.g., mutations, clinical info). These are typically **tab-delimited `.txt` files**.
+2. **Meta files** — These provide metadata about the data files (e.g., data type, version, source). These are **multi-line text files**. Each field must be manually filled in using a text editor like Notepad or VS Code.
 
-1. **data files**: that contain the actual data that is to be uploaded. These are tab-delimited files in a specific format
-
-2. **meta files**: that contain information about the data files. These are multi-line text file with information about the data files. You can create this file using any text editor (e.g., Notepad, VS Code). Each field should be filled with study specific information.
-
-   
 ## Before you begin
 
-There are just a few things to consider before you begin preparing your files for upload into cBioportal:
+Here are a few tips before you start preparing your files:
 
-- **Mandatory files**: For any study to be uploaded there are is a minimal set of files you need to be uploaded. These are the meta_study, meta_clinical and the data_clinical files.
-  
-*Note*: cancer_type file can be mandatory if the study is referring to a cancer subtype that does not yet exist in the cBioportal database. To know if they type of cancer your data comes from is present in the database please see the list here:<enter relevant URL>. If the cancer type your data is generated from is not in this list please make sure to prepare and upload the cancer_type file. 
-  
-- **Naming the files**: Meta files can be named anything, as long as it starts or ends with name 'meta'. E.g. meta_test, meta.test, test.meta are all fine; metal_test and metastudy are wrong. Additionally, data files can be named anything as long as they are referenced to appropriately in the field data_filename set in the meta file.
+- **Mandatory files**: Every study must include a minimum of these three files:
+  - `meta_study.txt`
+  - `meta_clinical_sample.txt`
+  - `data_clinical_sample.txt`
 
+> 📝 *Note: If you're working with a new cancer type not in cBioPortal's database, you'll need to include a `cancer_type.txt` and `meta_cancer_type.txt` file. See [public cBioPortal documentation](https://docs.cbioportal.org/file-formats/#cancer-type) for formatting guidance.
+
+- **Naming your files**:
+  - **Meta files** must include the word `meta`. Acceptable examples: `meta.txt`, `meta_clinical.txt`, `clinical_meta.txt`
+  - **Data files** can be named freely, but must match the `data_filename` specified in the associated meta file.
+
+---
 
 ## Helpful links
 
-### cBioportal documentation
+### 📚 Official Documentation
 
-See here for detailed information of the expected file formats for cBioportal: https://docs.cbioportal.org/file-formats/
+- [cBioPortal File Format Guide](https://docs.cbioportal.org/file-formats/)
+- [How to package a complete study](https://github.com/cBioPortal/cbioportal/blob/master/docs/Data-Loading.md#preparing-study-data)
 
-Overview of what a completed data "package" would look like for upload into cBioportal: https://github.com/cBioPortal/cbioportal/blob/master/docs/Data-Loading.md#preparing-study-data
+### 📦 Required and Optional Files Overview
+
+| Type                                        | Requirement | Filename Example                           | Required Format                 | Purpose                                                              | Detailed Instructions                                                                                                                                        | Example                                                                                               |
+|---------------------------------------------|-------------|-------------------------------------------|---------------------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| Cancer Study                                | Required    | meta_study.txt                            | Text file                       | Overall information about the study                                  | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/01_cancer_study)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/01_cancer_study/meta_study.txt) |
+| Cancer Type                                 | Optional    | meta_cancer_type.txt                      | Text file                       | A meta file with information about the file with new cancer type. Required if your cancer type does not exist in the database. | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/02_cancer_type)                                            | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/02_cancer_type/meta_cancer_type.txt) |
+| Cancer Type                                 | Optional    | cancer_type.txt                           | Tab Separated Value (TSV)      | Details about a new cancer type not found in the cBioPortal database. Required if your cancer type does not exist in the database. | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/02_cancer_type)                                            | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/02_cancer_type/cancer_type.txt) |
+| Clinical Sample                             | Required    | meta_clinical_sample.txt                  | Text file                       | A meta file with information about the clinical samples              | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/03_clinical_data)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/03_clinical_data/meta_clinical_sample.txt) |
+| Clinical Sample                             | Required    | data_clinical_sample.txt                  | Tab Separated Value (TSV)      | File with the sample-level clinical covariates/metadata              | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/03_clinical_data)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/03_clinical_data/data_clinical_sample.txt) |
+| Clinical Patient                            | Optional    | meta_clinical_patient.txt                 | Multi-line text file            | A meta file with information about the clinical patient             | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/03_clinical_data)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/03_clinical_data/meta_clinical_patient.txt) |
+| Clinical Patient                            | Optional    | data_clinical_patient.txt                 | Tab Separated Value (TSV)      | File with the sample-level clinical covariates/metadata             | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/03_clinical_data)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/03_clinical_data/data_clinical_patient.txt) |
+| Panel                                       | Optional    | meta_gene_panel_matrix.txt                | Multi-line text file            | A meta file for describing the gene panel matrix file              | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/04_mutation_data)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/04_mutation_data/meta_gene_panel_matrix.txt) |
+| Panel                                       | Optional    | data_gene_panel_matrix.txt                | Tab Separated Value (TSV)      | Sample level details of the gene panel used for the different samples | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/04_mutation_data)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/04_mutation_data/data_gene_panel_matrix.txt) |
+| Mutation                                    | Optional    | meta_mutations.txt                        | Multi-line text file            | A meta file describing information about the mutation file.          | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/04_mutation_data)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/04_mutation_data/meta_mutations.txt) |
+| Mutation                                    | Optional    | data_mutations.txt                        | Tab Separated Value (TSV)      | File with mutation data                                             | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/04_mutation_data)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/04_mutation_data/data_mutations.txt) |
+| Case Lists                                  | Required    | case_lists/cases_sequenced.txt           | Multi-line text file            | Helps cBioPortal identify which samples have data. Required if uploading data files beyond clinical data.               | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/05_case_lists)                                               | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/05_case_lists/case_lists/cases_sequenced.txt) |
+| Structural Variant                          | Optional    | meta_sv.txt                               | Multi-line text file            | A meta file for describing the structural variant data file        | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/06_structural_variants)                                          | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/06_structural_variants/meta_sv.txt) |
+| Structural Variants                         | Optional    | data_sv.txt                               | Tab Separated Value (TSV)      | File with structural variant data                                   | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/06_structural_variants)                                          | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/06_structural_variants/data_sv.txt) |
+| Generic Assays: Arm-level CNA               | Optional    | meta_armlevel_CNA.txt                     | Multi-line text file            | A meta file for arm-level copy number alteration data              | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/07_generic_assay_arm_level_cna)                                   | [Example](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/07_generic_assay_arm_level_cna/meta_armlevel_CNA.txt) |
+| Generic Assays: Arm-level CNA               | Optional    | data_armlevel_CNA.txt                     | Tab Separated Value (TSV)      | Arm-level copy number alteration data                               | [Readme](https://github.com/FredHutch/cbioportal-data-formatting/tree/main/01_file_formats/07_generic_assay_arm_level_cna)                                   | [Example](https://git
+
+> 📝 *Note: As of Version 6, cBioPortal requires at least one non-clinical data file. If your study is purely clinical.*
+
