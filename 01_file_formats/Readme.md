@@ -18,7 +18,7 @@ Here are a few tips before you start preparing your files:
   - `meta_clinical_sample.txt`
   - `data_clinical_sample.txt`
 
-> 📝 *Note: If you're working with a new cancer type not in cBioPortal's database, you'll need to include a `cancer_type.txt` and `meta_cancer_type.txt` file. See list of accepted types here: <enter relevant URL>*
+> 📝 *Note: If you're working with a new cancer type not in cBioPortal's database, you'll need to include a `cancer_type.txt` and `meta_cancer_type.txt` file. See [public cBioPortal documentation](https://docs.cbioportal.org/file-formats/#cancer-type) for formatting guidance.
 
 - **Naming your files**:
   - **Meta files** must include the word `meta`. Acceptable examples: `meta.txt`, `meta_clinical.txt`, `clinical_meta.txt`
