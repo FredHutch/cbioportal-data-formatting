@@ -190,3 +190,4 @@
 | OPXv6                                 | OncoPlex V6 gene list.                                                                                                                                                                      |
 | OPXv7                                 | OncoPlex V7 gene list.                                                                                                                                                                      |
 | OPXv8a                                 | OncoPlex V8a gene list.                                                                                                                                                                      |
+| lucap-reviewed-v1                                 | genes with reviewed WGS calls                                                                                                                                                                      |
